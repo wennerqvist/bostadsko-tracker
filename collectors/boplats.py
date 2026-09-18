@@ -72,6 +72,14 @@ def _iso(d):
     return d.isoformat() if d else None
 
 
+def clean_address(address: str) -> str:
+    """Drop a stray second number after the house number, e.g. landlords typing
+    'Distansgatan 66 66' or 'Kulvertkonstens väg 9 1004' (an apartment number).
+    Ranges ('66-68') and letters ('14A') are left alone."""
+    match = re.fullmatch(r"(.*\S\s+\d+[A-Za-z]?)\s+\d+", address)
+    return match.group(1) if match else address
+
+
 # --- parsers (no network) --------------------------------------------------
 
 def parse_search_page(html: str, today: date) -> list[dict]:
@@ -94,7 +102,7 @@ def parse_search_page(html: str, today: date) -> list[dict]:
             "source": "boplats",
             "url": link["href"],
             "area": _text(card.select_one(".search-result-area-name")),
-            "address": _text(card.select_one(".search-result-address")),
+            "address": clean_address(_text(card.select_one(".search-result-address"))),
             "rent_sek": int(rent) if rent else None,
             "size_m2": _number(_text(card.select_one("div.pure-u-2-5.right-align"))),
             "rooms": _number(_text(card.select_one("div.pure-u-1-4.right-align"))),

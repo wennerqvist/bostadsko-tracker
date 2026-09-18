@@ -68,6 +68,26 @@ def test_blank_floor_is_none(cards):
     assert sum(card["floor"] is None for card in cards) == 8
 
 
+@pytest.mark.parametrize("raw, expected", [
+    ("Distansgatan 66 66", "Distansgatan 66"),
+    ("Kulvertkonstens väg 9 1004", "Kulvertkonstens väg 9"),
+    ("Lillhagsvinkeln 25 1508", "Lillhagsvinkeln 25"),
+    ("Lars Kaggsgatan 14A", "Lars Kaggsgatan 14A"),  # house letter stays
+    ("Distansgatan 66-68", "Distansgatan 66-68"),  # range stays
+    ("Burggrevegatan 27 B", "Burggrevegatan 27 B"),  # letter after a space stays
+    ("Hasselbackevägen 4", "Hasselbackevägen 4"),
+])
+def test_clean_address(raw, expected):
+    assert boplats.clean_address(raw) == expected
+
+
+def test_search_page_addresses_are_cleaned(cards):
+    by_id = {card["id"]: card["address"] for card in cards}
+    assert by_id["boplats:6AA3B560076B787CB831B08B"] == "Distansgatan 66"
+    assert by_id["boplats:6AA24481FDCC65C0A24DB08B"] == "Distansgatan 66-68"
+    assert not [a for a in by_id.values() if boplats.clean_address(a) != a]  # nothing left to clean
+
+
 def test_empty_page_gives_no_cards():
     assert boplats.parse_search_page("<html><body></body></html>", TODAY) == []
 
