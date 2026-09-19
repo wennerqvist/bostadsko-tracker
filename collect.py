@@ -79,7 +79,7 @@ def main(argv=None, db_path=store.DEFAULT_DB, export_path=EXPORT_PATH, geocoder=
         ("Boplats", "boplats", lambda: boplats.collect(store.known_ids(conn, "boplats")),
          (boplats.PageChanged, requests.RequestException), True),
         # HomeQ gives no applicant counts, so a snapshot row would hold nothing.
-        ("HomeQ", "homeq", homeq.collect,
+        ("HomeQ", "homeq", lambda: homeq.collect(store.ids_with_allocation(conn, "homeq")),
          (homeq.HomeQError, requests.RequestException), False),
     ]
 

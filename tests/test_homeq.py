@@ -125,8 +125,14 @@ def test_missing_credentials_raise(tmp_path, content):
 LOGIN_OK = {"user_info": {"token": "T"}}
 
 
+PAGE = ('<html><script id="__NEXT_DATA__" type="application/json">{"props":{"pageProps":{"objectAd":'
+        '{"candidate_sorting_mode":"queue_points","landlord_company":"Acme","floor":2,"date_publish":"2026-09-01"}}}}'
+        '</script></html>')
+
+
 def result(*ids, total=None, kommun="Göteborg"):
-    items = [{"id": i, "title": f"Street {i}", "municipality": kommun, "type": "individual"} for i in ids]
+    items = [{"id": i, "title": f"Street {i}", "municipality": kommun, "type": "individual", "uri": f"/lagenhet/{i}"}
+             for i in ids]
     return {"results": items, "total_hits": total if total is not None else len(items)}
 
 
@@ -135,9 +141,18 @@ class FakeClient:
 
     responses = []
     calls = []
+    pages = {}  # url -> html, or an exception to raise; anything else gets PAGE
+    page_calls = []
 
     def __init__(self, pause=0):
         pass
+
+    def get_text(self, url):
+        FakeClient.page_calls.append(url)
+        page = FakeClient.pages.get(url, PAGE)
+        if isinstance(page, Exception):
+            raise page
+        return page
 
     def post_json(self, url, body, token=None):
         FakeClient.calls.append((url, body, token))
@@ -150,6 +165,8 @@ class FakeClient:
 @pytest.fixture
 def fake(monkeypatch):
     FakeClient.calls = []
+    FakeClient.page_calls = []
+    FakeClient.pages = {}
     monkeypatch.setattr(homeq, "PoliteClient", FakeClient)
     monkeypatch.setattr(homeq, "load_credentials", lambda: ("me@example.com", "pw"))
     return FakeClient
@@ -214,3 +231,63 @@ def test_token_is_sent_as_jwt_not_bearer():
     client.session = FakeSession()
     client.post_json("https://example.com", {}, token="T")
     assert sent["headers"] == {"Authorization": "JWT T"}
+
+
+# --- listing pages ---------------------------------------------------------
+# Three real pages saved 2026-09-19: one listing per selection method.
+
+def page(name):
+    return (SAMPLES / name).read_text(encoding="utf-8")
+
+
+@pytest.mark.parametrize("sample, expected", [
+    ("homeq_detail_queue.html", {"allocation": "queue", "landlord": "Gunnar Lövgren Fastigheter", "floor": 4, "published": "2026-09-19"}),
+    ("homeq_detail_lottery.html", {"allocation": "lottery", "landlord": "Kjellberg & Möller", "floor": 1, "published": "2026-09-18"}),
+    ("homeq_detail_firstcome.html", {"allocation": "first_come", "landlord": "Varekilhem AB", "floor": 2, "published": "2026-04-07"}),
+])
+def test_listing_page_gives_allocation_landlord_floor_and_publish_date(sample, expected):
+    assert homeq.parse_detail_page(page(sample)) == expected
+
+
+def test_page_without_a_selection_method_is_marked_unknown_not_empty():
+    html = ('<script id="__NEXT_DATA__" type="application/json">'
+            '{"props":{"pageProps":{"objectAd":{"floor":null,"candidate_sorting_mode":"something_new"}}}}</script>')
+    assert homeq.parse_detail_page(html) == {"allocation": "unknown", "landlord": None, "floor": None, "published": None}
+
+
+@pytest.mark.parametrize("html", ["<html>redesigned</html>", "", '<script id="__NEXT_DATA__">not json</script>',
+                                  '<script id="__NEXT_DATA__">{"props":{}}</script>'])
+def test_page_that_looks_different_raises(html):
+    with pytest.raises(homeq.HomeQError):
+        homeq.parse_detail_page(html)
+
+
+def test_collect_reads_the_page_of_new_listings_only(fake):
+    fake.responses = [LOGIN_OK, result(1, 2, 3)]
+    found = {item["id"]: item for item in homeq.collect(known_details={"homeq:2"}, pause=0)}
+    assert fake.page_calls == ["https://www.homeq.se/lagenhet/1", "https://www.homeq.se/lagenhet/3"]
+    assert found["homeq:1"]["allocation"] == "queue" and found["homeq:1"]["landlord"] == "Acme"
+    assert "allocation" not in found["homeq:2"]  # already read in an earlier run
+
+
+def test_a_page_that_fails_leaves_the_listing_in_place_without_details(fake):
+    fake.responses = [LOGIN_OK, result(1, 2)]
+    fake.pages = {"https://www.homeq.se/lagenhet/1": requests.ConnectionError("boom")}
+    found = {item["id"]: item for item in homeq.collect(pause=0)}
+    assert set(found) == {"homeq:1", "homeq:2"}  # still returned, so it is not marked closed
+    assert "allocation" not in found["homeq:1"]  # so it is tried again next run
+    assert found["homeq:2"]["allocation"] == "queue"
+
+
+def test_repeated_page_failures_stop_the_reading_for_this_run(fake):
+    fake.responses = [LOGIN_OK, result(*range(1, 11))]
+    fake.pages = {f"https://www.homeq.se/lagenhet/{i}": requests.ConnectionError("down") for i in range(1, 11)}
+    assert len(homeq.collect(pause=0)) == 10
+    assert len(fake.page_calls) == homeq.MAX_PAGE_FAILURES
+
+
+def test_a_redesigned_listing_page_fails_the_whole_run(fake):
+    fake.responses = [LOGIN_OK, result(1)]
+    fake.pages = {"https://www.homeq.se/lagenhet/1": "<html>new design</html>"}
+    with pytest.raises(homeq.HomeQError):
+        homeq.collect(pause=0)

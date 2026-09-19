@@ -102,3 +102,18 @@ def test_old_database_without_the_column_is_upgraded(tmp_path):
     row = conn.execute("SELECT id, is_short_lease FROM listings").fetchone()
     assert (row["id"], row["is_short_lease"]) == ("boplats:A", None)
     conn.close()
+
+
+def test_seen_again_fills_in_empty_fields_but_never_overwrites(conn):
+    store.upsert_listing(conn, {"id": "homeq:A", "source": "homeq", "rent_sek": 5000}, RUN_1)
+    store.upsert_listing(
+        conn, {"id": "homeq:A", "source": "homeq", "rent_sek": 9999, "allocation": "lottery", "floor": 3}, RUN_2)
+    row = conn.execute("SELECT * FROM listings WHERE id = 'homeq:A'").fetchone()
+    assert (row["rent_sek"], row["allocation"], row["floor"]) == (5000, "lottery", 3)  # gaps filled, rent kept
+
+
+def test_ids_with_allocation_lists_only_listings_whose_page_was_read(conn):
+    store.upsert_listing(conn, {"id": "homeq:1", "source": "homeq", "allocation": "unknown"}, RUN_1)
+    store.upsert_listing(conn, {"id": "homeq:2", "source": "homeq"}, RUN_1)
+    store.upsert_listing(conn, {"id": "boplats:3", "source": "boplats", "allocation": "queue"}, RUN_1)
+    assert store.ids_with_allocation(conn, "homeq") == {"homeq:1"}

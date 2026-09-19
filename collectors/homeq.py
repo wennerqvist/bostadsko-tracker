@@ -9,6 +9,7 @@ uses, so HomeQ can change them without notice. The login response contains
 personal details; only the token is ever read from it.
 """
 
+import json
 import os
 import re
 import time
@@ -30,6 +31,9 @@ WANTED_KOMMUNER = {
 USER_AGENT = "bostadsko-tracker (personal use)"
 PAUSE_SECONDS = 1.5
 MAX_PAGES = 30  # safety stop, so a misbehaving API can't keep us looping
+MAX_PAGE_FAILURES = 5  # this many listing pages failing in a row: stop fetching for this run
+# How the landlord picks the tenant, as HomeQ's listing page names it -> our allocation values.
+ALLOCATION_BY_MODE = {"queue_points": "queue", "random": "lottery", "first_come_first": "first_come"}
 ENV_PATH = Path(__file__).parent.parent / ".env"
 
 
@@ -135,6 +139,31 @@ def parse_search_response(data) -> list[dict]:
     return listings
 
 
+def parse_detail_page(html: str) -> dict:
+    """Fields only a listing's own page has (no login needed): how the landlord
+    picks the tenant, plus landlord, floor and publish date.
+
+    The page carries its data as JSON in a __NEXT_DATA__ script tag. Raises
+    HomeQError if that is missing (a redesign), so we never store "unknown" for
+    everything because of it. A listing whose selection method is missing or
+    new gets allocation "unknown": we looked, there was no answer.
+    """
+    match = re.search(r'<script id="__NEXT_DATA__"[^>]*>(.*?)</script>', html, re.S)
+    try:
+        ad = json.loads(match.group(1))["props"]["pageProps"]["objectAd"]
+    except (AttributeError, ValueError, KeyError, TypeError):
+        ad = None
+    if not isinstance(ad, dict):
+        raise HomeQError("listing page has no objectAd data (has homeq.se changed?)")
+    floor = ad.get("floor")
+    return {
+        "allocation": ALLOCATION_BY_MODE.get(ad.get("candidate_sorting_mode"), "unknown"),
+        "landlord": _clean(ad.get("landlord_company")),
+        "floor": floor if isinstance(floor, int) and not isinstance(floor, bool) else None,
+        "published": _iso_date(ad.get("date_publish")),
+    }
+
+
 # --- fetching --------------------------------------------------------------
 
 class PoliteClient:
@@ -146,11 +175,24 @@ class PoliteClient:
         self.session.headers["User-Agent"] = USER_AGENT
         self._last_request = None
 
-    def post_json(self, url: str, body: dict, token: str | None = None):
+    def _wait(self):
         if self._last_request is not None:
             wait = self.pause - (time.monotonic() - self._last_request)
             if wait > 0:
                 time.sleep(wait)
+
+    def get_text(self, url: str) -> str:
+        self._wait()
+        try:
+            response = self.session.get(url, timeout=30)
+        finally:
+            self._last_request = time.monotonic()
+        response.raise_for_status()
+        response.encoding = "utf-8"
+        return response.text
+
+    def post_json(self, url: str, body: dict, token: str | None = None):
+        self._wait()
         headers = {"Authorization": f"JWT {token}"} if token else {}
         try:
             response = self.session.post(url, json=body, headers=headers, timeout=90)
@@ -170,8 +212,12 @@ def login(client: PoliteClient, email: str, password: str) -> str:
     return parse_token(data)
 
 
-def collect(pause=PAUSE_SECONDS) -> list[dict]:
+def collect(known_details=frozenset(), pause=PAUSE_SECONDS) -> list[dict]:
     """Log in, then fetch the search results and keep the Göteborg-region apartments.
+
+    Each listing's own page is fetched once, for listings not in `known_details`
+    (ids whose page we have already read). A page that fails is skipped and
+    tried again next run; the listing is still returned, just without those fields.
 
     The answer normally holds every listing at once (total_hits says how many).
     If it ever comes in pages, we keep asking for the next page until we have
@@ -201,4 +247,22 @@ def collect(pause=PAUSE_SECONDS) -> list[dict]:
     if not listings:
         raise HomeQError("no listings found in the search response")
     print(f"HomeQ: {len(seen_ids)} listings in Sweden, {len(listings)} in the Göteborg region.")
+
+    todo = [item for item in listings.values() if item["id"] not in known_details and item["url"]]
+    if todo:
+        print(f"HomeQ: reading the page of {len(todo)} listings not seen before "
+              f"(about {round(len(todo) * (pause + 0.3) / 60)} min).")
+    failed_in_a_row = 0
+    for number, item in enumerate(todo, start=1):
+        try:
+            item.update(parse_detail_page(client.get_text(item["url"])))
+            failed_in_a_row = 0
+        except requests.RequestException as error:
+            failed_in_a_row += 1
+            print(f"  skipped {item['address']} (will retry next run): {error}")
+            if failed_in_a_row >= MAX_PAGE_FAILURES:
+                print(f"  {failed_in_a_row} pages in a row failed, stopping for this run.")
+                break
+        if number % 25 == 0 or number == len(todo):
+            print(f"  [{number}/{len(todo)}]")
     return list(listings.values())

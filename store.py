@@ -27,7 +27,7 @@ CREATE TABLE IF NOT EXISTS listings (
     allocation         TEXT,               -- queue / queue_guidance / first_come / lottery / points_landlord
     winners_queue_days INTEGER,            -- Boplats "kötid för liknande", in days
     is_short_lease     INTEGER,            -- 1 = time-limited lease, 0 = not, NULL = unknown
-    first_seen        TEXT NOT NULL,
+    first_seen         TEXT NOT NULL,
     last_seen          TEXT NOT NULL,
     status             TEXT NOT NULL DEFAULT 'active'   -- 'active' / 'closed'
 );
@@ -89,17 +89,25 @@ def known_ids(conn, source: str) -> set[str]:
     return {row["id"] for row in rows}
 
 
-def upsert_listing(conn, listing: dict, now: str) -> bool:
-    """Insert a new listing, or just refresh last_seen on one we already have.
+def ids_with_allocation(conn, source: str) -> set[str]:
+    """Ids whose own page we have already read (that is what sets `allocation`)."""
+    rows = conn.execute("SELECT id FROM listings WHERE source = ? AND allocation IS NOT NULL", (source,))
+    return {row["id"] for row in rows}
 
-    Returns True if the listing was new. An existing row is never overwritten
-    with the (thinner) data from a search card, only touched to say "still here".
+
+def upsert_listing(conn, listing: dict, now: str) -> bool:
+    """Insert a new listing, or refresh one we already have.
+
+    Returns True if the listing was new. An existing row is never overwritten:
+    it is marked "still here" and only its empty fields are filled in, so the
+    details from a listing's own page can arrive later than the search card.
     """
     exists = conn.execute("SELECT 1 FROM listings WHERE id = ?", (listing["id"],)).fetchone()
     if exists:
+        fill = ", ".join(f"{field} = COALESCE({field}, ?)" for field in LISTING_FIELDS)
         conn.execute(
-            "UPDATE listings SET last_seen = ?, status = 'active' WHERE id = ?",
-            (now, listing["id"]),
+            f"UPDATE listings SET last_seen = ?, status = 'active', {fill} WHERE id = ?",
+            [now, *[listing.get(field) for field in LISTING_FIELDS], listing["id"]],
         )
         return False
 
