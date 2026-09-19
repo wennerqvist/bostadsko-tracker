@@ -153,3 +153,43 @@ def test_a_broken_dates_file_stops_the_run_before_fetching(tmp_path, monkeypatch
     code = collect.main([], db_path=tmp_path / "test.db", export_path=tmp_path / "listings.json", me_path=me)
     assert code == 1
     assert not (tmp_path / "listings.json").exists()
+
+
+# --- HomeQ points readings ----------------------------------------------------
+
+def test_a_points_reading_is_saved_exported_and_scored(tmp_path, run):
+    me = tmp_path / "me.json"
+    me.write_text('{"boplats_registered": "2000-01-01", "homeq_verified": "2000-01-01"}', encoding="utf-8")
+    read = listing("homeq", 1, allocation="queue", insight_frame="queue_points_info", points_needed_top10=2546)
+    unread = listing("homeq", 2, allocation="queue")  # not read this run: no snapshot row
+    code, rows = run([], [read, unread], me_path=me)
+    by_id = {row["id"]: row for row in rows}
+    assert by_id["homeq:1"]["points_needed_top10"] == 2546 and by_id["homeq:1"]["bucket"] == "likely"
+    assert by_id["homeq:2"]["points_needed_top10"] is None and by_id["homeq:2"]["bucket"] is None
+
+    conn = store.connect(tmp_path / "test.db")
+    saved = [(r["listing_id"], r["frame"]) for r in conn.execute("SELECT listing_id, frame FROM snapshots")]
+    conn.close()
+    assert saved == [("homeq:1", "queue_points_info")]
+
+
+def test_a_reading_without_a_figure_is_saved_so_it_is_not_asked_again_at_once(tmp_path, run):
+    run([], [listing("homeq", 1, insight_frame="first_to_apply")])
+    conn = store.connect(tmp_path / "test.db")
+    assert store.latest_insight_times(conn, "homeq") == {"homeq:1": "2026-09-19T01:00:00+00:00"}
+    conn.close()
+
+
+def test_the_collector_is_told_what_was_read_recently_and_where_the_cutoff_is(tmp_path, run, monkeypatch):
+    run([], [listing("homeq", 1, insight_frame="first_to_apply")])  # run 1, at 01:00
+    asked = {}
+
+    def spy(*args, **kwargs):
+        asked.update(kwargs)
+        return [listing("homeq", 1)]
+
+    monkeypatch.setattr(homeq, "collect", spy)
+    collect.main([], db_path=tmp_path / "test.db", export_path=tmp_path / "listings.json",
+                 geocoder=FakeGeocoder(), me_path=tmp_path / "no-me.json")  # run 2, at 02:00
+    assert asked["last_insight"] == {"homeq:1": "2026-09-19T01:00:00+00:00"}
+    assert asked["insight_cutoff"] == "2026-09-18T06:00:00+00:00"  # 20 hours before this run

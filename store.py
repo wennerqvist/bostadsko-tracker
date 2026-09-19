@@ -37,7 +37,8 @@ CREATE TABLE IF NOT EXISTS snapshots (
     listing_id          TEXT NOT NULL REFERENCES listings(id),
     taken_at            TEXT NOT NULL,
     applicants          INTEGER,
-    points_needed_top10 INTEGER
+    points_needed_top10 INTEGER,
+    frame               TEXT               -- HomeQ free_insights "frame": queue_points_info (has a number), first_to_apply (none)
 );
 CREATE INDEX IF NOT EXISTS snapshots_by_listing ON snapshots(listing_id, taken_at);
 
@@ -62,7 +63,10 @@ LISTING_FIELDS = [
 
 # Columns added after the first version. CREATE TABLE IF NOT EXISTS leaves an
 # existing database alone, so connect() adds any of these that are missing.
-ADDED_COLUMNS = {"is_short_lease": "INTEGER"}
+ADDED_COLUMNS = {
+    "listings": {"is_short_lease": "INTEGER"},
+    "snapshots": {"frame": "TEXT"},
+}
 
 
 def now_iso() -> str:
@@ -76,10 +80,11 @@ def connect(path=DEFAULT_DB) -> sqlite3.Connection:
     conn = sqlite3.connect(path)
     conn.row_factory = sqlite3.Row
     conn.executescript(SCHEMA)
-    have = {row["name"] for row in conn.execute("PRAGMA table_info(listings)")}
-    for column, kind in ADDED_COLUMNS.items():
-        if column not in have:
-            conn.execute(f"ALTER TABLE listings ADD COLUMN {column} {kind}")
+    for table, columns in ADDED_COLUMNS.items():
+        have = {row["name"] for row in conn.execute(f"PRAGMA table_info({table})")}
+        for column, kind in columns.items():
+            if column not in have:
+                conn.execute(f"ALTER TABLE {table} ADD COLUMN {column} {kind}")
     return conn
 
 
@@ -93,6 +98,17 @@ def ids_with_allocation(conn, source: str) -> set[str]:
     """Ids whose own page we have already read (that is what sets `allocation`)."""
     rows = conn.execute("SELECT id FROM listings WHERE source = ? AND allocation IS NOT NULL", (source,))
     return {row["id"] for row in rows}
+
+
+def latest_insight_times(conn, source: str) -> dict[str, str]:
+    """When each listing's HomeQ points figure was last read: {id: time}. Never-read listings are absent."""
+    rows = conn.execute(
+        "SELECT s.listing_id, MAX(s.taken_at) AS last FROM snapshots s"
+        " JOIN listings l ON l.id = s.listing_id"
+        " WHERE l.source = ? AND s.frame IS NOT NULL GROUP BY s.listing_id",
+        (source,),
+    )
+    return {row["listing_id"]: row["last"] for row in rows}
 
 
 def upsert_listing(conn, listing: dict, now: str) -> bool:
@@ -133,12 +149,12 @@ def set_coordinates(conn, listing_id: str, lat: float, lon: float):
     conn.execute("UPDATE listings SET lat = ?, lon = ? WHERE id = ?", (lat, lon, listing_id))
 
 
-def snapshot(conn, listing_id: str, taken_at: str, applicants=None, points_needed_top10=None):
-    """Record the numbers that change over time, one row per listing per run."""
+def snapshot(conn, listing_id: str, taken_at: str, applicants=None, points_needed_top10=None, frame=None):
+    """Record the numbers that change over time, one row per listing per reading."""
     conn.execute(
-        "INSERT INTO snapshots (listing_id, taken_at, applicants, points_needed_top10)"
-        " VALUES (?, ?, ?, ?)",
-        (listing_id, taken_at, applicants, points_needed_top10),
+        "INSERT INTO snapshots (listing_id, taken_at, applicants, points_needed_top10, frame)"
+        " VALUES (?, ?, ?, ?, ?)",
+        (listing_id, taken_at, applicants, points_needed_top10, frame),
     )
 
 

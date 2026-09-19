@@ -110,7 +110,7 @@ def _score_boplats(listing, my_days, today):
 def _score_homeq(listing, my_days):
     needed = listing.get("points_needed_top10")
     if not needed:
-        return None, "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
+        return None, "HomeQ visar ingen poänggräns för den här annonsen (än), så chansen kan inte räknas ut."
 
     bucket = "likely" if my_days >= needed else "possible" if my_days >= needed * HOMEQ_POSSIBLE_RATIO else "unlikely"
     note = f"Dina {_n(my_days)} poäng mot {_n(needed)} som krävs för topp 10."

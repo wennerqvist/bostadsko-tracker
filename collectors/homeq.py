@@ -20,6 +20,7 @@ import requests
 
 LOGIN_URL = "https://api.homeq.se/api/v1/user/profile/login"
 SEARCH_URL = "https://api.homeq.se/api/v3/search"
+INSIGHTS_URL = "https://api.homeq.se/api/v3/free_insights/{id}/"  # HomeQ's own "free" tier: top-10 points, when shown
 SITE_URL = "https://www.homeq.se/"
 SHAPE = "metropolitan_area.8"  # HomeQ's id for the Göteborg area (the server ignores it, see WANTED_KOMMUNER)
 # The search returns all of Sweden in one 8 MB answer, so we keep only these
@@ -32,6 +33,7 @@ USER_AGENT = "bostadsko-tracker (personal use)"
 PAUSE_SECONDS = 1.5
 MAX_PAGES = 30  # safety stop, so a misbehaving API can't keep us looping
 MAX_PAGE_FAILURES = 5  # this many listing pages failing in a row: stop fetching for this run
+MAX_INSIGHTS_PER_RUN = 150  # readings per run, oldest first, so a first run or a long gap never means a huge burst
 # How the landlord picks the tenant, as HomeQ's listing page names it -> our allocation values.
 ALLOCATION_BY_MODE = {"queue_points": "queue", "random": "lottery", "first_come_first": "first_come"}
 ENV_PATH = Path(__file__).parent.parent / ".env"
@@ -164,6 +166,24 @@ def parse_detail_page(html: str) -> dict:
     }
 
 
+def parse_insights(data) -> dict:
+    """HomeQ's free_insights answer -> {'insight_frame': ..., 'points_needed_top10': ...}.
+
+    'frame' says what HomeQ shows on the listing: queue_points_info comes with
+    queue_points_top_10 (the points that give a place among the top 10 applicants),
+    first_to_apply comes without a number. We keep the frame text as it is and only
+    trust the number. Raises HomeQError if there is no frame (has HomeQ changed?).
+    """
+    frame = _clean(data.get("frame")) if isinstance(data, dict) else None
+    if frame is None:
+        raise HomeQError("insights answer has no 'frame' (has HomeQ changed?)")
+    points = data.get("queue_points_top_10")
+    return {
+        "insight_frame": frame,
+        "points_needed_top10": points if isinstance(points, int) and not isinstance(points, bool) else None,
+    }
+
+
 # --- fetching --------------------------------------------------------------
 
 class PoliteClient:
@@ -191,6 +211,15 @@ class PoliteClient:
         response.encoding = "utf-8"
         return response.text
 
+    def get_json(self, url: str, token: str):
+        self._wait()
+        try:
+            response = self.session.get(url, headers={"Authorization": f"JWT {token}"}, timeout=30)
+        finally:
+            self._last_request = time.monotonic()
+        response.raise_for_status()
+        return response.json()
+
     def post_json(self, url: str, body: dict, token: str | None = None):
         self._wait()
         headers = {"Authorization": f"JWT {token}"} if token else {}
@@ -212,7 +241,34 @@ def login(client: PoliteClient, email: str, password: str) -> str:
     return parse_token(data)
 
 
-def collect(known_details=frozenset(), pause=PAUSE_SECONDS) -> list[dict]:
+def read_insights(client, token, listings, last_insight, insight_cutoff):
+    """Add 'insight_frame' and 'points_needed_top10' to listings whose last reading is older than the cutoff.
+
+    `last_insight` is {id: time of last reading}; a listing never read counts as oldest.
+    An empty cutoff reads nothing. A reading that fails is skipped and tried next run.
+    """
+    todo = [item for item in listings if last_insight.get(item["id"], "") < insight_cutoff]
+    todo.sort(key=lambda item: last_insight.get(item["id"], ""))  # never read first, then the stalest
+    todo = todo[:MAX_INSIGHTS_PER_RUN]
+    if todo:
+        print(f"HomeQ: reading the points figure of {len(todo)} listings.")
+    failed_in_a_row = 0
+    for item in todo:
+        try:
+            item.update(parse_insights(client.get_json(INSIGHTS_URL.format(id=item["id"].split(":", 1)[1]), token)))
+            failed_in_a_row = 0
+        except requests.RequestException as error:
+            failed_in_a_row += 1
+            print(f"  skipped points for {item['address']} (will retry next run): {error}")
+            if failed_in_a_row >= MAX_PAGE_FAILURES:
+                print(f"  {failed_in_a_row} readings in a row failed, stopping for this run.")
+                break
+        except HomeQError as error:  # the answer looks different: an extra, so do not fail the whole run
+            print(f"  points readings stopped for this run: {error}")
+            break
+
+
+def collect(known_details=frozenset(), pause=PAUSE_SECONDS, last_insight=None, insight_cutoff="") -> list[dict]:
     """Log in, then fetch the search results and keep the Göteborg-region apartments.
 
     Each listing's own page is fetched once, for listings not in `known_details`
@@ -265,4 +321,6 @@ def collect(known_details=frozenset(), pause=PAUSE_SECONDS) -> list[dict]:
                 break
         if number % 25 == 0 or number == len(todo):
             print(f"  [{number}/{len(todo)}]")
+
+    read_insights(client, token, list(listings.values()), last_insight or {}, insight_cutoff)
     return list(listings.values())

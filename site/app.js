@@ -243,6 +243,7 @@ const kr = (v) => (v == null ? null : `${numberFormat.format(v)} kr/mån`);
 const m2 = (v) => (v == null ? null : `${numberFormat.format(v)} m²`);
 const rooms = (v) => (v == null ? null : `${numberFormat.format(v)} rum`);
 const days = (v) => (v == null ? null : `${numberFormat.format(v)} dagar`);
+const points = (v) => (v == null ? null : `${numberFormat.format(v)} poäng`);
 
 function allocationLabel(l) {
   switch (l.allocation) {
@@ -268,6 +269,7 @@ function cardHtml(l, f) {
     ["Sökande", l.applicants],
     ["Tilldelning", allocationLabel(l)],
     ["Vinnarnas kötid", days(l.winners_queue_days)], // kötid för vinnarna av liknande lägenheter
+    ["Topp 10 kräver", points(l.points_needed_top10)], // HomeQ: poäng som ger plats bland de 10 första sökande
     ["Hyresvärd", l.landlord],
   ].filter(([, value]) => value != null && value !== "");
 

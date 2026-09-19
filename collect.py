@@ -6,7 +6,7 @@ Usage:  python collect.py [--no-alert]
 import argparse
 import json
 import sys
-from datetime import date
+from datetime import date, datetime, timedelta
 from pathlib import Path
 
 import requests
@@ -17,6 +17,7 @@ import store
 from collectors import boplats, homeq
 
 EXPORT_PATH = Path(__file__).parent / "site" / "listings.json"
+INSIGHT_MAX_AGE = timedelta(hours=20)  # a listing's HomeQ points figure is read again after this long
 
 
 def export_json(conn, path=EXPORT_PATH, me=None, today=None) -> int:
@@ -42,9 +43,10 @@ def save(conn, source: str, listings: list[dict], now: str, snapshots=True) -> t
     """
     with conn:
         new = sum(store.upsert_listing(conn, item, now) for item in listings)
-        if snapshots:
-            for item in listings:
-                store.snapshot(conn, item["id"], now, applicants=item.get("applicants"))
+        for item in listings:
+            if snapshots or "insight_frame" in item:  # HomeQ: only listings whose points were read this run
+                store.snapshot(conn, item["id"], now, applicants=item.get("applicants"),
+                               points_needed_top10=item.get("points_needed_top10"), frame=item.get("insight_frame"))
         closed = store.close_unseen(conn, source, now)
     return new, closed
 
@@ -91,12 +93,17 @@ def main(argv=None, db_path=store.DEFAULT_DB, export_path=EXPORT_PATH, geocoder=
     conn = store.connect(db_path)
     now = store.now_iso()
 
-    # (name, source id, how to fetch, errors that mean "this site failed", save snapshots?)
+    insight_cutoff = (datetime.fromisoformat(now) - INSIGHT_MAX_AGE).isoformat(timespec="seconds")
+
+    # (name, source id, how to fetch, errors that mean "this site failed", save snapshots for every listing?)
     sources = [
         ("Boplats", "boplats", lambda: boplats.collect(store.known_ids(conn, "boplats")),
          (boplats.PageChanged, requests.RequestException), True),
-        # HomeQ gives no applicant counts, so a snapshot row would hold nothing.
-        ("HomeQ", "homeq", lambda: homeq.collect(store.ids_with_allocation(conn, "homeq")),
+        # HomeQ gives no applicant counts; it only gets a snapshot row when its points figure was read.
+        ("HomeQ", "homeq",
+         lambda: homeq.collect(store.ids_with_allocation(conn, "homeq"),
+                               last_insight=store.latest_insight_times(conn, "homeq"),
+                               insight_cutoff=insight_cutoff),
          (homeq.HomeQError, requests.RequestException), False),
     ]
 

@@ -143,9 +143,18 @@ class FakeClient:
     calls = []
     pages = {}  # url -> html, or an exception to raise; anything else gets PAGE
     page_calls = []
+    insights = {}  # url -> answer, or an exception to raise; anything else gets a "first_to_apply" answer
+    insight_calls = []  # (url, token)
 
     def __init__(self, pause=0):
         pass
+
+    def get_json(self, url, token):
+        FakeClient.insight_calls.append((url, token))
+        answer = FakeClient.insights.get(url, {"frame": "first_to_apply"})
+        if isinstance(answer, Exception):
+            raise answer
+        return answer
 
     def get_text(self, url):
         FakeClient.page_calls.append(url)
@@ -167,6 +176,8 @@ def fake(monkeypatch):
     FakeClient.calls = []
     FakeClient.page_calls = []
     FakeClient.pages = {}
+    FakeClient.insights = {}
+    FakeClient.insight_calls = []
     monkeypatch.setattr(homeq, "PoliteClient", FakeClient)
     monkeypatch.setattr(homeq, "load_credentials", lambda: ("me@example.com", "pw"))
     return FakeClient
@@ -291,3 +302,107 @@ def test_a_redesigned_listing_page_fails_the_whole_run(fake):
     fake.pages = {"https://www.homeq.se/lagenhet/1": "<html>new design</html>"}
     with pytest.raises(homeq.HomeQError):
         homeq.collect(pause=0)
+
+
+# --- points figure ("free insights") -----------------------------------------
+# Two real answers saved 2026-09-19: a strict listing (has the figure) and a guidance one (has none).
+
+def insight(name):
+    return json.loads((SAMPLES / name).read_text(encoding="utf-8"))
+
+
+def test_insights_with_a_figure_give_the_points_for_top_10():
+    assert homeq.parse_insights(insight("homeq_insights_strict.json")) == {
+        "insight_frame": "queue_points_info", "points_needed_top10": 2546}
+
+
+def test_insights_without_a_figure_keep_the_frame_and_give_no_points():
+    assert homeq.parse_insights(insight("homeq_insights_first_to_apply.json")) == {
+        "insight_frame": "first_to_apply", "points_needed_top10": None}
+
+
+@pytest.mark.parametrize("points", ["2546", True, 12.5, None])
+def test_a_figure_that_is_not_a_whole_number_is_ignored(points):
+    assert homeq.parse_insights({"frame": "queue_points_info", "queue_points_top_10": points})["points_needed_top10"] is None
+
+
+@pytest.mark.parametrize("bad", [None, [], {}, {"frame": ""}, {"frame": 5}, "text"])
+def test_insights_that_look_different_raise(bad):
+    with pytest.raises(homeq.HomeQError):
+        homeq.parse_insights(bad)
+
+
+INSIGHT_URL = "https://api.homeq.se/api/v3/free_insights/{}/"
+
+
+def test_no_cutoff_means_no_readings(fake):
+    fake.responses = [LOGIN_OK, result(1, 2)]
+    found = homeq.collect(pause=0)
+    assert fake.insight_calls == []
+    assert "insight_frame" not in found[0]
+
+
+def test_only_stale_listings_are_read_and_never_read_ones_go_first(fake):
+    fake.responses = [LOGIN_OK, result(1, 2, 3)]
+    last = {"homeq:1": "2026-09-19T12:00:00+00:00", "homeq:2": "2026-09-18T01:00:00+00:00"}  # 1 fresh, 2 stale, 3 never
+    found = {item["id"]: item for item in
+             homeq.collect(pause=0, last_insight=last, insight_cutoff="2026-09-19T00:00:00+00:00")}
+    assert fake.insight_calls == [(INSIGHT_URL.format(3), "T"), (INSIGHT_URL.format(2), "T")]  # sent as the login token
+    assert "insight_frame" not in found["homeq:1"]
+    assert found["homeq:2"]["insight_frame"] == "first_to_apply"
+
+
+def test_the_figure_is_added_to_the_listing(fake):
+    fake.responses = [LOGIN_OK, result(1)]
+    fake.insights = {INSIGHT_URL.format(1): insight("homeq_insights_strict.json")}
+    found = homeq.collect(pause=0, insight_cutoff="9")
+    assert (found[0]["insight_frame"], found[0]["points_needed_top10"]) == ("queue_points_info", 2546)
+
+
+def test_readings_per_run_are_capped(fake, monkeypatch):
+    monkeypatch.setattr(homeq, "MAX_INSIGHTS_PER_RUN", 2)
+    fake.responses = [LOGIN_OK, result(*range(1, 6))]
+    homeq.collect(pause=0, insight_cutoff="9")
+    assert len(fake.insight_calls) == 2
+
+
+def test_a_failed_reading_is_skipped_and_the_rest_go_on(fake):
+    fake.responses = [LOGIN_OK, result(1, 2)]
+    fake.insights = {INSIGHT_URL.format(1): requests.ConnectionError("boom")}
+    found = {item["id"]: item for item in homeq.collect(pause=0, insight_cutoff="9")}
+    assert set(found) == {"homeq:1", "homeq:2"}  # still returned, so it is not marked closed
+    assert "insight_frame" not in found["homeq:1"] and found["homeq:2"]["insight_frame"] == "first_to_apply"
+
+
+def test_repeated_failed_readings_stop_for_this_run(fake):
+    fake.responses = [LOGIN_OK, result(*range(1, 11))]
+    fake.insights = {INSIGHT_URL.format(i): requests.ConnectionError("down") for i in range(1, 11)}
+    assert len(homeq.collect(pause=0, insight_cutoff="9")) == 10
+    assert len(fake.insight_calls) == homeq.MAX_PAGE_FAILURES
+
+
+def test_a_changed_insights_answer_stops_the_readings_but_not_the_run(fake):
+    fake.responses = [LOGIN_OK, result(1, 2, 3)]
+    fake.insights = {INSIGHT_URL.format(1): {"something": "new"}}
+    found = homeq.collect(pause=0, insight_cutoff="9")
+    assert len(found) == 3  # the listings themselves are still collected
+    assert len(fake.insight_calls) == 1 and all("insight_frame" not in item for item in found)
+
+
+def test_get_json_sends_the_token_as_jwt():
+    sent = {}
+
+    class FakeSession:
+        headers = {}
+
+        def get(self, url, headers=None, timeout=None):
+            sent["headers"] = headers
+            response = requests.Response()
+            response.status_code = 200
+            response._content = b'{"frame": "x"}'
+            return response
+
+    client = homeq.PoliteClient(pause=0)
+    client.session = FakeSession()
+    assert client.get_json("https://example.com", "T") == {"frame": "x"}
+    assert sent["headers"] == {"Authorization": "JWT T"}

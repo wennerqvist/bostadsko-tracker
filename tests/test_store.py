@@ -117,3 +117,38 @@ def test_ids_with_allocation_lists_only_listings_whose_page_was_read(conn):
     store.upsert_listing(conn, {"id": "homeq:2", "source": "homeq"}, RUN_1)
     store.upsert_listing(conn, {"id": "boplats:3", "source": "boplats", "allocation": "queue"}, RUN_1)
     assert store.ids_with_allocation(conn, "homeq") == {"homeq:1"}
+
+
+# --- HomeQ points readings -----------------------------------------------------
+
+def test_latest_insight_times_lists_the_last_reading_of_homeq_listings_only(conn):
+    for listing_id, source in (("homeq:1", "homeq"), ("homeq:2", "homeq"), ("boplats:3", "boplats")):
+        store.upsert_listing(conn, {"id": listing_id, "source": source}, RUN_1)
+    store.snapshot(conn, "homeq:1", RUN_1, frame="first_to_apply")
+    store.snapshot(conn, "homeq:1", RUN_2, points_needed_top10=2546, frame="queue_points_info")
+    store.snapshot(conn, "boplats:3", RUN_2, applicants=4)  # no frame: not a points reading
+    assert store.latest_insight_times(conn, "homeq") == {"homeq:1": RUN_2}  # homeq:2 was never read
+    assert store.latest_insight_times(conn, "boplats") == {}
+
+
+def test_export_shows_the_latest_points_figure(conn):
+    store.upsert_listing(conn, {"id": "homeq:1", "source": "homeq"}, RUN_1)
+    store.snapshot(conn, "homeq:1", RUN_1, points_needed_top10=2400, frame="queue_points_info")
+    store.snapshot(conn, "homeq:1", RUN_2, points_needed_top10=2546, frame="queue_points_info")
+    assert store.export_rows(conn)[0]["points_needed_top10"] == 2546
+
+
+def test_old_database_without_the_frame_column_is_upgraded(tmp_path):
+    import sqlite3
+    path = tmp_path / "old.db"
+    old = sqlite3.connect(path)
+    old.executescript("CREATE TABLE snapshots (id INTEGER PRIMARY KEY AUTOINCREMENT, listing_id TEXT NOT NULL,"
+                      " taken_at TEXT NOT NULL, applicants INTEGER, points_needed_top10 INTEGER);"
+                      "INSERT INTO snapshots (listing_id, taken_at, applicants) VALUES ('boplats:A', 'x', 7);")
+    old.commit()
+    old.close()
+
+    conn = store.connect(path)  # must not fail, and must keep the existing row
+    row = conn.execute("SELECT applicants, frame FROM snapshots").fetchone()
+    assert (row["applicants"], row["frame"]) == (7, None)
+    conn.close()
