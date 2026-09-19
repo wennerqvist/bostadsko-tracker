@@ -6,22 +6,31 @@ Usage:  python collect.py [--no-alert]
 import argparse
 import json
 import sys
+from datetime import date
 from pathlib import Path
 
 import requests
 
 import geocode
+import score
 import store
 from collectors import boplats, homeq
 
 EXPORT_PATH = Path(__file__).parent / "site" / "listings.json"
 
 
-def export_json(conn, path=EXPORT_PATH) -> int:
-    """Write all active listings (with their latest applicant count) as JSON."""
+def export_json(conn, path=EXPORT_PATH, me=None, today=None) -> int:
+    """Write all active listings (with applicant count and chance bucket) as JSON.
+
+    Next to it goes queue.json: your queue start dates, so the page can count days itself.
+    """
+    path = Path(path)
+    me = me or score.load_me()
     rows = store.export_rows(conn)
+    score.add_scores(rows, me, today or date.today())
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(rows, ensure_ascii=False, indent=2), encoding="utf-8")
+    path.with_name("queue.json").write_text(json.dumps(score.queue_json(me), indent=2), encoding="utf-8")
     return len(rows)
 
 
@@ -65,11 +74,19 @@ def add_coordinates(conn, geocoder) -> tuple[int, int]:
     return found, missing
 
 
-def main(argv=None, db_path=store.DEFAULT_DB, export_path=EXPORT_PATH, geocoder=None) -> int:
+def main(argv=None, db_path=store.DEFAULT_DB, export_path=EXPORT_PATH, geocoder=None, me_path=None) -> int:
     parser = argparse.ArgumentParser(description="Collect apartment listings.")
     parser.add_argument("--no-alert", action="store_true",
                         help="skip Telegram alerts (there are none yet, so this changes nothing today)")
     parser.parse_args(argv)
+
+    try:
+        me = score.load_me(me_path)  # check this first, so a typo in the dates stops us before any fetching
+    except score.MeError as error:
+        print(f"Cannot read your queue dates: {error}", file=sys.stderr)
+        return 1
+    if None in me.values():
+        print("Queue dates are missing (fill in me.local.json): listings get no chance score.", file=sys.stderr)
 
     conn = store.connect(db_path)
     now = store.now_iso()
@@ -99,7 +116,7 @@ def main(argv=None, db_path=store.DEFAULT_DB, export_path=EXPORT_PATH, geocoder=
     if found or missing:
         print(f"Coordinates: {found} found, {missing} not found.")
 
-    exported = export_json(conn, export_path)
+    exported = export_json(conn, export_path, me)
     print(f"Done: {exported} active listings written to {Path(export_path).name}.")
     if failed:
         print(f"Failed: {', '.join(failed)}", file=sys.stderr)

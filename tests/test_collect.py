@@ -33,7 +33,7 @@ def run(tmp_path, monkeypatch):
     """Runs collect.main() with the given fake results; returns (exit code, rows in the JSON export)."""
     runs = iter(range(1, 100))  # each run gets its own timestamp, like runs hours apart
 
-    def go(boplats_result, homeq_result, geocoder=None):
+    def go(boplats_result, homeq_result, geocoder=None, me_path=None):
         monkeypatch.setattr(store, "now_iso", lambda: f"2026-09-19T{next(runs):02d}:00:00+00:00")
 
         def fake(result):
@@ -47,7 +47,7 @@ def run(tmp_path, monkeypatch):
         monkeypatch.setattr(homeq, "collect", fake(homeq_result))
         export = tmp_path / "listings.json"
         code = collect.main([], db_path=tmp_path / "test.db", export_path=export,
-                            geocoder=geocoder or FakeGeocoder())
+                            geocoder=geocoder or FakeGeocoder(), me_path=me_path or tmp_path / "no-me.json")
         return code, json.loads(export.read_text(encoding="utf-8"))
     return go
 
@@ -122,3 +122,34 @@ def test_lookup_service_failing_stops_lookups_but_keeps_everything_else(run):
     assert geocoder.asked == ["Street 1"]  # gave up after the first failure
     assert code == 0
     assert {row["id"] for row in rows} == {"boplats:1", "boplats:2"}
+
+
+# --- queue dates and chance score --------------------------------------------
+
+def test_export_has_a_chance_bucket_and_a_queue_file(tmp_path, run):
+    me = tmp_path / "me.json"
+    me.write_text('{"boplats_registered": "2000-01-01", "homeq_verified": "2000-01-01"}', encoding="utf-8")
+    code, rows = run([listing("boplats", 1, allocation="queue", winners_queue_days=1000)], [], me_path=me)
+    assert code == 0
+    assert rows[0]["bucket"] == "likely"  # about 9 000 days against 1 000
+    queue = json.loads((tmp_path / "queue.json").read_text(encoding="utf-8"))
+    assert queue == {"boplats_start": "2000-01-01", "homeq_start": "2000-01-01"}
+
+
+def test_without_queue_dates_listings_are_exported_but_not_scored(run):
+    code, rows = run([listing("boplats", 1, allocation="queue", winners_queue_days=1000)], [])
+    assert code == 0
+    assert rows[0]["bucket"] is None
+
+
+def test_a_broken_dates_file_stops_the_run_before_fetching(tmp_path, monkeypatch):
+    def must_not_be_called(*args, **kwargs):
+        raise AssertionError("fetched although the dates file is broken")
+    monkeypatch.setattr(boplats, "collect", must_not_be_called)
+    monkeypatch.setattr(homeq, "collect", must_not_be_called)
+    me = tmp_path / "me.json"
+    me.write_text('{"boplats_registered": "21/4/2023"}', encoding="utf-8")
+
+    code = collect.main([], db_path=tmp_path / "test.db", export_path=tmp_path / "listings.json", me_path=me)
+    assert code == 1
+    assert not (tmp_path / "listings.json").exists()
