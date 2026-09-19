@@ -1,13 +1,22 @@
 "use strict";
 
-// Läser listings.json, ritar en pin per adress och gråar pins som inte matchar
-// filtren. För att färglägga pins efter chans senare: ändra pinColour().
+// Läser listings.json, ritar en pin per adress (fyllningen visar chansen, ringen
+// visar sajten) och gråar pins som inte matchar filtren. Chansen (bucket) räknas
+// ut av score.py, inte här. queue.json ger dina ködatum till kötidsrutan.
 
 const STORAGE_KEY = "bostadsko.filters.v2";
 const SOURCES = {
   boplats: { name: "Boplats", colour: "#1f6fb4" },
   homeq: { name: "HomeQ", colour: "#d9730d" },
 };
+const CHANCE = {
+  likely: { label: "God chans", colour: "#1e7e3a", text: "#fff" },
+  possible: { label: "Möjlig", colour: "#f2b705", text: "#1c1c1c" },
+  unlikely: { label: "Låg chans", colour: "#c0392b", text: "#fff" },
+};
+const UNKNOWN_CHANCE = { label: "Okänd chans", colour: "#eef1f4", text: "#1c1c1c" };
+const CHANCE_ORDER = ["likely", "possible", "unlikely"]; // bäst först
+const chanceOf = (l) => CHANCE[l.bucket] ?? UNKNOWN_CHANCE;
 const GREY = "#b8b8b8";
 const AREA_STYLE = { color: "#6a3fb5", weight: 2, dashArray: "6 4", fillOpacity: 0.08 };
 const SAFE_LINK = /^https:\/\/(www\.)?(boplats|homeq)\.se\//; // länka bara till de två sajter vi hämtar från
@@ -194,8 +203,10 @@ function stopDrawing(save) {
 
 // --- pins ------------------------------------------------------------------
 
+// Pinnens fyllning = bästa chansen bland annonserna på adressen.
 function pinColour(hits) {
-  return SOURCES[hits[0].source]?.colour ?? GREY;
+  const best = CHANCE_ORDER.find((bucket) => hits.some((l) => l.bucket === bucket));
+  return (CHANCE[best] ?? UNKNOWN_CHANCE).colour;
 }
 
 function pinStyle(group, f) {
@@ -204,11 +215,9 @@ function pinStyle(group, f) {
   if (hits.length === 0) {
     return { radius, color: "#9a9a9a", weight: 1, fillColor: GREY, fillOpacity: 0.5, dashArray: null, hits };
   }
-  const colour = pinColour(hits);
-  if (hits.every((l) => l.is_short_lease === 1)) { // ihålig, streckad ring
-    return { radius, color: colour, weight: 3, fillColor: colour, fillOpacity: 0.2, dashArray: "3 3", hits };
-  }
-  return { radius, color: "#fff", weight: 1.5, fillColor: colour, fillOpacity: 0.88, dashArray: null, hits };
+  const ring = SOURCES[hits[0].source]?.colour ?? "#555"; // ringen visar sajten
+  const dashArray = hits.every((l) => l.is_short_lease === 1) ? "3 3" : null; // streckad ring = korttidskontrakt
+  return { radius, color: ring, weight: 3, fillColor: pinColour(hits), fillOpacity: 0.95, dashArray, hits };
 }
 
 function buildGroups() {
@@ -270,6 +279,10 @@ function cardHtml(l, f) {
     <div class="card${matches(l, f) ? "" : " dim"}">
       <div class="title">${esc(l.address ?? "(adress saknas)")}${l.is_short_lease === 1 ? '<span class="badge">Korttidskontrakt</span>' : ""}</div>
       <div class="sub">${esc(place)}${place ? " · " : ""}<span class="source ${esc(l.source)}">${esc(source?.name ?? l.source)}</span></div>
+      <div class="chance">
+        <span class="chip" style="background:${chanceOf(l).colour};color:${chanceOf(l).text}">${esc(chanceOf(l).label)}</span>
+        <span class="note">${esc(l.bucket_note ?? "")}</span>
+      </div>
       <dl>${rows.map(([label, value]) => `<dt>${esc(label)}</dt><dd${label === "Hyresvärd" ? ' class="wrap"' : ""}>${esc(value)}</dd>`).join("")}</dl>
       ${link}
     </div>`;
@@ -309,6 +322,60 @@ function apply() {
     })
     .join("");
   saveFilters();
+}
+
+// --- din kötid ----------------------------------------------------------------
+
+// Datum som dagnummer (UTC), så att skillnaden blir hela dagar oavsett tidszon och sommartid.
+const dayNumber = (iso) => {
+  const [y, m, d] = iso.split("-").map(Number);
+  return Date.UTC(y, m - 1, d) / 86400000;
+};
+const todayNumber = () => {
+  const now = new Date();
+  return Date.UTC(now.getFullYear(), now.getMonth(), now.getDate()) / 86400000;
+};
+
+function renderQueue(queue) {
+  const queues = [
+    { name: "Boplats", start: queue.boplats_start, unit: "dagar" },
+    { name: "HomeQ", start: queue.homeq_start, unit: "poäng" },
+  ];
+  const on = $("queueDate").value ? dayNumber($("queueDate").value) : null;
+
+  $("queueNow").innerHTML = queues
+    .map((q) =>
+      q.start
+        ? `<li>${esc(q.name)}: <strong>${numberFormat.format(todayNumber() - dayNumber(q.start))} ${q.unit}</strong> <span class="count">(sedan ${esc(q.start)})</span></li>`
+        : `<li>${esc(q.name)}: datum saknas (fyll i me.local.json)</li>`
+    )
+    .join("");
+
+  if (on == null) {
+    $("queueLater").textContent = "";
+  } else if (on < todayNumber()) {
+    $("queueLater").textContent = "Välj ett datum som inte har passerat.";
+  } else {
+    $("queueLater").textContent = queues
+      .filter((q) => q.start)
+      .map((q) => `${q.name} ${numberFormat.format(on - dayNumber(q.start))} ${q.unit}`)
+      .join(" · ");
+  }
+}
+
+function initQueue() {
+  fetch("queue.json", { cache: "no-cache" })
+    .then((response) => {
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      return response.json();
+    })
+    .then((queue) => {
+      renderQueue(queue);
+      $("queueDate").addEventListener("input", () => renderQueue(queue));
+    })
+    .catch((error) => {
+      $("queueNow").innerHTML = `<li class="warn">Kunde inte läsa queue.json (${esc(error.message)}).</li>`;
+    });
 }
 
 function showStatus(text, isError = false) {
@@ -351,6 +418,7 @@ function init(data) {
   apply();
 }
 
+initQueue();
 fetch("listings.json", { cache: "no-cache" })
   .then((response) => {
     if (!response.ok) throw new Error(`HTTP ${response.status}`);

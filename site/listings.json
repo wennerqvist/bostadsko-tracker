@@ -23,7 +23,9 @@
     "status": "active",
     "is_short_lease": 1,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Först till kvarn: köpoängen spelar ingen roll, den som ansöker först vinner."
   },
   {
     "id": "homeq:211245",
@@ -49,7 +51,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:211246",
@@ -75,7 +79,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:211247",
@@ -101,7 +107,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:211248",
@@ -127,7 +135,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:211249",
@@ -153,7 +163,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:217658",
@@ -179,7 +191,9 @@
     "status": "active",
     "is_short_lease": 1,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Lottning: din kötid spelar ingen roll."
   },
   {
     "id": "homeq:217662",
@@ -205,7 +219,9 @@
     "status": "active",
     "is_short_lease": 1,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Först till kvarn: köpoängen spelar ingen roll, den som ansöker först vinner."
   },
   {
     "id": "homeq:220672",
@@ -231,7 +247,9 @@
     "status": "active",
     "is_short_lease": 1,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Lottning: din kötid spelar ingen roll."
   },
   {
     "id": "homeq:220734",
@@ -257,7 +275,9 @@
     "status": "active",
     "is_short_lease": 1,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Först till kvarn: köpoängen spelar ingen roll, den som ansöker först vinner."
   },
   {
     "id": "homeq:221229",
@@ -283,7 +303,9 @@
     "status": "active",
     "is_short_lease": 1,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Först till kvarn: köpoängen spelar ingen roll, den som ansöker först vinner."
   },
   {
     "id": "homeq:226038",
@@ -309,7 +331,9 @@
     "status": "active",
     "is_short_lease": 1,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Lottning: din kötid spelar ingen roll."
   },
   {
     "id": "homeq:230976",
@@ -335,7 +359,9 @@
     "status": "active",
     "is_short_lease": 1,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Först till kvarn: köpoängen spelar ingen roll, den som ansöker först vinner."
   },
   {
     "id": "homeq:234632",
@@ -361,7 +387,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Lottning: din kötid spelar ingen roll."
   },
   {
     "id": "homeq:234755",
@@ -387,7 +415,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Först till kvarn: köpoängen spelar ingen roll, den som ansöker först vinner."
   },
   {
     "id": "homeq:238564",
@@ -413,7 +443,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:244382",
@@ -439,7 +471,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Först till kvarn: köpoängen spelar ingen roll, den som ansöker först vinner."
   },
   {
     "id": "homeq:248671",
@@ -465,7 +499,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Först till kvarn: köpoängen spelar ingen roll, den som ansöker först vinner."
   },
   {
     "id": "homeq:250062",
@@ -491,7 +527,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:251595",
@@ -517,7 +555,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Först till kvarn: köpoängen spelar ingen roll, den som ansöker först vinner."
   },
   {
     "id": "homeq:253382",
@@ -543,7 +583,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Lottning: din kötid spelar ingen roll."
   },
   {
     "id": "homeq:253484",
@@ -569,7 +611,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Lottning: din kötid spelar ingen roll."
   },
   {
     "id": "homeq:254062",
@@ -595,7 +639,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Först till kvarn: köpoängen spelar ingen roll, den som ansöker först vinner."
   },
   {
     "id": "homeq:257930",
@@ -621,7 +667,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:259232",
@@ -647,7 +695,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:259245",
@@ -673,7 +723,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:263382",
@@ -699,7 +751,9 @@
     "status": "active",
     "is_short_lease": 1,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Först till kvarn: köpoängen spelar ingen roll, den som ansöker först vinner."
   },
   {
     "id": "homeq:263751",
@@ -725,7 +779,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:265144",
@@ -751,7 +807,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Först till kvarn: köpoängen spelar ingen roll, den som ansöker först vinner."
   },
   {
     "id": "homeq:265146",
@@ -777,7 +835,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Först till kvarn: köpoängen spelar ingen roll, den som ansöker först vinner."
   },
   {
     "id": "homeq:266838",
@@ -803,7 +863,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Först till kvarn: köpoängen spelar ingen roll, den som ansöker först vinner."
   },
   {
     "id": "homeq:267055",
@@ -829,7 +891,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:267571",
@@ -855,7 +919,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:267721",
@@ -881,7 +947,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Först till kvarn: köpoängen spelar ingen roll, den som ansöker först vinner."
   },
   {
     "id": "homeq:267756",
@@ -907,7 +975,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:269775",
@@ -933,7 +1003,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:270785",
@@ -959,7 +1031,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Först till kvarn: köpoängen spelar ingen roll, den som ansöker först vinner."
   },
   {
     "id": "homeq:270836",
@@ -985,7 +1059,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:271543",
@@ -1011,7 +1087,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:271865",
@@ -1037,7 +1115,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:272147",
@@ -1063,7 +1143,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:272269",
@@ -1089,7 +1171,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Lottning: din kötid spelar ingen roll."
   },
   {
     "id": "homeq:272285",
@@ -1115,7 +1199,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Lottning: din kötid spelar ingen roll."
   },
   {
     "id": "homeq:272469",
@@ -1141,7 +1227,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Lottning: din kötid spelar ingen roll."
   },
   {
     "id": "homeq:272539",
@@ -1167,7 +1255,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Först till kvarn: köpoängen spelar ingen roll, den som ansöker först vinner."
   },
   {
     "id": "homeq:272779",
@@ -1193,7 +1283,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:273010",
@@ -1219,7 +1311,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:273168",
@@ -1245,7 +1339,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:273282",
@@ -1271,7 +1367,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Lottning: din kötid spelar ingen roll."
   },
   {
     "id": "homeq:273404",
@@ -1297,7 +1395,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:273409",
@@ -1323,7 +1423,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:273976",
@@ -1349,7 +1451,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Lottning: din kötid spelar ingen roll."
   },
   {
     "id": "homeq:273977",
@@ -1375,7 +1479,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:274021",
@@ -1401,7 +1507,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:274188",
@@ -1427,7 +1535,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Först till kvarn: köpoängen spelar ingen roll, den som ansöker först vinner."
   },
   {
     "id": "homeq:274279",
@@ -1453,7 +1563,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Först till kvarn: köpoängen spelar ingen roll, den som ansöker först vinner."
   },
   {
     "id": "homeq:274415",
@@ -1479,7 +1591,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Först till kvarn: köpoängen spelar ingen roll, den som ansöker först vinner."
   },
   {
     "id": "homeq:274416",
@@ -1505,7 +1619,9 @@
     "status": "active",
     "is_short_lease": 1,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Först till kvarn: köpoängen spelar ingen roll, den som ansöker först vinner."
   },
   {
     "id": "homeq:274586",
@@ -1531,7 +1647,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:274598",
@@ -1557,7 +1675,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Först till kvarn: köpoängen spelar ingen roll, den som ansöker först vinner."
   },
   {
     "id": "homeq:274617",
@@ -1583,7 +1703,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Lottning: din kötid spelar ingen roll."
   },
   {
     "id": "homeq:274711",
@@ -1609,7 +1731,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:275265",
@@ -1635,7 +1759,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Lottning: din kötid spelar ingen roll."
   },
   {
     "id": "homeq:275490",
@@ -1661,7 +1787,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:275496",
@@ -1687,7 +1815,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:275787",
@@ -1713,7 +1843,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:275875",
@@ -1739,7 +1871,9 @@
     "status": "active",
     "is_short_lease": 1,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Först till kvarn: köpoängen spelar ingen roll, den som ansöker först vinner."
   },
   {
     "id": "homeq:275877",
@@ -1765,7 +1899,9 @@
     "status": "active",
     "is_short_lease": 1,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Först till kvarn: köpoängen spelar ingen roll, den som ansöker först vinner."
   },
   {
     "id": "homeq:275954",
@@ -1791,7 +1927,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Lottning: din kötid spelar ingen roll."
   },
   {
     "id": "homeq:276130",
@@ -1817,7 +1955,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:276174",
@@ -1843,7 +1983,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Lottning: din kötid spelar ingen roll."
   },
   {
     "id": "homeq:276254",
@@ -1869,7 +2011,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:276256",
@@ -1895,7 +2039,9 @@
     "status": "active",
     "is_short_lease": 1,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Lottning: din kötid spelar ingen roll."
   },
   {
     "id": "homeq:276271",
@@ -1921,7 +2067,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Lottning: din kötid spelar ingen roll."
   },
   {
     "id": "homeq:276276",
@@ -1947,7 +2095,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Lottning: din kötid spelar ingen roll."
   },
   {
     "id": "homeq:276371",
@@ -1973,7 +2123,9 @@
     "status": "active",
     "is_short_lease": 1,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:276477",
@@ -1999,7 +2151,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:276528",
@@ -2025,7 +2179,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Lottning: din kötid spelar ingen roll."
   },
   {
     "id": "homeq:276566",
@@ -2051,7 +2207,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:276678",
@@ -2077,7 +2235,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:276810",
@@ -2103,7 +2263,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Lottning: din kötid spelar ingen roll."
   },
   {
     "id": "homeq:276826",
@@ -2129,7 +2291,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:276856",
@@ -2155,7 +2319,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:276857",
@@ -2181,7 +2347,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:276871",
@@ -2207,7 +2375,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:276895",
@@ -2233,7 +2403,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Lottning: din kötid spelar ingen roll."
   },
   {
     "id": "homeq:277281",
@@ -2259,7 +2431,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Lottning: din kötid spelar ingen roll."
   },
   {
     "id": "homeq:277285",
@@ -2285,7 +2459,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Lottning: din kötid spelar ingen roll."
   },
   {
     "id": "homeq:277291",
@@ -2311,7 +2487,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Först till kvarn: köpoängen spelar ingen roll, den som ansöker först vinner."
   },
   {
     "id": "homeq:277307",
@@ -2337,7 +2515,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:277308",
@@ -2363,7 +2543,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:277378",
@@ -2389,7 +2571,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Lottning: din kötid spelar ingen roll."
   },
   {
     "id": "homeq:277399",
@@ -2415,7 +2599,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:277416",
@@ -2441,7 +2627,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Lottning: din kötid spelar ingen roll."
   },
   {
     "id": "homeq:277425",
@@ -2467,7 +2655,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:277428",
@@ -2493,7 +2683,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Först till kvarn: köpoängen spelar ingen roll, den som ansöker först vinner."
   },
   {
     "id": "homeq:277459",
@@ -2519,7 +2711,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:277477",
@@ -2545,7 +2739,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:277484",
@@ -2571,7 +2767,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:277524",
@@ -2597,7 +2795,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:277604",
@@ -2623,7 +2823,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:277616",
@@ -2649,7 +2851,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Lottning: din kötid spelar ingen roll."
   },
   {
     "id": "homeq:277655",
@@ -2675,7 +2879,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:277672",
@@ -2701,7 +2907,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:277680",
@@ -2727,7 +2935,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:277684",
@@ -2753,7 +2963,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:277706",
@@ -2779,7 +2991,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:277749",
@@ -2805,7 +3019,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Först till kvarn: köpoängen spelar ingen roll, den som ansöker först vinner."
   },
   {
     "id": "homeq:277784",
@@ -2831,7 +3047,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:277848",
@@ -2857,7 +3075,9 @@
     "status": "active",
     "is_short_lease": 1,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Först till kvarn: köpoängen spelar ingen roll, den som ansöker först vinner."
   },
   {
     "id": "homeq:277927",
@@ -2883,7 +3103,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:277941",
@@ -2909,7 +3131,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:277973",
@@ -2935,7 +3159,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:277977",
@@ -2961,7 +3187,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:277986",
@@ -2987,7 +3215,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:278005",
@@ -3013,7 +3243,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Lottning: din kötid spelar ingen roll."
   },
   {
     "id": "homeq:278009",
@@ -3039,7 +3271,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:278011",
@@ -3065,7 +3299,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:278027",
@@ -3091,7 +3327,9 @@
     "status": "active",
     "is_short_lease": 1,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Lottning: din kötid spelar ingen roll."
   },
   {
     "id": "homeq:278032",
@@ -3117,7 +3355,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:278038",
@@ -3143,7 +3383,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:278040",
@@ -3169,7 +3411,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:278056",
@@ -3195,7 +3439,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:278060",
@@ -3221,7 +3467,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:278074",
@@ -3247,7 +3495,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:278075",
@@ -3273,7 +3523,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:278089",
@@ -3299,7 +3551,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:278101",
@@ -3325,7 +3579,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:278112",
@@ -3351,7 +3607,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:278144",
@@ -3377,7 +3635,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:278149",
@@ -3403,7 +3663,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:278184",
@@ -3429,7 +3691,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:278207",
@@ -3455,7 +3719,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:278209",
@@ -3481,7 +3747,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:278253",
@@ -3507,7 +3775,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Lottning: din kötid spelar ingen roll."
   },
   {
     "id": "homeq:278258",
@@ -3533,7 +3803,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:278260",
@@ -3559,7 +3831,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:278263",
@@ -3585,7 +3859,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:278277",
@@ -3611,7 +3887,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:278281",
@@ -3637,7 +3915,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:278322",
@@ -3663,7 +3943,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:278325",
@@ -3689,7 +3971,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Lottning: din kötid spelar ingen roll."
   },
   {
     "id": "homeq:278333",
@@ -3715,7 +3999,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:278334",
@@ -3741,7 +4027,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:278345",
@@ -3767,7 +4055,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:278365",
@@ -3793,7 +4083,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:278414",
@@ -3819,7 +4111,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Lottning: din kötid spelar ingen roll."
   },
   {
     "id": "homeq:278417",
@@ -3845,7 +4139,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Lottning: din kötid spelar ingen roll."
   },
   {
     "id": "homeq:278420",
@@ -3871,7 +4167,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Lottning: din kötid spelar ingen roll."
   },
   {
     "id": "homeq:278557",
@@ -3897,7 +4195,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:278579",
@@ -3923,7 +4223,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:278581",
@@ -3949,7 +4251,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:278590",
@@ -3975,7 +4279,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:278591",
@@ -4001,7 +4307,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:278593",
@@ -4027,7 +4335,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Lottning: din kötid spelar ingen roll."
   },
   {
     "id": "homeq:278603",
@@ -4053,7 +4363,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:278623",
@@ -4079,7 +4391,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:278677",
@@ -4105,7 +4419,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:278693",
@@ -4131,7 +4447,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Lottning: din kötid spelar ingen roll."
   },
   {
     "id": "homeq:278695",
@@ -4157,7 +4475,9 @@
     "status": "active",
     "is_short_lease": 1,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Lottning: din kötid spelar ingen roll."
   },
   {
     "id": "homeq:278696",
@@ -4183,7 +4503,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Lottning: din kötid spelar ingen roll."
   },
   {
     "id": "homeq:278809",
@@ -4209,7 +4531,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Lottning: din kötid spelar ingen roll."
   },
   {
     "id": "homeq:278842",
@@ -4235,7 +4559,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:278858",
@@ -4261,7 +4587,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:278863",
@@ -4287,7 +4615,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:279011",
@@ -4313,7 +4643,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:279014",
@@ -4339,7 +4671,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:279041",
@@ -4365,7 +4699,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:279066",
@@ -4391,7 +4727,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:279086",
@@ -4417,7 +4755,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:279096",
@@ -4443,7 +4783,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:279097",
@@ -4469,7 +4811,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:279098",
@@ -4495,7 +4839,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:279101",
@@ -4521,7 +4867,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:279102",
@@ -4547,7 +4895,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:279108",
@@ -4573,7 +4923,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:279111",
@@ -4599,7 +4951,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:279121",
@@ -4625,7 +4979,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:279127",
@@ -4651,7 +5007,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:279134",
@@ -4677,7 +5035,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:279152",
@@ -4703,7 +5063,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:279225",
@@ -4729,7 +5091,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:279292",
@@ -4755,7 +5119,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:279323",
@@ -4781,7 +5147,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:279334",
@@ -4807,7 +5175,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Lottning: din kötid spelar ingen roll."
   },
   {
     "id": "homeq:279360",
@@ -4833,7 +5203,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:279373",
@@ -4859,7 +5231,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Lottning: din kötid spelar ingen roll."
   },
   {
     "id": "homeq:279392",
@@ -4885,7 +5259,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:279408",
@@ -4911,7 +5287,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:279418",
@@ -4937,7 +5315,9 @@
     "status": "active",
     "is_short_lease": 1,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:279479",
@@ -4963,7 +5343,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Först till kvarn: köpoängen spelar ingen roll, den som ansöker först vinner."
   },
   {
     "id": "homeq:279580",
@@ -4989,7 +5371,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:279591",
@@ -5015,7 +5399,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:279595",
@@ -5041,7 +5427,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:279600",
@@ -5067,7 +5455,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:279602",
@@ -5093,7 +5483,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:279610",
@@ -5119,7 +5511,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:279611",
@@ -5145,7 +5539,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:279621",
@@ -5171,7 +5567,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:279679",
@@ -5197,7 +5595,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:279699",
@@ -5223,7 +5623,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:279704",
@@ -5249,7 +5651,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:279714",
@@ -5275,7 +5679,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:279725",
@@ -5301,7 +5707,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:279726",
@@ -5327,7 +5735,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:279727",
@@ -5353,7 +5763,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:279734",
@@ -5379,7 +5791,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:279736",
@@ -5405,7 +5819,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:279748",
@@ -5431,7 +5847,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Först till kvarn: köpoängen spelar ingen roll, den som ansöker först vinner."
   },
   {
     "id": "homeq:279792",
@@ -5457,7 +5875,9 @@
     "status": "active",
     "is_short_lease": 1,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:279795",
@@ -5483,7 +5903,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Lottning: din kötid spelar ingen roll."
   },
   {
     "id": "homeq:279798",
@@ -5509,7 +5931,9 @@
     "status": "active",
     "is_short_lease": 1,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Lottning: din kötid spelar ingen roll."
   },
   {
     "id": "homeq:279805",
@@ -5535,7 +5959,9 @@
     "status": "active",
     "is_short_lease": 1,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Lottning: din kötid spelar ingen roll."
   },
   {
     "id": "homeq:279815",
@@ -5561,7 +5987,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Lottning: din kötid spelar ingen roll."
   },
   {
     "id": "homeq:279846",
@@ -5587,7 +6015,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:279857",
@@ -5613,7 +6043,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Lottning: din kötid spelar ingen roll."
   },
   {
     "id": "homeq:279863",
@@ -5639,7 +6071,9 @@
     "status": "active",
     "is_short_lease": 1,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:279867",
@@ -5665,7 +6099,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:279887",
@@ -5691,7 +6127,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:279910",
@@ -5717,7 +6155,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:279913",
@@ -5743,7 +6183,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:279942",
@@ -5769,7 +6211,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:279990",
@@ -5795,7 +6239,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:280083",
@@ -5821,7 +6267,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:280117",
@@ -5847,7 +6295,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:280126",
@@ -5873,7 +6323,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:280165",
@@ -5899,7 +6351,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:280167",
@@ -5925,7 +6379,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Lottning: din kötid spelar ingen roll."
   },
   {
     "id": "homeq:280170",
@@ -5951,7 +6407,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:280180",
@@ -5977,7 +6435,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Lottning: din kötid spelar ingen roll."
   },
   {
     "id": "homeq:280189",
@@ -6003,7 +6463,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Lottning: din kötid spelar ingen roll."
   },
   {
     "id": "homeq:280197",
@@ -6029,7 +6491,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Lottning: din kötid spelar ingen roll."
   },
   {
     "id": "homeq:280208",
@@ -6055,7 +6519,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:280209",
@@ -6081,7 +6547,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:280240",
@@ -6107,7 +6575,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Lottning: din kötid spelar ingen roll."
   },
   {
     "id": "homeq:280275",
@@ -6133,7 +6603,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:280281",
@@ -6159,7 +6631,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:280282",
@@ -6185,7 +6659,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:280286",
@@ -6211,7 +6687,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:280294",
@@ -6237,7 +6715,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:280375",
@@ -6263,7 +6743,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:280376",
@@ -6289,7 +6771,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:280382",
@@ -6315,7 +6799,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Lottning: din kötid spelar ingen roll."
   },
   {
     "id": "homeq:280383",
@@ -6341,7 +6827,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:280390",
@@ -6367,7 +6855,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:280429",
@@ -6393,7 +6883,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:280430",
@@ -6419,7 +6911,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:280432",
@@ -6445,7 +6939,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:280438",
@@ -6471,7 +6967,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:280443",
@@ -6497,7 +6995,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:280501",
@@ -6523,7 +7023,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:280503",
@@ -6549,7 +7051,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:280536",
@@ -6575,7 +7079,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:280570",
@@ -6601,7 +7107,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:280572",
@@ -6627,7 +7135,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:280573",
@@ -6653,7 +7163,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:280579",
@@ -6679,7 +7191,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Lottning: din kötid spelar ingen roll."
   },
   {
     "id": "homeq:280581",
@@ -6705,7 +7219,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:280582",
@@ -6731,7 +7247,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:280598",
@@ -6757,7 +7275,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:280599",
@@ -6783,7 +7303,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:280636",
@@ -6809,7 +7331,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:280653",
@@ -6835,7 +7359,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Lottning: din kötid spelar ingen roll."
   },
   {
     "id": "homeq:280663",
@@ -6861,7 +7387,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Lottning: din kötid spelar ingen roll."
   },
   {
     "id": "homeq:280692",
@@ -6887,7 +7415,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Lottning: din kötid spelar ingen roll."
   },
   {
     "id": "homeq:280695",
@@ -6913,7 +7443,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:280697",
@@ -6939,7 +7471,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:280698",
@@ -6965,7 +7499,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:280700",
@@ -6991,7 +7527,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Först till kvarn: köpoängen spelar ingen roll, den som ansöker först vinner."
   },
   {
     "id": "homeq:280701",
@@ -7017,7 +7555,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:280702",
@@ -7043,7 +7583,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:280704",
@@ -7069,7 +7611,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:280707",
@@ -7095,7 +7639,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:280708",
@@ -7121,7 +7667,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:280712",
@@ -7147,7 +7695,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Lottning: din kötid spelar ingen roll."
   },
   {
     "id": "homeq:280714",
@@ -7173,7 +7723,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:280717",
@@ -7199,7 +7751,9 @@
     "status": "active",
     "is_short_lease": 1,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Först till kvarn: köpoängen spelar ingen roll, den som ansöker först vinner."
   },
   {
     "id": "homeq:280749",
@@ -7225,7 +7779,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:280750",
@@ -7251,7 +7807,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:280769",
@@ -7277,7 +7835,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:280772",
@@ -7303,7 +7863,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:280799",
@@ -7329,7 +7891,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:280847",
@@ -7355,7 +7919,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:280886",
@@ -7381,7 +7947,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:280903",
@@ -7407,7 +7975,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:280904",
@@ -7433,7 +8003,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:280908",
@@ -7459,7 +8031,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:280924",
@@ -7485,7 +8059,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:280930",
@@ -7511,7 +8087,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:280957",
@@ -7537,7 +8115,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:280970",
@@ -7563,7 +8143,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:280986",
@@ -7589,7 +8171,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:281007",
@@ -7615,7 +8199,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:281017",
@@ -7641,7 +8227,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:281058",
@@ -7667,7 +8255,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Lottning: din kötid spelar ingen roll."
   },
   {
     "id": "homeq:281062",
@@ -7693,7 +8283,9 @@
     "status": "active",
     "is_short_lease": 1,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:281064",
@@ -7719,7 +8311,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:281069",
@@ -7745,7 +8339,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:281071",
@@ -7771,7 +8367,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:281073",
@@ -7797,7 +8395,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:281079",
@@ -7823,7 +8423,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:281081",
@@ -7849,7 +8451,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:281084",
@@ -7875,7 +8479,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:281086",
@@ -7901,7 +8507,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:281090",
@@ -7927,7 +8535,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:281105",
@@ -7953,7 +8563,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:281113",
@@ -7979,7 +8591,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:281117",
@@ -8005,7 +8619,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:281121",
@@ -8031,7 +8647,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:281122",
@@ -8057,7 +8675,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:281138",
@@ -8083,7 +8703,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Lottning: din kötid spelar ingen roll."
   },
   {
     "id": "homeq:281139",
@@ -8109,7 +8731,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:281240",
@@ -8135,7 +8759,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:281252",
@@ -8161,7 +8787,9 @@
     "status": "active",
     "is_short_lease": 1,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Lottning: din kötid spelar ingen roll."
   },
   {
     "id": "homeq:281285",
@@ -8187,7 +8815,9 @@
     "status": "active",
     "is_short_lease": 1,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:281292",
@@ -8213,7 +8843,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:281313",
@@ -8239,7 +8871,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:281320",
@@ -8265,7 +8899,9 @@
     "status": "active",
     "is_short_lease": 1,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:281321",
@@ -8291,7 +8927,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:281340",
@@ -8317,7 +8955,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:281369",
@@ -8343,7 +8983,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:281371",
@@ -8369,7 +9011,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:281381",
@@ -8395,7 +9039,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:281385",
@@ -8421,7 +9067,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:281390",
@@ -8447,7 +9095,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:281397",
@@ -8473,7 +9123,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:281421",
@@ -8499,7 +9151,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:281429",
@@ -8525,7 +9179,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:281433",
@@ -8551,7 +9207,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:281437",
@@ -8577,7 +9235,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:281439",
@@ -8603,7 +9263,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:281440",
@@ -8629,7 +9291,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Lottning: din kötid spelar ingen roll."
   },
   {
     "id": "homeq:281442",
@@ -8655,7 +9319,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Lottning: din kötid spelar ingen roll."
   },
   {
     "id": "homeq:281446",
@@ -8681,7 +9347,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Lottning: din kötid spelar ingen roll."
   },
   {
     "id": "homeq:281447",
@@ -8707,7 +9375,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:281448",
@@ -8733,7 +9403,9 @@
     "status": "active",
     "is_short_lease": 1,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:281451",
@@ -8759,7 +9431,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:281454",
@@ -8785,7 +9459,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:281456",
@@ -8811,7 +9487,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:281458",
@@ -8837,7 +9515,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:281470",
@@ -8863,7 +9543,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:281476",
@@ -8889,7 +9571,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:281489",
@@ -8915,7 +9599,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:281504",
@@ -8941,7 +9627,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:281514",
@@ -8967,7 +9655,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:281524",
@@ -8993,7 +9683,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Lottning: din kötid spelar ingen roll."
   },
   {
     "id": "homeq:281546",
@@ -9019,7 +9711,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Lottning: din kötid spelar ingen roll."
   },
   {
     "id": "homeq:281547",
@@ -9045,7 +9739,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:281550",
@@ -9071,7 +9767,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:281556",
@@ -9097,7 +9795,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:281568",
@@ -9123,7 +9823,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:281570",
@@ -9149,7 +9851,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:281574",
@@ -9175,7 +9879,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:281588",
@@ -9201,7 +9907,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:281599",
@@ -9227,7 +9935,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Lottning: din kötid spelar ingen roll."
   },
   {
     "id": "homeq:281600",
@@ -9253,7 +9963,9 @@
     "status": "active",
     "is_short_lease": 1,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Lottning: din kötid spelar ingen roll."
   },
   {
     "id": "homeq:281631",
@@ -9279,7 +9991,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:281637",
@@ -9305,7 +10019,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:281641",
@@ -9331,7 +10047,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:281645",
@@ -9357,7 +10075,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Lottning: din kötid spelar ingen roll."
   },
   {
     "id": "homeq:281648",
@@ -9383,7 +10103,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:281656",
@@ -9409,7 +10131,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Först till kvarn: köpoängen spelar ingen roll, den som ansöker först vinner."
   },
   {
     "id": "homeq:281658",
@@ -9435,7 +10159,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Först till kvarn: köpoängen spelar ingen roll, den som ansöker först vinner."
   },
   {
     "id": "homeq:281668",
@@ -9461,7 +10187,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:281670",
@@ -9487,7 +10215,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:281821",
@@ -9513,7 +10243,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:281824",
@@ -9539,7 +10271,9 @@
     "status": "active",
     "is_short_lease": 1,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:281825",
@@ -9565,7 +10299,9 @@
     "status": "active",
     "is_short_lease": 1,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:281830",
@@ -9591,7 +10327,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Lottning: din kötid spelar ingen roll."
   },
   {
     "id": "homeq:281834",
@@ -9617,7 +10355,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Lottning: din kötid spelar ingen roll."
   },
   {
     "id": "homeq:281846",
@@ -9643,7 +10383,9 @@
     "status": "active",
     "is_short_lease": 1,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:281847",
@@ -9669,7 +10411,9 @@
     "status": "active",
     "is_short_lease": 1,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:281848",
@@ -9695,7 +10439,9 @@
     "status": "active",
     "is_short_lease": 1,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:281854",
@@ -9721,7 +10467,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:281861",
@@ -9747,7 +10495,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:281863",
@@ -9773,7 +10523,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Lottning: din kötid spelar ingen roll."
   },
   {
     "id": "homeq:281872",
@@ -9799,7 +10551,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:281879",
@@ -9825,7 +10579,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:281882",
@@ -9851,7 +10607,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Lottning: din kötid spelar ingen roll."
   },
   {
     "id": "homeq:281893",
@@ -9877,7 +10635,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:281897",
@@ -9903,7 +10663,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar inte hur många poäng som krävs för den här annonsen, så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:281899",
@@ -9929,7 +10691,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Lottning: din kötid spelar ingen roll."
   },
   {
     "id": "homeq:281902",
@@ -9955,7 +10719,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Lottning: din kötid spelar ingen roll."
   },
   {
     "id": "homeq:281903",
@@ -9981,7 +10747,9 @@
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Lottning: din kötid spelar ingen roll."
   },
   {
     "id": "boplats:6AA427DA03347B8F75B0B095",
@@ -10007,7 +10775,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 210,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "unlikely",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 3 516 dagar (35 %). 210 sökande: ett steg ner."
   },
   {
     "id": "boplats:6AA96DDDFE28AB2028EDB095",
@@ -10033,7 +10803,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 127,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "unlikely",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 4 198 dagar (30 %). 127 sökande: ett steg ner."
   },
   {
     "id": "boplats:6AA96DDF0591ACF1DB9EC382",
@@ -10059,7 +10831,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 126,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "unlikely",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 3 055 dagar (41 %). 126 sökande: ett steg ner."
   },
   {
     "id": "boplats:6AA96DE10042AB2AF22BB095",
@@ -10085,7 +10859,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 540,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "unlikely",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 5 281 dagar (24 %). 540 sökande: ett steg ner."
   },
   {
     "id": "boplats:6AA10620FDA95573FC3CB095",
@@ -10111,7 +10887,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 14,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "unlikely",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 2 076 dagar (60 %)."
   },
   {
     "id": "boplats:6AA108CE07BB546A8AEBC379",
@@ -10137,7 +10915,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 52,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "unlikely",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 2 506 dagar (50 %). 52 sökande: ett steg ner."
   },
   {
     "id": "boplats:6AA1307E029B5A745839C382",
@@ -10163,7 +10943,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 200,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "unlikely",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 3 511 dagar (36 %). 200 sökande: ett steg ner."
   },
   {
     "id": "boplats:6AA24481FDCC65C0A24DB08B",
@@ -10189,7 +10971,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 15,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 1 170 dagar (107 %)."
   },
   {
     "id": "boplats:6AA2D65AFC7D6D8DEAB2B095",
@@ -10215,7 +10999,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 100,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "unlikely",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 2 323 dagar (54 %). 100 sökande: ett steg ner."
   },
   {
     "id": "boplats:6AA3B560076B787CB831B08B",
@@ -10241,7 +11027,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 15,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 1 152 dagar (108 %)."
   },
   {
     "id": "boplats:6AA3D37A02E97BF94FF6C379",
@@ -10267,7 +11055,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 78,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "unlikely",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 3 182 dagar (39 %). 78 sökande: ett steg ner."
   },
   {
     "id": "boplats:6AA3D37D011B797A2E5BB095",
@@ -10293,7 +11083,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 82,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "unlikely",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 3 182 dagar (39 %). 82 sökande: ett steg ner."
   },
   {
     "id": "boplats:6AA3D37E03C877E3EB8CB095",
@@ -10319,7 +11111,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 320,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "unlikely",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 5 942 dagar (21 %). 320 sökande: ett steg ner."
   },
   {
     "id": "boplats:6AA3D3850600798FCFB0B095",
@@ -10345,7 +11139,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 423,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "unlikely",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 2 316 dagar (54 %). 423 sökande: ett steg ner."
   },
   {
     "id": "boplats:6AA3D38800E57599BFD6C382",
@@ -10371,7 +11167,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 16,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "unlikely",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 2 229 dagar (56 %)."
   },
   {
     "id": "boplats:6AA3D38E061476C424E9B08B",
@@ -10397,7 +11195,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 104,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "unlikely",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 3 618 dagar (34 %). 104 sökande: ett steg ner."
   },
   {
     "id": "boplats:6AA3D38FFBE67BCFAA70C379",
@@ -10423,7 +11223,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 130,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "unlikely",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 3 516 dagar (35 %). 130 sökande: ett steg ner."
   },
   {
     "id": "boplats:6AA3D39201E47C0BA584C379",
@@ -10449,7 +11251,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 38,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "unlikely",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 2 676 dagar (47 %)."
   },
   {
     "id": "boplats:6AA3D39502E678548C59C379",
@@ -10475,7 +11279,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 107,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "unlikely",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 3 516 dagar (35 %). 107 sökande: ett steg ner."
   },
   {
     "id": "boplats:6AA3D399FDBD7987D398B095",
@@ -10501,7 +11307,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 169,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "unlikely",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 2 574 dagar (48 %). 169 sökande: ett steg ner."
   },
   {
     "id": "boplats:6AA71F4006A39538C055C382",
@@ -10527,7 +11335,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 94,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "unlikely",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 2 604 dagar (48 %). 94 sökande: ett steg ner."
   },
   {
     "id": "boplats:6AA797F37352BAB520BD3603",
@@ -10553,7 +11363,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 41,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "unlikely",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 2 817 dagar (44 %)."
   },
   {
     "id": "boplats:6AA7A076FF9697D5284AB08B",
@@ -10579,7 +11391,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 8,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "likely",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 818 dagar (152 %)."
   },
   {
     "id": "boplats:6AA7BC65014299AF6210B08B",
@@ -10605,7 +11419,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 14,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "unlikely",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 3 543 dagar (35 %)."
   },
   {
     "id": "boplats:6AA7C7FB071F9AAED767C382",
@@ -10631,7 +11447,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 18,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "likely",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 668 dagar (187 %)."
   },
   {
     "id": "boplats:6AA7C80000959B8B0404C382",
@@ -10657,7 +11475,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 129,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "unlikely",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 2 678 dagar (47 %). 129 sökande: ett steg ner."
   },
   {
     "id": "boplats:6AA7C800032F95B55CEAC382",
@@ -10683,7 +11503,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 103,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "unlikely",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 2 066 dagar (60 %). 103 sökande: ett steg ner."
   },
   {
     "id": "boplats:6AA81C6208279D75BA2AB08B",
@@ -10709,7 +11531,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 5,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "likely",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 814 dagar (153 %). Bara 5 sökande nära sista dagen: ett steg upp."
   },
   {
     "id": "boplats:6AA9197B0186A5245889C379",
@@ -10735,7 +11559,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 14,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "likely",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 999 dagar (125 %)."
   },
   {
     "id": "boplats:6AA9197EF98EA6836B6CC379",
@@ -10761,7 +11587,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 16,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "unlikely",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 2 107 dagar (59 %)."
   },
   {
     "id": "boplats:6AA91980008DA686754FB08B",
@@ -10787,7 +11615,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 68,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "unlikely",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 2 834 dagar (44 %). 68 sökande: ett steg ner."
   },
   {
     "id": "boplats:6AA91981013EA68F66B0C379",
@@ -10813,7 +11643,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 102,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "unlikely",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 3 161 dagar (39 %). 102 sökande: ett steg ner."
   },
   {
     "id": "boplats:6AA919830184A2BC81F1C382",
@@ -10839,7 +11671,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 116,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "unlikely",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 3 174 dagar (39 %). 116 sökande: ett steg ner."
   },
   {
     "id": "boplats:6AA9198F0239A6F938F6B08B",
@@ -10865,7 +11699,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 28,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "likely",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 1 129 dagar (110 %)."
   },
   {
     "id": "boplats:6AA96DDC03A0ABC243D3B08B",
@@ -10891,7 +11727,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 12,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "likely",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 974 dagar (128 %)."
   },
   {
     "id": "boplats:6AA96DDC0791A9A3A8CCC379",
@@ -10917,7 +11755,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 18,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "likely",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 869 dagar (143 %)."
   },
   {
     "id": "boplats:6AA96DDE04DFABBE9FD7B08B",
@@ -10943,7 +11783,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 152,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "unlikely",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 3 179 dagar (39 %). 152 sökande: ett steg ner."
   },
   {
     "id": "boplats:6AA96DDF0174A82B31E4B08B",
@@ -10969,7 +11811,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 56,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "unlikely",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 2 315 dagar (54 %). 56 sökande: ett steg ner."
   },
   {
     "id": "boplats:6AA96DE406CAA90CDEA1C382",
@@ -10995,7 +11839,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 132,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "unlikely",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 2 279 dagar (55 %). 132 sökande: ett steg ner."
   },
   {
     "id": "boplats:6AA96DE5F999ACF24A23B095",
@@ -11021,7 +11867,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 110,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "unlikely",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 3 475 dagar (36 %). 110 sökande: ett steg ner."
   },
   {
     "id": "boplats:6AA96DE6F976ACFCABB1B095",
@@ -11047,7 +11895,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 130,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "unlikely",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 3 475 dagar (36 %). 130 sökande: ett steg ner."
   },
   {
     "id": "boplats:6AA96DE7F9D9AA1AFEBBB08B",
@@ -11073,7 +11923,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 103,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "unlikely",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 2 637 dagar (47 %). 103 sökande: ett steg ner."
   },
   {
     "id": "boplats:6AA96DE9FEB6A9AE5067C379",
@@ -11099,7 +11951,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 47,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "unlikely",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 1 909 dagar (65 %)."
   },
   {
     "id": "boplats:6AA96DEB0771AB363F1FB095",
@@ -11125,7 +11979,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 123,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "unlikely",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 2 644 dagar (47 %). 123 sökande: ett steg ner."
   },
   {
     "id": "boplats:6AA9C23F016BAE6F1C50B08B",
@@ -11151,7 +12007,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 52,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "unlikely",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 2 067 dagar (60 %). 52 sökande: ett steg ner."
   },
   {
     "id": "boplats:6AAA6AFAFEA8B832B8E3B095",
@@ -11177,7 +12035,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 426,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "unlikely",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 5 456 dagar (23 %). 426 sökande: ett steg ner."
   },
   {
     "id": "boplats:6AAABF5EF9D2B936811FB095",
@@ -11203,7 +12063,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 88,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "unlikely",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 3 897 dagar (32 %). 88 sökande: ett steg ner."
   },
   {
     "id": "boplats:6AAABF61F96CBB08A085C382",
@@ -11229,7 +12091,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 50,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "unlikely",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 2 053 dagar (61 %). 50 sökande: ett steg ner."
   },
   {
     "id": "boplats:6AAABF63FA74B666026FB08B",
@@ -11255,7 +12119,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 10,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "unlikely",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 1 725 dagar (72 %)."
   },
   {
     "id": "boplats:6AAABF67FA9FBCCE8C47B095",
@@ -11281,7 +12147,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 9,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "unlikely",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 2 293 dagar (54 %)."
   },
   {
     "id": "boplats:6AAABF6BFBD3B6ED71D2C382",
@@ -11307,7 +12175,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 11,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "unlikely",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 2 355 dagar (53 %)."
   },
   {
     "id": "boplats:6AAABF6F038EB96CFC41B095",
@@ -11333,7 +12203,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 35,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "unlikely",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 2 676 dagar (47 %)."
   },
   {
     "id": "boplats:6AAABF7206CDBA247389B08B",
@@ -11359,7 +12231,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 70,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "unlikely",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 2 994 dagar (42 %). 70 sökande: ett steg ner."
   },
   {
     "id": "boplats:6AAABF73FD67B6F9E8F6C382",
@@ -11385,7 +12259,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 51,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "unlikely",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 3 701 dagar (34 %). 51 sökande: ett steg ner."
   },
   {
     "id": "boplats:6AAB13BEF868BC099DA6B095",
@@ -11411,7 +12287,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 70,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "unlikely",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 2 974 dagar (42 %). 70 sökande: ett steg ner."
   },
   {
     "id": "boplats:6AAB13C1FA19BF2BF6E4B095",
@@ -11437,7 +12315,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 8,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "unlikely",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 1 883 dagar (66 %)."
   },
   {
     "id": "boplats:6AAB13C4F81BBF0DCB32C382",
@@ -11463,7 +12343,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 59,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "unlikely",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 2 152 dagar (58 %). 59 sökande: ett steg ner."
   },
   {
     "id": "boplats:6AAB13D1FDFEBE3FFEC0B08B",
@@ -11489,7 +12371,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 83,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "unlikely",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 4 459 dagar (28 %). 83 sökande: ett steg ner."
   },
   {
     "id": "boplats:6AABBC7B0709C33F5DC0B095",
@@ -11515,7 +12399,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 4,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "likely",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 1 525 dagar (82 %). Bara 4 sökande nära sista dagen: ett steg upp."
   },
   {
     "id": "boplats:6AABBC7C009CC1C0C64DB08B",
@@ -11541,7 +12427,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 51,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "unlikely",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 2 554 dagar (49 %). 51 sökande: ett steg ner."
   },
   {
     "id": "boplats:6AABBC7DFABDC5B03E5DB08B",
@@ -11567,7 +12455,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 64,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "unlikely",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 2 554 dagar (49 %). 64 sökande: ett steg ner."
   },
   {
     "id": "boplats:6AABBC85FAFFC4FAAEDBC379",
@@ -11593,7 +12483,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 15,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "unlikely",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 2 401 dagar (52 %)."
   },
   {
     "id": "boplats:6AABBC87FEA7C52E58E7B095",
@@ -11619,7 +12511,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 44,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "unlikely",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 3 178 dagar (39 %)."
   },
   {
     "id": "boplats:6AABBC8903EBBFF525AAC382",
@@ -11645,7 +12539,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 23,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "unlikely",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 2 486 dagar (50 %)."
   },
   {
     "id": "boplats:6AABBC90041DC2CD4472B095",
@@ -11671,7 +12567,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 35,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "unlikely",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 2 635 dagar (47 %)."
   },
   {
     "id": "boplats:6AABBC940125C5169A3FC379",
@@ -11697,7 +12595,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 243,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "unlikely",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 6 045 dagar (21 %). 243 sökande: ett steg ner."
   },
   {
     "id": "boplats:6AABBC9AFD10C1DBD0F4B08B",
@@ -11723,7 +12623,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 22,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "unlikely",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 1 705 dagar (73 %)."
   },
   {
     "id": "boplats:6AABBC9DF8EDC1F1929EB08B",
@@ -11749,7 +12651,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 31,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "unlikely",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 1 815 dagar (69 %)."
   },
   {
     "id": "boplats:6AAC10DAF910C7BBE294B08B",
@@ -11775,7 +12679,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 63,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "unlikely",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 2 006 dagar (62 %). 63 sökande: ett steg ner."
   },
   {
     "id": "boplats:6AAC10DB07B8C47623DFC382",
@@ -11801,7 +12707,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 49,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "unlikely",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 2 546 dagar (49 %)."
   },
   {
     "id": "boplats:6AAC10DCFF71CA8589DAB095",
@@ -11827,7 +12735,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 72,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "unlikely",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 4 942 dagar (25 %). 72 sökande: ett steg ner."
   },
   {
     "id": "boplats:6AAC6544FF7CC7457E1AC382",
@@ -11853,7 +12763,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 69,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "unlikely",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 1 375 dagar (91 %). 69 sökande: ett steg ner."
   },
   {
     "id": "boplats:6AAD0DFD07E3D68FF6B0B095",
@@ -11879,7 +12791,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 27,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "unlikely",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 3 924 dagar (32 %)."
   },
   {
     "id": "boplats:6A9929C5F8BC02424153B095",
@@ -11905,7 +12819,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 30,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "unlikely",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 2 866 dagar (44 %)."
   },
   {
     "id": "boplats:6AAABF5B0727BC105BFDB095",
@@ -11931,7 +12847,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 46,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "unlikely",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 2 246 dagar (56 %)."
   },
   {
     "id": "boplats:6AABBC8D07DFC6727CA3B095",
@@ -11957,7 +12875,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 3,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "likely",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 734 dagar (170 %). Bara 3 sökande nära sista dagen: ett steg upp."
   },
   {
     "id": "boplats:6AAC653EFB5ECB361F1FC379",
@@ -11983,7 +12903,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 228,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "unlikely",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 5 128 dagar (24 %). 228 sökande: ett steg ner."
   },
   {
     "id": "boplats:6AAC6542F884CC494C66C382",
@@ -12009,7 +12931,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 54,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "unlikely",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 1 583 dagar (79 %). 54 sökande: ett steg ner."
   },
   {
     "id": "boplats:6AAC6548FF71CCBC77F1C382",
@@ -12035,7 +12959,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 5,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 1 877 dagar (66 %). Bara 5 sökande nära sista dagen: ett steg upp."
   },
   {
     "id": "boplats:6AAD0DFA06F0D5B7D328C379",
@@ -12061,7 +12987,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 15,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "unlikely",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 3 750 dagar (33 %)."
   },
   {
     "id": "boplats:6AAD0DFCFBD2D4599616B08B",
@@ -12087,7 +13015,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 15,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 1 343 dagar (93 %)."
   },
   {
     "id": "boplats:6AAD0DFEF987D213EE1CB095",
@@ -12113,7 +13043,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 20,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "unlikely",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 1 884 dagar (66 %)."
   },
   {
     "id": "boplats:6AAD0E0001F1D461566EB08B",
@@ -12139,7 +13071,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 26,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "unlikely",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 2 127 dagar (59 %)."
   },
   {
     "id": "boplats:6AAD0E00FE21D4C0D34DB095",
@@ -12165,7 +13099,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 10,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 1 343 dagar (93 %)."
   },
   {
     "id": "boplats:6AAD0E02028ED5C3912CC379",
@@ -12191,7 +13127,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 12,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "unlikely",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 1 584 dagar (79 %)."
   },
   {
     "id": "boplats:6AAD0E02FEE9D85F9720C379",
@@ -12217,7 +13155,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 67,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "unlikely",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 3 460 dagar (36 %). 67 sökande: ett steg ner."
   },
   {
     "id": "boplats:6AAD0E03F7E2D470279DB08B",
@@ -12243,7 +13183,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 11,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "unlikely",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 1 878 dagar (66 %)."
   },
   {
     "id": "boplats:6AAD6260FC9BD6A50B3AB08B",
@@ -12269,7 +13211,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 45,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "unlikely",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 2 151 dagar (58 %)."
   },
   {
     "id": "boplats:6AAD6261FC36D866906FB08B",
@@ -12295,7 +13239,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 43,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "unlikely",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 2 151 dagar (58 %)."
   },
   {
     "id": "boplats:6AAD62620620D8D35A5CC382",
@@ -12321,7 +13267,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 54,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "unlikely",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 2 569 dagar (49 %). 54 sökande: ett steg ner."
   },
   {
     "id": "boplats:6565FF2EFA853E3E1957C382",
@@ -12347,7 +13295,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 7,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "Boplats visar ingen kötid för vinnarna av liknande lägenheter, så chansen kan inte räknas ut."
   },
   {
     "id": "boplats:6AA7E6EAFC29977EA617C382",
@@ -12373,7 +13323,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 3,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "Boplats visar ingen kötid för vinnarna av liknande lägenheter, så chansen kan inte räknas ut."
   },
   {
     "id": "boplats:6AA919880725A4EEDB27C379",
@@ -12399,7 +13351,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 2,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "likely",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 1 296 dagar (96 %). Bara 2 sökande nära sista dagen: ett steg upp."
   },
   {
     "id": "boplats:6AAA500D79E29D37BBB68196",
@@ -12425,7 +13379,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 15,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "likely",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 1 131 dagar (110 %)."
   },
   {
     "id": "boplats:6AAABF7AF896BBFA4FDBC382",
@@ -12451,7 +13407,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 73,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "unlikely",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 3 354 dagar (37 %). 73 sökande: ett steg ner."
   },
   {
     "id": "boplats:6AAD0DFB05A2D1FF9600B095",
@@ -12477,7 +13435,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 5,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 1 737 dagar (72 %). Bara 5 sökande nära sista dagen: ett steg upp."
   },
   {
     "id": "boplats:6AAD625E0440DB368F1FC382",
@@ -12503,7 +13463,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 4,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "likely",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 959 dagar (130 %). Bara 4 sökande nära sista dagen: ett steg upp."
   },
   {
     "id": "boplats:6AADB6BE04E2D96F8D50B095",
@@ -12529,7 +13491,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 36,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "unlikely",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 3 406 dagar (37 %)."
   },
   {
     "id": "boplats:6A573AEE02C5A9C1578EB08B",
@@ -12555,7 +13519,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 9,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "likely",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 653 dagar (191 %)."
   },
   {
     "id": "boplats:6AA9197DFB1FA396D7BFC382",
@@ -12581,7 +13547,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 31,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "unlikely",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 2 009 dagar (62 %)."
   },
   {
     "id": "boplats:6AA927B8FA2DA9E849A5C382",
@@ -12607,7 +13575,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 20,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 1 212 dagar (103 %)."
   },
   {
     "id": "boplats:6AABD9CA6D7F29F7DD3D4C6E",
@@ -12633,7 +13603,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 5,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "likely",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 1 008 dagar (124 %)."
   },
   {
     "id": "boplats:6AABE0CBFC7CC2081985C382",
@@ -12659,7 +13631,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 22,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "unlikely",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 3 685 dagar (34 %)."
   },
   {
     "id": "boplats:6AAD0DFFFF95D21B71B4B095",
@@ -12685,7 +13659,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 2,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "unlikely",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 2 127 dagar (59 %)."
   },
   {
     "id": "boplats:6AA926930629A5D73988B08B",
@@ -12711,7 +13687,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 9,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "likely",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 671 dagar (186 %)."
   },
   {
     "id": "boplats:6AAABF75047BBC03BBECC382",
@@ -12737,7 +13715,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 65,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "unlikely",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 3 406 dagar (37 %). 65 sökande: ett steg ner."
   },
   {
     "id": "boplats:6AAABF77FCBFB884E729C379",
@@ -12763,7 +13743,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 60,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "unlikely",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 3 468 dagar (36 %). 60 sökande: ett steg ner."
   },
   {
     "id": "boplats:6AAD011D4342E3B5710B5A1A",
@@ -12789,7 +13771,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 3,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "Boplats visar ingen kötid för vinnarna av liknande lägenheter, så chansen kan inte räknas ut."
   },
   {
     "id": "boplats:6AAD0824387D1325AB54CBBC",
@@ -12815,7 +13799,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 6,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 1 269 dagar (98 %)."
   },
   {
     "id": "boplats:6AA923F507DEA875532AB095",
@@ -12841,7 +13827,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 7,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "likely",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 681 dagar (183 %)."
   },
   {
     "id": "boplats:6AA925B3F87FA63A5F9BB095",
@@ -12867,7 +13855,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 2,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "likely",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 671 dagar (186 %)."
   },
   {
     "id": "boplats:6AA7C809F8F79AD8EAB5B095",
@@ -12893,7 +13883,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 95,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "unlikely",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 3 468 dagar (36 %). 95 sökande: ett steg ner."
   },
   {
     "id": "boplats:6AA7C80CF86E9973483CC379",
@@ -12919,7 +13911,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 106,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "unlikely",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 3 497 dagar (36 %). 106 sökande: ett steg ner."
   },
   {
     "id": "boplats:6AA870C1FDF0A1824C13B095",
@@ -12945,7 +13939,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 38,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "unlikely",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 2 185 dagar (57 %)."
   },
   {
     "id": "boplats:6AA8F0BDFAD2A4F1039EB095",
@@ -12971,7 +13967,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 15,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "unlikely",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 3 899 dagar (32 %)."
   },
   {
     "id": "boplats:6AAA6AFAFD34B39CCF11C379",
@@ -12997,7 +13995,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 190,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "unlikely",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 3 682 dagar (34 %). 190 sökande: ett steg ner."
   },
   {
     "id": "boplats:6AACD241053ECE6AA0EBB08B",
@@ -13023,7 +14023,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 0,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "unlikely",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 2 697 dagar (46 %)."
   },
   {
     "id": "boplats:6AACFF60FF68D47FC580C382",
@@ -13049,7 +14051,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 3,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "possible",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 1 469 dagar (85 %)."
   },
   {
     "id": "boplats:6AAB9920FD28BDF54FAAC382",
@@ -13075,7 +14079,9 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 31,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "unlikely",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 3 172 dagar (39 %)."
   },
   {
     "id": "boplats:6AAD625A034BDC243189C379",
@@ -13101,6 +14107,8 @@
     "status": "active",
     "is_short_lease": null,
     "applicants": 29,
-    "points_needed_top10": null
+    "points_needed_top10": null,
+    "bucket": "unlikely",
+    "bucket_note": "Dina 1 247 dagar mot vinnarnas 2 771 dagar (45 %)."
   }
 ]

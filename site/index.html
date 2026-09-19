@@ -61,14 +61,23 @@
       display: inline-block; width: 12px; height: 12px; border-radius: 50%;
       vertical-align: -1px; margin-right: 6px; border: 2px solid transparent;
     }
-    .dot.boplats { background: var(--boplats); }
-    .dot.homeq { background: var(--homeq); }
+    .dot.likely { background: #1e7e3a; }
+    .dot.possible { background: #f2b705; }
+    .dot.unlikely { background: #c0392b; }
+    .dot.unknown { background: #eef1f4; border-color: #888; }
+    .dot.ring-boplats { background: #fff; border: 3px solid var(--boplats); }
+    .dot.ring-homeq { background: #fff; border: 3px solid var(--homeq); }
     .dot.grey { background: #b8b8b8; opacity: .6; }
     .dot.short { background: transparent; border: 2px dashed #555; }
     details { font-size: .9rem; }
     details ul { padding-left: 18px; margin: 6px 0; }
     .hint { color: var(--muted); font-size: .85rem; margin: 4px 0; }
-    .hint.warn { color: #b00020; }
+    .hint.warn, .warn { color: #b00020; }
+
+    #queue { margin: 0 0 14px; padding: 10px 12px; background: #fff; border: 1px solid var(--line); border-radius: 8px; }
+    #queue h2 { font-size: 1rem; margin: 0 0 4px; }
+    #queueNow { list-style: none; margin: 0 0 8px; padding: 0; }
+    #queueLater { margin: 4px 0 0; font-weight: 600; }
 
     .kommun-list {
       max-height: 170px; overflow-y: auto; padding: 4px 8px;
@@ -86,6 +95,9 @@
     .card.dim { opacity: .55; }
     .card .title { font-weight: 700; font-size: 15px; }
     .card .sub { color: var(--muted); margin-bottom: 4px; }
+    .chance { margin: 4px 0 6px; }
+    .chip { display: inline-block; padding: 1px 9px; border-radius: 10px; font-size: 12px; font-weight: 700; border: 1px solid rgba(0, 0, 0, .25); }
+    .chance .note { display: block; margin-top: 3px; color: var(--muted); font-size: 13px; }
     .card dl { display: grid; grid-template-columns: auto 1fr; gap: 1px 10px; margin: 4px 0 6px; }
     .card dt { color: var(--muted); }
     .card dd { margin: 0; white-space: nowrap; }
@@ -109,6 +121,13 @@
   <aside id="panel">
     <h1>Bostadskö Tracker</h1>
     <p id="status">Laddar annonser…</p>
+
+    <section id="queue">
+      <h2>Din kötid</h2>
+      <ul id="queueNow"><li class="count">Laddar…</li></ul>
+      <label>Räkna framåt till <input type="date" id="queueDate"></label>
+      <p id="queueLater" aria-live="polite"></p>
+    </section>
 
     <form id="filters" autocomplete="off">
       <fieldset>
@@ -183,8 +202,11 @@
     <p id="summary" aria-live="polite"></p>
 
     <ul class="legend">
-      <li><span class="dot boplats"></span>Boplats</li>
-      <li><span class="dot homeq"></span>HomeQ</li>
+      <li><span class="dot likely"></span>God chans</li>
+      <li><span class="dot possible"></span>Möjlig</li>
+      <li><span class="dot unlikely"></span>Låg chans</li>
+      <li><span class="dot unknown"></span>Okänd chans (går inte att räkna ut)</li>
+      <li><span class="dot ring-boplats"></span>Ring: Boplats · <span class="dot ring-homeq"></span>HomeQ</li>
       <li><span class="dot short"></span>Korttidskontrakt (streckad ring)</li>
       <li><span class="dot grey"></span>Matchar inte dina filter</li>
       <li>Större pin = flera annonser på samma adress</li>
