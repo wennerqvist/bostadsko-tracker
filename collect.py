@@ -11,7 +11,7 @@ from pathlib import Path
 import requests
 
 import store
-from collectors import boplats
+from collectors import boplats, homeq
 
 EXPORT_PATH = Path(__file__).parent / "site" / "listings.json"
 
@@ -24,31 +24,56 @@ def export_json(conn, path=EXPORT_PATH) -> int:
     return len(rows)
 
 
-def main() -> int:
+def save(conn, source: str, listings: list[dict], now: str, snapshots=True) -> tuple[int, int]:
+    """Save one source's listings in one transaction (everything, or nothing).
+
+    Returns (new, closed). Listings of this source that are no longer on the
+    site are marked closed.
+    """
+    with conn:
+        new = sum(store.upsert_listing(conn, item, now) for item in listings)
+        if snapshots:
+            for item in listings:
+                store.snapshot(conn, item["id"], now, applicants=item.get("applicants"))
+        closed = store.close_unseen(conn, source, now)
+    return new, closed
+
+
+def main(argv=None, db_path=store.DEFAULT_DB, export_path=EXPORT_PATH) -> int:
     parser = argparse.ArgumentParser(description="Collect apartment listings.")
     parser.add_argument("--no-alert", action="store_true",
                         help="skip Telegram alerts (there are none yet, so this changes nothing today)")
-    parser.parse_args()
+    parser.parse_args(argv)
 
-    conn = store.connect()
+    conn = store.connect(db_path)
     now = store.now_iso()
 
-    try:
-        listings = boplats.collect(store.known_ids(conn, "boplats"))
-    except (boplats.PageChanged, requests.RequestException) as error:
-        print(f"Boplats failed, database left untouched: {error}", file=sys.stderr)
-        return 1
+    # (name, source id, how to fetch, errors that mean "this site failed", save snapshots?)
+    sources = [
+        ("Boplats", "boplats", lambda: boplats.collect(store.known_ids(conn, "boplats")),
+         (boplats.PageChanged, requests.RequestException), True),
+        # HomeQ gives no applicant counts, so a snapshot row would hold nothing.
+        ("HomeQ", "homeq", homeq.collect,
+         (homeq.HomeQError, requests.RequestException), False),
+    ]
 
-    with conn:  # one transaction: everything is saved, or nothing is
-        new = sum(store.upsert_listing(conn, item, now) for item in listings)
-        for item in listings:
-            store.snapshot(conn, item["id"], now, applicants=item.get("applicants"))
-        closed = store.close_unseen(conn, "boplats", now)
+    failed = []
+    for name, source, fetch, errors, snapshots in sources:
+        try:
+            listings = fetch()
+        except errors as error:
+            # Nothing is saved or closed for this source; its old listings stay as they were.
+            print(f"{name} failed, its listings left untouched: {error}", file=sys.stderr)
+            failed.append(name)
+            continue
+        new, closed = save(conn, source, listings, now, snapshots)
+        print(f"{name}: {new} new, {len(listings) - new} already known, {closed} closed.")
 
-    exported = export_json(conn)
-    print(f"Done: {new} new, {len(listings) - new} already known, {closed} closed. "
-          f"{exported} active listings written to {EXPORT_PATH.relative_to(Path(__file__).parent)}.")
-    return 0
+    exported = export_json(conn, export_path)
+    print(f"Done: {exported} active listings written to {Path(export_path).name}.")
+    if failed:
+        print(f"Failed: {', '.join(failed)}", file=sys.stderr)
+    return 1 if failed else 0
 
 
 if __name__ == "__main__":
