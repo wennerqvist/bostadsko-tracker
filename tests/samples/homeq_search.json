@@ -1,40 +1,189 @@
 {
   "results": [
     {
-      "id": 101234,
-      "uri": "/apartment/101234",
-      "city": "Majorna",
+      "id": 281903,
+      "references": {
+        "estate": 1322,
+        "apartment": 71509,
+        "object_ad": 281903,
+        "company": 144,
+        "office": 1782,
+        "project": null
+      },
+      "type": "individual",
+      "uri": "/lagenhet/281903-2rum-västra-frölunda-västra-götalands-län-bergkristallsgatan-6",
       "municipality": "Göteborg",
-      "rent": 8450,
-      "rooms": 2,
-      "area": 52.5,
+      "county": "Västra Götalands län",
+      "city": "Västra Frölunda",
+      "location": {
+        "lat": 57.6575282,
+        "lon": 11.8935041
+      },
+      "boost_value": 0,
+      "discount": null,
+      "title": "Bergkristallsgatan 6",
+      "audience": "everyone",
+      "is_short_lease": false,
+      "early_access": null,
+      "rent": 9002,
+      "rooms": 2.0,
+      "area": 66.0,
       "date_access": "2026-11-01",
-      "title": "Karl Johansgatan 12",
-      "is_short_lease": false
+      "is_quick_apply": false
     },
     {
-      "id": 101300,
-      "uri": "/apartment/101300",
-      "city": "Mölndal",
-      "municipality": "Mölndal",
-      "rent": 6900,
-      "rooms": 1.5,
-      "area": 38,
-      "date_access": "2026-10-15T00:00:00",
-      "title": "Gamla Torget 3",
-      "is_short_lease": true
-    },
-    {
-      "id": 101377,
-      "uri": "https://www.homeq.se/apartment/101377",
-      "city": "Angered",
+      "id": 281846,
+      "references": {
+        "estate": 3519,
+        "apartment": 295219,
+        "object_ad": 281846,
+        "company": 151,
+        "office": 182,
+        "project": null
+      },
+      "type": "individual",
+      "uri": "/lagenhet/281846-2rum-göteborg-västra-götalands-län-gibraltargatan-42",
       "municipality": "Göteborg",
-      "rent": "7 200",
-      "rooms": null,
-      "area": null,
+      "county": "Västra Götalands län",
+      "city": "Göteborg",
+      "location": {
+        "lat": 57.6890126,
+        "lon": 11.9813393
+      },
+      "boost_value": 0,
+      "discount": null,
+      "title": "Gibraltargatan 42",
+      "audience": "everyone",
+      "is_short_lease": true,
+      "early_access": null,
+      "rent": 8344,
+      "rooms": 2.0,
+      "area": 49.0,
+      "date_access": "2026-12-01",
+      "is_quick_apply": false
+    },
+    {
+      "id": 274188,
+      "references": {
+        "estate": 23149,
+        "apartment": 292316,
+        "object_ad": 274188,
+        "company": 3688,
+        "office": 4728,
+        "project": null
+      },
+      "type": "individual",
+      "uri": "/lagenhet/274188-1rum-mölndal-västra-götalands-län-solhemsgatan-4a",
+      "municipality": "Mölndal",
+      "county": "Västra Götalands län",
+      "city": "Mölndal",
+      "location": {
+        "lat": 57.6536,
+        "lon": 12.001
+      },
+      "boost_value": 0,
+      "discount": null,
+      "title": "Solhemsgatan 4A",
+      "audience": "everyone",
+      "is_short_lease": false,
+      "early_access": null,
+      "rent": 5000,
+      "rooms": 1.0,
+      "area": 15.0,
       "date_access": null,
-      "title": "  ",
-      "is_short_lease": false
+      "is_quick_apply": false
+    },
+    {
+      "id": 1330,
+      "references": {
+        "company": 64,
+        "office": 329,
+        "project": 1330
+      },
+      "type": "project",
+      "uri": "/projekt/1330",
+      "municipality": "Mölndal",
+      "county": "Västra Götalands län",
+      "city": "Kållered",
+      "location": {
+        "lat": 57.6104122,
+        "lon": 12.0540991
+      },
+      "boost_value": 0,
+      "discount": null,
+      "title": "Våmmedalsvägen 7-11",
+      "audience": [],
+      "is_short_lease": false,
+      "has_discount": false,
+      "rent_range": [
+        8436,
+        18012
+      ],
+      "active_ads": 0,
+      "date_access": "2026-06-01"
+    },
+    {
+      "id": 281921,
+      "references": {
+        "estate": 11481,
+        "apartment": 247390,
+        "object_ad": 281921,
+        "company": 1552,
+        "office": 2481,
+        "project": null
+      },
+      "type": "individual",
+      "uri": "/lagenhet/281921-3rum-eslöv-skåne-län-västergatan-19-g",
+      "municipality": "Eslöv",
+      "county": "Skåne län",
+      "city": "Eslöv",
+      "location": {
+        "lat": 55.8401333,
+        "lon": 13.2989911
+      },
+      "boost_value": 0,
+      "discount": null,
+      "title": "Västergatan 19 G",
+      "audience": "everyone",
+      "is_short_lease": false,
+      "early_access": null,
+      "rent": 11936,
+      "rooms": 3.0,
+      "area": 89.0,
+      "date_access": null,
+      "is_quick_apply": false
+    },
+    {
+      "id": 281320,
+      "references": {
+        "estate": 2517,
+        "apartment": 18398,
+        "object_ad": 281320,
+        "company": 31,
+        "office": 2233,
+        "project": null
+      },
+      "type": "individual",
+      "uri": "/lagenhet/281320-1rum-göteborg-västra-götalands-län-fyrklöversgatan-7",
+      "municipality": "Göteborg",
+      "county": "Västra Götalands län",
+      "city": "Göteborg",
+      "location": {
+        "lat": 57.7270098,
+        "lon": 11.934561
+      },
+      "boost_value": 0,
+      "discount": null,
+      "title": "Fyrklöversgatan 7",
+      "audience": "student",
+      "is_short_lease": true,
+      "early_access": null,
+      "rent": 6072,
+      "rooms": 1.0,
+      "area": 23.0,
+      "date_access": "2026-12-01",
+      "is_quick_apply": false
     }
-  ]
+  ],
+  "total_hits": 6
 }

@@ -3,6 +3,10 @@
 The parse_* functions only turn saved JSON into data (no internet), so they can
 be tested against the samples in tests/samples/. collect() does the fetching.
 The login token lives in memory for one run and is never written to disk.
+
+These are the same (unofficial, "internal") endpoints homeq.se's own web page
+uses, so HomeQ can change them without notice. The login response contains
+personal details; only the token is ever read from it.
 """
 
 import os
@@ -13,10 +17,16 @@ from urllib.parse import urljoin
 
 import requests
 
-LOGIN_URL = "https://api.homeq.se/api/v1/user/token/"
+LOGIN_URL = "https://api.homeq.se/api/v1/user/profile/login"
 SEARCH_URL = "https://api.homeq.se/api/v3/search"
 SITE_URL = "https://www.homeq.se/"
-SHAPE = "metropolitan_area.8"  # HomeQ's id for the Göteborg area
+SHAPE = "metropolitan_area.8"  # HomeQ's id for the Göteborg area (the server ignores it, see WANTED_KOMMUNER)
+# The search returns all of Sweden in one 8 MB answer, so we keep only these
+# municipalities ourselves: the 13 that make up Göteborgsregionen.
+WANTED_KOMMUNER = {
+    "Ale", "Alingsås", "Göteborg", "Härryda", "Kungsbacka", "Kungälv", "Lerum",
+    "Lilla Edet", "Mölndal", "Partille", "Stenungsund", "Tjörn", "Öckerö",
+}
 USER_AGENT = "bostadsko-tracker (personal use)"
 PAUSE_SECONDS = 1.5
 MAX_PAGES = 30  # safety stop, so a misbehaving API can't keep us looping
@@ -79,20 +89,21 @@ def _clean(value):
 # --- parsers (no network) --------------------------------------------------
 
 def parse_token(data) -> str:
-    """The login response -> the token string."""
-    if isinstance(data, dict):
-        for key in ("token", "access_token", "key"):
-            if isinstance(data.get(key), str) and data[key]:
-                return data[key]
-        keys = ", ".join(sorted(data))
-    else:
-        keys = f"a {type(data).__name__}, not an object"
-    # Only the field names are shown, never the values, in case one of them is a secret.
-    raise HomeQError(f"login response has no token field (it contains: {keys})")
+    """The login response -> the token string (found at user_info.token)."""
+    user_info = data.get("user_info") if isinstance(data, dict) else None
+    if isinstance(user_info, dict) and isinstance(user_info.get("token"), str) and user_info["token"]:
+        return user_info["token"]
+    keys = ", ".join(sorted(data)) if isinstance(data, dict) else f"a {type(data).__name__}, not an object"
+    # Only the field names are shown, never the values: this response holds personal data.
+    raise HomeQError(f"login response has no user_info.token (it contains: {keys})")
 
 
 def parse_search_response(data) -> list[dict]:
-    """One page of search results -> a list of listings in the unified schema."""
+    """The search response -> listings in the unified schema.
+
+    Only single apartments in WANTED_KOMMUNER are kept. "Projects" (a whole new
+    building, with no rent, rooms or size of its own) are left out.
+    """
     if not isinstance(data, dict) or not isinstance(data.get("results"), list):
         raise HomeQError("search response has no 'results' list")
 
@@ -100,15 +111,21 @@ def parse_search_response(data) -> list[dict]:
     for item in data["results"]:
         if not isinstance(item, dict) or item.get("id") in (None, ""):
             raise HomeQError("a search result has no id")
+        kommun = _clean(item.get("municipality"))
+        if item.get("type") == "project" or kommun not in WANTED_KOMMUNER:
+            continue
         rent = _number(item.get("rent"))
         uri = item.get("uri")
+        location = item.get("location") if isinstance(item.get("location"), dict) else {}
         listings.append({
             "id": f"homeq:{item['id']}",
             "source": "homeq",
             "url": urljoin(SITE_URL, uri) if isinstance(uri, str) and uri else None,
             "address": _clean(item.get("title")),
             "area": _clean(item.get("city")),
-            "kommun": _clean(item.get("municipality")),
+            "kommun": kommun,
+            "lat": _number(location.get("lat")),
+            "lon": _number(location.get("lon")),
             "rent_sek": round(rent) if rent is not None else None,
             "size_m2": _number(item.get("area")),  # HomeQ's "area" is the size, not the district
             "rooms": _number(item.get("rooms")),
@@ -134,9 +151,9 @@ class PoliteClient:
             wait = self.pause - (time.monotonic() - self._last_request)
             if wait > 0:
                 time.sleep(wait)
-        headers = {"Authorization": f"Bearer {token}"} if token else {}
+        headers = {"Authorization": f"JWT {token}"} if token else {}
         try:
-            response = self.session.post(url, json=body, headers=headers, timeout=30)
+            response = self.session.post(url, json=body, headers=headers, timeout=90)
         finally:
             self._last_request = time.monotonic()
         response.raise_for_status()
@@ -145,7 +162,7 @@ class PoliteClient:
 
 def login(client: PoliteClient, email: str, password: str) -> str:
     try:
-        data = client.post_json(LOGIN_URL, {"username": email, "password": password})
+        data = client.post_json(LOGIN_URL, {"email": email, "password": password})
     except requests.HTTPError as error:
         if error.response is not None and error.response.status_code in (400, 401, 403):
             raise HomeQError("HomeQ login was refused (wrong email or password?)") from None
@@ -154,9 +171,11 @@ def login(client: PoliteClient, email: str, password: str) -> str:
 
 
 def collect(pause=PAUSE_SECONDS) -> list[dict]:
-    """Log in, then fetch every page of search results for the Göteborg area.
+    """Log in, then fetch the search results and keep the Göteborg-region apartments.
 
-    Raises HomeQError if there is nothing to return, so an empty answer is never
+    The answer normally holds every listing at once (total_hits says how many).
+    If it ever comes in pages, we keep asking for the next page until we have
+    them all. Raises HomeQError if nothing is left, so an empty answer is never
     mistaken for "every listing has closed".
     """
     email, password = load_credentials()
@@ -164,18 +183,22 @@ def collect(pause=PAUSE_SECONDS) -> list[dict]:
     token = login(client, email, password)
 
     listings = {}
+    seen_ids = set()  # everything HomeQ returned, before filtering
     for page in range(1, MAX_PAGES + 1):
-        found = parse_search_response(
-            client.post_json(SEARCH_URL, {"selectedShapes": SHAPE, "page": page}, token)
-        )
-        added = [item for item in found if item["id"] not in listings]
-        if not added:  # an empty page, or one we have already seen: that was the last one
+        data = client.post_json(SEARCH_URL, {"selectedShapes": SHAPE, "page": page}, token)
+        found = parse_search_response(data)
+        returned = {str(item["id"]) for item in data["results"]}
+        if not returned - seen_ids:  # an empty page, or one we have already seen: that was the last one
             break
-        listings.update({item["id"]: item for item in added})
+        seen_ids |= returned
+        listings.update({item["id"]: item for item in found})
+        total = data.get("total_hits")
+        if isinstance(total, int) and len(seen_ids) >= total:
+            break
     else:
         raise HomeQError(f"still getting new listings after {MAX_PAGES} pages, giving up")
 
     if not listings:
         raise HomeQError("no listings found in the search response")
-    print(f"HomeQ: {len(listings)} listings on the site.")
+    print(f"HomeQ: {len(seen_ids)} listings in Sweden, {len(listings)} in the Göteborg region.")
     return list(listings.values())
