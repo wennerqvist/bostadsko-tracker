@@ -4,10 +4,24 @@ Fake collectors and a throwaway database are used, so nothing touches the intern
 import json
 
 import pytest
+import requests
 
 import collect
 import store
 from collectors import boplats, homeq
+
+
+class FakeGeocoder:
+    """Knows a few addresses; records every lookup so tests can see what was asked."""
+
+    def __init__(self, known=None, error=None):
+        self.known, self.error, self.asked = known or {}, error, []
+
+    def lookup(self, address, kommun):
+        self.asked.append(address)
+        if self.error:
+            raise self.error
+        return self.known.get(address)
 
 
 def listing(source, number, **extra):
@@ -19,7 +33,7 @@ def run(tmp_path, monkeypatch):
     """Runs collect.main() with the given fake results; returns (exit code, rows in the JSON export)."""
     runs = iter(range(1, 100))  # each run gets its own timestamp, like runs hours apart
 
-    def go(boplats_result, homeq_result):
+    def go(boplats_result, homeq_result, geocoder=None):
         monkeypatch.setattr(store, "now_iso", lambda: f"2026-09-19T{next(runs):02d}:00:00+00:00")
 
         def fake(result):
@@ -32,7 +46,8 @@ def run(tmp_path, monkeypatch):
         monkeypatch.setattr(boplats, "collect", fake(boplats_result))
         monkeypatch.setattr(homeq, "collect", fake(homeq_result))
         export = tmp_path / "listings.json"
-        code = collect.main([], db_path=tmp_path / "test.db", export_path=export)
+        code = collect.main([], db_path=tmp_path / "test.db", export_path=export,
+                            geocoder=geocoder or FakeGeocoder())
         return code, json.loads(export.read_text(encoding="utf-8"))
     return go
 
@@ -71,3 +86,39 @@ def test_homeq_gets_no_snapshot_rows_but_boplats_does(tmp_path, run):
     ids = [row["listing_id"] for row in conn.execute("SELECT listing_id FROM snapshots")]
     conn.close()
     assert ids == ["boplats:1"]
+
+
+# --- coordinates -----------------------------------------------------------
+
+def boplats_listing(number):
+    return listing("boplats", number, address=f"Street {number}", kommun="Göteborg")
+
+
+def test_coordinates_are_found_saved_and_exported(run):
+    geocoder = FakeGeocoder({"Street 1": (57.7, 11.9)})
+    code, rows = run([boplats_listing(1), boplats_listing(2)], [], geocoder)
+    by_id = {row["id"]: row for row in rows}
+    assert (by_id["boplats:1"]["lat"], by_id["boplats:1"]["lon"]) == (57.7, 11.9)
+    assert by_id["boplats:2"]["lat"] is None  # not found: stays empty, run still succeeds
+    assert code == 0
+
+
+def test_an_address_that_has_coordinates_is_never_looked_up_again(run):
+    geocoder = FakeGeocoder({"Street 1": (57.7, 11.9)})
+    run([boplats_listing(1)], [], geocoder)
+    run([boplats_listing(1)], [], geocoder)
+    assert geocoder.asked == ["Street 1"]  # only in the first run
+
+
+def test_homeq_listings_that_already_have_coordinates_are_not_looked_up(run):
+    geocoder = FakeGeocoder()
+    run([], [listing("homeq", 1, address="Street 1", kommun="Göteborg", lat=57.7, lon=11.9)], geocoder)
+    assert geocoder.asked == []
+
+
+def test_lookup_service_failing_stops_lookups_but_keeps_everything_else(run):
+    geocoder = FakeGeocoder(error=requests.ConnectionError("no network"))
+    code, rows = run([boplats_listing(1), boplats_listing(2)], [], geocoder)
+    assert geocoder.asked == ["Street 1"]  # gave up after the first failure
+    assert code == 0
+    assert {row["id"] for row in rows} == {"boplats:1", "boplats:2"}

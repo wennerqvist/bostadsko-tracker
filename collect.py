@@ -10,6 +10,7 @@ from pathlib import Path
 
 import requests
 
+import geocode
 import store
 from collectors import boplats, homeq
 
@@ -39,7 +40,32 @@ def save(conn, source: str, listings: list[dict], now: str, snapshots=True) -> t
     return new, closed
 
 
-def main(argv=None, db_path=store.DEFAULT_DB, export_path=EXPORT_PATH) -> int:
+def add_coordinates(conn, geocoder) -> tuple[int, int]:
+    """Look up coordinates for listings that lack them. Returns (found, not found).
+
+    Each found address is saved at once, so it is never looked up again. If the
+    lookup service is unreachable we stop for this run; the rest is tried next time.
+    """
+    found = missing = 0
+    todo = store.missing_coordinates(conn)
+    if todo:
+        print(f"Coordinates: looking up {len(todo)} addresses (about {round(len(todo) * 1.5 / 60)} min)...")
+    for row in todo:
+        try:
+            result = geocoder.lookup(row["address"], row["kommun"])
+        except (requests.RequestException, geocode.GeocodeError) as error:
+            print(f"Coordinates: stopped early, will continue next run: {error}", file=sys.stderr)
+            break
+        if result:
+            with conn:
+                store.set_coordinates(conn, row["id"], *result)
+            found += 1
+        else:
+            missing += 1
+    return found, missing
+
+
+def main(argv=None, db_path=store.DEFAULT_DB, export_path=EXPORT_PATH, geocoder=None) -> int:
     parser = argparse.ArgumentParser(description="Collect apartment listings.")
     parser.add_argument("--no-alert", action="store_true",
                         help="skip Telegram alerts (there are none yet, so this changes nothing today)")
@@ -68,6 +94,10 @@ def main(argv=None, db_path=store.DEFAULT_DB, export_path=EXPORT_PATH) -> int:
             continue
         new, closed = save(conn, source, listings, now, snapshots)
         print(f"{name}: {new} new, {len(listings) - new} already known, {closed} closed.")
+
+    found, missing = add_coordinates(conn, geocoder or geocode.Geocoder())
+    if found or missing:
+        print(f"Coordinates: {found} found, {missing} not found.")
 
     exported = export_json(conn, export_path)
     print(f"Done: {exported} active listings written to {Path(export_path).name}.")

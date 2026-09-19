@@ -111,6 +111,20 @@ def upsert_listing(conn, listing: dict, now: str) -> bool:
     return True
 
 
+def missing_coordinates(conn) -> list[sqlite3.Row]:
+    """Active listings that have an address and kommun but no coordinates yet."""
+    return conn.execute(
+        "SELECT id, address, kommun FROM listings"
+        " WHERE status = 'active' AND lat IS NULL AND address IS NOT NULL AND kommun IS NOT NULL"
+        " ORDER BY id"
+    ).fetchall()
+
+
+def set_coordinates(conn, listing_id: str, lat: float, lon: float):
+    """Fill in coordinates found after the listing was first saved."""
+    conn.execute("UPDATE listings SET lat = ?, lon = ? WHERE id = ?", (lat, lon, listing_id))
+
+
 def snapshot(conn, listing_id: str, taken_at: str, applicants=None, points_needed_top10=None):
     """Record the numbers that change over time, one row per listing per run."""
     conn.execute(
