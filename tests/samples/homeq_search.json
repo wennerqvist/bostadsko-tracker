@@ -1,0 +1,40 @@
+{
+  "results": [
+    {
+      "id": 101234,
+      "uri": "/apartment/101234",
+      "city": "Majorna",
+      "municipality": "Göteborg",
+      "rent": 8450,
+      "rooms": 2,
+      "area": 52.5,
+      "date_access": "2026-11-01",
+      "title": "Karl Johansgatan 12",
+      "is_short_lease": false
+    },
+    {
+      "id": 101300,
+      "uri": "/apartment/101300",
+      "city": "Mölndal",
+      "municipality": "Mölndal",
+      "rent": 6900,
+      "rooms": 1.5,
+      "area": 38,
+      "date_access": "2026-10-15T00:00:00",
+      "title": "Gamla Torget 3",
+      "is_short_lease": true
+    },
+    {
+      "id": 101377,
+      "uri": "https://www.homeq.se/apartment/101377",
+      "city": "Angered",
+      "municipality": "Göteborg",
+      "rent": "7 200",
+      "rooms": null,
+      "area": null,
+      "date_access": null,
+      "title": "  ",
+      "is_short_lease": false
+    }
+  ]
+}
