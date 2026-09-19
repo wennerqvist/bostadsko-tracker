@@ -1,6 +1,8 @@
-"""Entry point: collect listings, save them, and export site/listings.json.
+"""Entry point: collect listings, save them, export site/listings.json, and send alerts.
 
 Usage:  python collect.py [--no-alert]
+
+After saving and exporting, sends the Telegram alerts that are due (see alerts.json and notify.py).
 """
 
 import argparse
@@ -11,13 +13,22 @@ from pathlib import Path
 
 import requests
 
+import alerts
 import geocode
+import notify
 import score
 import store
 from collectors import boplats, homeq
 
 EXPORT_PATH = Path(__file__).parent / "site" / "listings.json"
 INSIGHT_MAX_AGE = timedelta(hours=20)  # a listing's HomeQ points figure is read again after this long
+
+
+def scored_rows(conn, me, today) -> list[dict]:
+    """All active listings with applicant count and chance bucket (and 'alerted_at', for the alerts)."""
+    rows = store.export_rows(conn)
+    score.add_scores(rows, me, today)
+    return rows
 
 
 def export_json(conn, path=EXPORT_PATH, me=None, today=None) -> int:
@@ -27,8 +38,8 @@ def export_json(conn, path=EXPORT_PATH, me=None, today=None) -> int:
     """
     path = Path(path)
     me = me or score.load_me()
-    rows = store.export_rows(conn)
-    score.add_scores(rows, me, today or date.today())
+    rows = scored_rows(conn, me, today or date.today())
+    rows = [{key: value for key, value in row.items() if key != "alerted_at"} for row in rows]  # the page has no use for it
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(rows, ensure_ascii=False, indent=2), encoding="utf-8")
     path.with_name("queue.json").write_text(json.dumps(score.queue_json(me), indent=2), encoding="utf-8")
@@ -76,11 +87,11 @@ def add_coordinates(conn, geocoder) -> tuple[int, int]:
     return found, missing
 
 
-def main(argv=None, db_path=store.DEFAULT_DB, export_path=EXPORT_PATH, geocoder=None, me_path=None) -> int:
+def main(argv=None, db_path=store.DEFAULT_DB, export_path=EXPORT_PATH, geocoder=None, me_path=None,
+         alerts_path=None) -> int:
     parser = argparse.ArgumentParser(description="Collect apartment listings.")
-    parser.add_argument("--no-alert", action="store_true",
-                        help="skip Telegram alerts (there are none yet, so this changes nothing today)")
-    parser.parse_args(argv)
+    parser.add_argument("--no-alert", action="store_true", help="skip Telegram alerts")
+    args = parser.parse_args(argv)
 
     try:
         me = score.load_me(me_path)  # check this first, so a typo in the dates stops us before any fetching
@@ -125,6 +136,17 @@ def main(argv=None, db_path=store.DEFAULT_DB, export_path=EXPORT_PATH, geocoder=
 
     exported = export_json(conn, export_path, me)
     print(f"Done: {exported} active listings written to {Path(export_path).name}.")
+
+    if not args.no_alert:
+        # After the export, so a problem with alerts never stops the listings from being saved and shown.
+        try:
+            searches = alerts.load_alerts(alerts_path)
+            settings = alerts.load_settings(alerts_path)
+            rows = scored_rows(conn, me, date.today())
+            print("Alerts:", notify.run_alerts(conn, rows, searches, settings, datetime.fromisoformat(now)))
+        except (alerts.AlertsError, notify.NotifyError) as error:
+            print(f"Alerts failed: {error}", file=sys.stderr)
+            failed.append("alerts")
     if failed:
         print(f"Failed: {', '.join(failed)}", file=sys.stderr)
     return 1 if failed else 0

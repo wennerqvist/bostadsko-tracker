@@ -47,7 +47,7 @@ Build in this order; each one is useful on its own before the next exists.
 5. **Chance score per listing** and a "worth applying" shortlist that respects the Boplats limit of fewer than five active applications.
 6. **Telegram alerts.** New matches, deadlines within 24 h on listings you care about, and changes in applicant count on ones you've applied to.
 7. **Application log.** What you applied to, outcome, and the winner's queue time when you learn it. Over months this becomes your own calibration data.
-8. **Instant alert for HomeQ first-come listings** in your criteria. These are won in minutes, so this is the single highest-value notification.
+8. **Instant alert for HomeQ first-come listings** in your criteria. These are won in minutes, so this is the single highest-value notification. *(Parked 2026-09-19: first-come is only about 1 in 10 of your matches, and a 3-hour poll is too slow for listings won in minutes. `include_first_come` is off in `alerts.json`; alerts arrive as a daily digest.)*
 
 **Left out of v1 on purpose:** auto-applying (Boplats penalises declined offers, and a bot applying for you is how you end up with a flat you don't want), user accounts, a native mobile app, anything that costs money monthly.
 

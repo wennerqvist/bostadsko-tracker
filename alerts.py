@@ -13,6 +13,8 @@ ALERTS_PATH = Path(__file__).parent / "alerts.json"
 
 SOURCES = ("boplats", "homeq")
 CHANCE_WORDS = {"god chans": "likely", "möjlig": "possible"}  # what alerts.json says -> score.py's bucket
+DELIVERY_MODES = ("daily", "instant")
+TOP_KEYS = ("help", "delivery", "digest_hour", "searches")
 SEARCH_KEYS = (
     "name", "max_rent", "min_size", "min_rooms", "sources", "kommuner",
     "include_first_come", "include_lottery", "min_chance",
@@ -83,8 +85,8 @@ def _check_search(raw, number: int) -> dict:
     }
 
 
-def load_alerts(path=None) -> list[dict]:
-    """The searches in alerts.json. A missing file gives no searches, so no alerts."""
+def _read(path) -> dict:
+    """alerts.json as a dict ({} if the file is missing), checked for typos in the top-level names."""
     path = Path(path) if path else ALERTS_PATH
     try:
         raw = json.loads(path.read_text(encoding="utf-8-sig")) if path.exists() else {}
@@ -92,10 +94,31 @@ def load_alerts(path=None) -> list[dict]:
         raise AlertsError(f"{path.name} is not valid JSON: {error}") from None
     if not isinstance(raw, dict):
         raise AlertsError(f"{path.name} must be a JSON object with a 'searches' list")
+    unknown = [key for key in raw if key not in TOP_KEYS]
+    if unknown:
+        raise AlertsError(f"{path.name}: unknown setting '{unknown[0]}'. Allowed: {', '.join(TOP_KEYS)}")
+    return raw
+
+
+def load_alerts(path=None) -> list[dict]:
+    """The searches in alerts.json. A missing file gives no searches, so no alerts."""
+    raw = _read(path)
     searches = raw.get("searches", [])
     if not isinstance(searches, list):
-        raise AlertsError(f"{path.name}: 'searches' must be a list")
+        raise AlertsError("alerts.json: 'searches' must be a list")
     return [_check_search(item, number) for number, item in enumerate(searches, start=1)]
+
+
+def load_settings(path=None) -> dict:
+    """{'delivery': 'daily' | 'instant', 'digest_hour': 0-23}: how alerts are sent, not what they are about."""
+    raw = _read(path)
+    delivery = raw.get("delivery", "daily")
+    if delivery not in DELIVERY_MODES:
+        raise AlertsError(f"alerts.json: 'delivery' must be \"daily\" or \"instant\", got {delivery!r}")
+    hour = raw.get("digest_hour", 7)
+    if isinstance(hour, bool) or not isinstance(hour, int) or not 0 <= hour <= 23:
+        raise AlertsError(f"alerts.json: 'digest_hour' must be a whole number from 0 to 23, got {hour!r}")
+    return {"delivery": delivery, "digest_hour": hour}
 
 
 # --- does a listing match? ---------------------------------------------------

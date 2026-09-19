@@ -27,7 +27,9 @@ zero monthly cost, no server. Full plan: PLAN.md.
 - `collectors/boplats.py`, `collectors/homeq.py` — one function each: fetch → list of dicts in the unified schema
 - `store.py` — SQLite schema + upsert + snapshot
 - `score.py` — bucket logic (see PLAN.md "How your chances are estimated")
-- `notify.py` — Telegram
+- `alerts.json` — what to be alerted about (searches, `min_chance`) and how (`daily` digest at 07:00 Swedish time, or `instant`). Jakob edits this by hand.
+- `alerts.py` — reads `alerts.json` and decides whether a listing matches
+- `notify.py` — Telegram: message text, sending, and when an alert is due (`python notify.py preview` / `test`)
 - `me.json` — queue dates and criteria (gitignored copy `me.local.json` for real values)
 - `site/` — the web page
 - `tests/` — saved HTML/JSON samples from both sites + parser tests

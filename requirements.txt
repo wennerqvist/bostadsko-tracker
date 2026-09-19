@@ -1,3 +1,4 @@
 requests
+tzdata  # Windows has no time-zone list of its own; needed to work out "07:00 Swedish time" for alerts
 beautifulsoup4
 pytest

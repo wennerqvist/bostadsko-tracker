@@ -7,6 +7,7 @@ import pytest
 import requests
 
 import collect
+import notify
 import store
 from collectors import boplats, homeq
 
@@ -46,7 +47,7 @@ def run(tmp_path, monkeypatch):
         monkeypatch.setattr(boplats, "collect", fake(boplats_result))
         monkeypatch.setattr(homeq, "collect", fake(homeq_result))
         export = tmp_path / "listings.json"
-        code = collect.main([], db_path=tmp_path / "test.db", export_path=export,
+        code = collect.main(["--no-alert"], db_path=tmp_path / "test.db", export_path=export,
                             geocoder=geocoder or FakeGeocoder(), me_path=me_path or tmp_path / "no-me.json")
         return code, json.loads(export.read_text(encoding="utf-8"))
     return go
@@ -150,7 +151,7 @@ def test_a_broken_dates_file_stops_the_run_before_fetching(tmp_path, monkeypatch
     me = tmp_path / "me.json"
     me.write_text('{"boplats_registered": "21/4/2023"}', encoding="utf-8")
 
-    code = collect.main([], db_path=tmp_path / "test.db", export_path=tmp_path / "listings.json", me_path=me)
+    code = collect.main(["--no-alert"], db_path=tmp_path / "test.db", export_path=tmp_path / "listings.json", me_path=me)
     assert code == 1
     assert not (tmp_path / "listings.json").exists()
 
@@ -189,7 +190,72 @@ def test_the_collector_is_told_what_was_read_recently_and_where_the_cutoff_is(tm
         return [listing("homeq", 1)]
 
     monkeypatch.setattr(homeq, "collect", spy)
-    collect.main([], db_path=tmp_path / "test.db", export_path=tmp_path / "listings.json",
+    collect.main(["--no-alert"], db_path=tmp_path / "test.db", export_path=tmp_path / "listings.json",
                  geocoder=FakeGeocoder(), me_path=tmp_path / "no-me.json")  # run 2, at 02:00
     assert asked["last_insight"] == {"homeq:1": "2026-09-19T01:00:00+00:00"}
     assert asked["insight_cutoff"] == "2026-09-18T06:00:00+00:00"  # 20 hours before this run
+
+
+# --- Telegram alerts at the end of a run ----------------------------------------------------------
+
+@pytest.fixture
+def alert_run(tmp_path, monkeypatch):
+    """Runs collect.main() WITH alerts, at a chosen time. Fake Telegram: records posts, or refuses if told to."""
+    sent, state = [], {"status": 200}
+    (tmp_path / "alerts.json").write_text(json.dumps({"searches": [{"name": "S", "max_rent": 9000}]}), encoding="utf-8")
+
+    def fake_post(url, json=None, timeout=None):
+        sent.append(json["text"])
+        response = requests.Response()
+        response.status_code = state["status"]
+        response._content = b'{"ok": true, "description": "nope"}'
+        return response
+
+    monkeypatch.setattr(requests, "post", fake_post)
+    monkeypatch.setattr(notify, "load_credentials", lambda: ("tok", "42"))
+    monkeypatch.setattr(homeq, "collect", lambda *a, **k: [])
+
+    def go(now, boplats_result, alerts_path=None, argv=()):
+        monkeypatch.setattr(store, "now_iso", lambda: now)
+        monkeypatch.setattr(boplats, "collect", lambda *a, **k: boplats_result)
+        export = tmp_path / "listings.json"
+        code = collect.main(list(argv), db_path=tmp_path / "test.db", export_path=export, geocoder=FakeGeocoder(),
+                            me_path=tmp_path / "no-me.json", alerts_path=alerts_path or tmp_path / "alerts.json")
+        return code, json.loads(export.read_text(encoding="utf-8"))
+
+    go.sent, go.state = sent, state
+    return go
+
+
+FIRST_RUN, NEXT_MORNING = "2026-09-19T08:00:00+00:00", "2026-09-20T08:00:00+00:00"  # 10:00 Swedish time
+
+
+def test_the_first_alert_run_sends_nothing_and_a_later_new_match_is_announced(alert_run):
+    alert_run(FIRST_RUN, [listing("boplats", 1, rent_sek=8000)])
+    assert alert_run.sent == []
+    code, rows = alert_run(NEXT_MORNING, [listing("boplats", 1, rent_sek=8000), listing("boplats", 2, rent_sek=8000)])
+    assert code == 0 and len(alert_run.sent) == 1 and "Street 2" in alert_run.sent[0]
+    assert all("alerted_at" not in row for row in rows)  # the public JSON does not carry it
+
+
+def test_a_telegram_failure_is_reported_but_the_listings_are_still_saved_and_exported(alert_run, capsys):
+    alert_run(FIRST_RUN, [listing("boplats", 1, rent_sek=8000)])
+    alert_run.state["status"] = 500
+    code, rows = alert_run(NEXT_MORNING, [listing("boplats", 1, rent_sek=8000), listing("boplats", 2, rent_sek=8000)])
+    assert code == 1 and {row["id"] for row in rows} == {"boplats:1", "boplats:2"}
+    assert "Alerts failed" in capsys.readouterr().err
+
+
+def test_a_typo_in_alerts_json_is_reported_but_the_listings_are_still_saved(alert_run, tmp_path, capsys):
+    broken = tmp_path / "broken.json"
+    broken.write_text('{"searches": [{"name": "S", "max_rnt": 9000}]}', encoding="utf-8")
+    code, rows = alert_run(FIRST_RUN, [listing("boplats", 1)], alerts_path=broken)
+    assert code == 1 and len(rows) == 1
+    assert "max_rnt" in capsys.readouterr().err
+
+
+def test_no_alert_flag_skips_alerts_completely(alert_run, tmp_path):
+    alert_run(FIRST_RUN, [listing("boplats", 1, rent_sek=8000)], argv=["--no-alert"])
+    conn = store.connect(tmp_path / "test.db")
+    assert not store.alerts_started(conn)  # not even the first-run marking happened
+    conn.close()

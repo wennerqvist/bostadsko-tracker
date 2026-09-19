@@ -36,6 +36,30 @@ def test_the_real_alerts_json_is_valid_and_holds_the_starting_criteria():
     assert (mine["max_rent"], mine["min_size"], mine["min_rooms"]) == (9000, 20, 1)
     assert mine["kommuner"] == ["Göteborg", "Mölndal"]
     assert mine["min_chance"] == "possible"
+    assert mine["include_first_come"] is False
+    assert alerts.load_settings() == {"delivery": "daily", "digest_hour": 7}
+
+
+# --- delivery settings -----------------------------------------------------------
+
+def test_settings_default_to_a_daily_digest_at_seven(tmp_path):
+    assert alerts.load_settings(write_alerts(tmp_path, {"searches": []})) == {"delivery": "daily", "digest_hour": 7}
+    assert alerts.load_settings(tmp_path / "nope.json") == {"delivery": "daily", "digest_hour": 7}
+
+
+def test_settings_can_be_changed(tmp_path):
+    path = write_alerts(tmp_path, {"delivery": "instant", "digest_hour": 18})
+    assert alerts.load_settings(path) == {"delivery": "instant", "digest_hour": 18}
+
+
+@pytest.mark.parametrize("bad", [
+    {"delivery": "weekly"}, {"delivery": None}, {"digest_hour": 24}, {"digest_hour": -1},
+    {"digest_hour": "7"}, {"digest_hour": 7.5}, {"digest_hour": True},
+    {"deliverry": "daily"},   # typo in a top-level name
+])
+def test_bad_settings_give_a_clear_error(tmp_path, bad):
+    with pytest.raises(alerts.AlertsError):
+        alerts.load_settings(write_alerts(tmp_path, bad))
 
 
 # --- reading the file ------------------------------------------------------------

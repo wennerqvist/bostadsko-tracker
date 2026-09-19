@@ -27,6 +27,7 @@ CREATE TABLE IF NOT EXISTS listings (
     allocation         TEXT,               -- queue / queue_guidance / first_come / lottery / points_landlord
     winners_queue_days INTEGER,            -- Boplats "kötid för liknande", in days
     is_short_lease     INTEGER,            -- 1 = time-limited lease, 0 = not, NULL = unknown
+    alerted_at         TEXT,               -- when it went into a Telegram alert (or was marked seen); NULL = not yet
     first_seen         TEXT NOT NULL,
     last_seen          TEXT NOT NULL,
     status             TEXT NOT NULL DEFAULT 'active'   -- 'active' / 'closed'
@@ -64,7 +65,7 @@ LISTING_FIELDS = [
 # Columns added after the first version. CREATE TABLE IF NOT EXISTS leaves an
 # existing database alone, so connect() adds any of these that are missing.
 ADDED_COLUMNS = {
-    "listings": {"is_short_lease": "INTEGER"},
+    "listings": {"is_short_lease": "INTEGER", "alerted_at": "TEXT"},
     "snapshots": {"frame": "TEXT"},
 }
 
@@ -165,6 +166,28 @@ def close_unseen(conn, source: str, now: str) -> int:
         (source, now),
     )
     return cur.rowcount
+
+
+def alerts_started(conn) -> bool:
+    """True once any listing has been announced or marked as seen (so alerts have run before)."""
+    return conn.execute("SELECT 1 FROM listings WHERE alerted_at IS NOT NULL LIMIT 1").fetchone() is not None
+
+
+def last_alert_time(conn) -> str | None:
+    """When the latest alert went out (or the first-run marking happened). None if never."""
+    return conn.execute("SELECT MAX(alerted_at) FROM listings").fetchone()[0]
+
+
+def mark_alerted(conn, listing_ids, when: str):
+    """Remember that these listings have been announced, so they never are again."""
+    with conn:
+        conn.executemany("UPDATE listings SET alerted_at = ? WHERE id = ?", [(when, one) for one in listing_ids])
+
+
+def mark_all_alerted(conn, when: str) -> int:
+    """First run with alerts on: everything already here counts as seen. Returns how many."""
+    with conn:
+        return conn.execute("UPDATE listings SET alerted_at = ? WHERE alerted_at IS NULL", (when,)).rowcount
 
 
 def export_rows(conn) -> list[dict]:

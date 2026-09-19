@@ -1,7 +1,7 @@
-"""Telegram messages: turn a listing into a short Swedish text and send it.
+"""Telegram messages: turn listings into short Swedish texts and send them.
 
 Usage:
-    python notify.py preview [N]   print messages for N matching listings (default 3), sends nothing
+    python notify.py preview [N]   print what the alert would look like for N matching listings, sends nothing
     python notify.py test          send one greeting, to check that the bot works
 """
 
@@ -9,11 +9,15 @@ import argparse
 import json
 import os
 import sys
+import time
+from datetime import datetime
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 import requests
 
 import alerts
+import store
 
 ENV_PATH = Path(__file__).parent / ".env"
 LISTINGS_PATH = Path(__file__).parent / "site" / "listings.json"
@@ -21,6 +25,11 @@ SEND_URL = "https://api.telegram.org/bot{token}/sendMessage"
 
 SOURCE_NAMES = {"boplats": "Boplats", "homeq": "HomeQ"}
 CHANCE_LABELS = {"likely": "God chans", "possible": "Möjlig", "unlikely": "Låg chans"}  # same words as the map
+CHANCE_ORDER = {"likely": 0, "possible": 1, "unlikely": 3}  # anything else (unknown) sorts in between, at 2
+
+STOCKHOLM = ZoneInfo("Europe/Stockholm")  # the digest hour in alerts.json is Swedish time, summer and winter
+DIGEST_MAX_CHARS = 3500  # Telegram refuses messages over 4096 characters; a longer digest is split
+PAUSE_SECONDS = 1.1      # Telegram allows about one message per second to one chat
 
 
 class NotifyError(Exception):
@@ -58,16 +67,17 @@ def _number(value) -> str:
     return text.replace(",", " ").replace(".", ",")
 
 
-def format_message(listing: dict, search_names: list[str]) -> str:
-    """Plain text for one listing. Only facts we know are included."""
-    first_come = listing.get("allocation") == "first_come"
+def _title(listing: dict) -> str:
+    """'Storgatan 5 (Majorna, Göteborg)'. Only known parts."""
     area, kommun = listing.get("area"), listing.get("kommun")
     if area and kommun and area.casefold() == kommun.casefold():  # HomeQ often names the kommun as the area
         kommun = None
     place = ", ".join(part for part in (area, kommun) if part)
-    title = listing.get("address") or "adress saknas"
-    lines = [f"{'⚡' if first_come else '🏠'} Ny annons: {title}" + (f" ({place})" if place else "")]
+    return (listing.get("address") or "adress saknas") + (f" ({place})" if place else "")
 
+
+def _facts(listing: dict) -> str:
+    """'7 200 kr/mån · 52,5 m² · 2 rum · vån 3'. Only known parts."""
     facts = []
     if listing.get("rent_sek") is not None:
         facts.append(f"{_number(listing['rent_sek'])} kr/mån")
@@ -77,8 +87,14 @@ def format_message(listing: dict, search_names: list[str]) -> str:
         facts.append(f"{_number(listing['rooms'])} rum")
     if listing.get("floor") is not None:
         facts.append("bottenvåning" if listing["floor"] == 0 else f"vån {listing['floor']}")
-    if facts:
-        lines.append(" · ".join(facts))
+    return " · ".join(facts)
+
+
+def format_message(listing: dict, search_names: list[str]) -> str:
+    """One listing as its own message (delivery 'instant')."""
+    lines = [f"{'⚡' if listing.get('allocation') == 'first_come' else '🏠'} Ny annons: {_title(listing)}"]
+    if _facts(listing):
+        lines.append(_facts(listing))
 
     label = CHANCE_LABELS.get(listing.get("bucket"), "Okänd chans")
     lines.append(f"{label}. {listing.get('bucket_note') or ''}".strip())
@@ -98,6 +114,50 @@ def format_message(listing: dict, search_names: list[str]) -> str:
     if listing.get("url"):
         lines.append(listing["url"])
     return "\n".join(lines)
+
+
+def _digest_entry(number: int, listing: dict, search_names=None) -> str:
+    """One listing inside the digest: shorter than a message of its own."""
+    lines = [f"{number}. {_title(listing)}"]
+    if _facts(listing):
+        lines.append(_facts(listing))
+    detail = [CHANCE_LABELS.get(listing.get("bucket"), "Okänd chans")]
+    if listing.get("deadline"):
+        detail.append(f"sista dag {listing['deadline']}")
+    detail.append(SOURCE_NAMES.get(listing.get("source"), listing.get("source") or ""))
+    if search_names:
+        detail.append(", ".join(search_names))
+    lines.append(" · ".join(detail))
+    if listing.get("url"):
+        lines.append(listing["url"])
+    return "\n".join(lines)
+
+
+def digest_messages(items, show_names=False, max_chars=None) -> list[tuple[str, list[str]]]:
+    """[(text, ids of the listings in it)] for the daily digest, best chance first, then soonest deadline.
+
+    `items` is [(listing, names of the searches it matches)]. A digest that would be too long
+    for one Telegram message is split into several.
+    """
+    max_chars = max_chars or DIGEST_MAX_CHARS
+    items = sorted(items, key=lambda item: (
+        CHANCE_ORDER.get(item[0].get("bucket"), 2), item[0].get("deadline") or "9999", item[0].get("address") or ""))
+    parts, current, size = [], [], 0
+    for number, (listing, names) in enumerate(items, start=1):
+        entry = _digest_entry(number, listing, names if show_names else None)
+        if current and size + len(entry) > max_chars:
+            parts.append(current)
+            current, size = [], 0
+        current.append((listing["id"], entry))
+        size += len(entry) + 2
+    if current:
+        parts.append(current)
+
+    messages = []
+    for index, part in enumerate(parts, start=1):
+        header = f"📬 Nya annonser ({len(items)})" + (f" · del {index}/{len(parts)}" if len(parts) > 1 else "")
+        messages.append((header + "\n\n" + "\n\n".join(entry for _, entry in part), [one for one, _ in part]))
+    return messages
 
 
 # --- sending ---------------------------------------------------------------------
@@ -121,21 +181,74 @@ def send_message(text: str, token: str, chat_id: str, session=requests):
         raise NotifyError(f"Telegram refused the message (HTTP {response.status_code}): {reason}".rstrip(": "))
 
 
+def run_alerts(conn, rows, searches, settings, now: datetime, session=requests, credentials=None, pause=None) -> str:
+    """Send the alerts that are due and remember what was sent. Returns a one-line summary.
+
+    `rows` are the scored listings (with 'alerted_at'); `now` must have a time zone.
+    Raises NotifyError if a message cannot be sent; whatever went out before that stays marked as sent.
+
+    * First time alerts run: everything already in the database is marked as seen, nothing is sent.
+    * 'daily': at most one message a day, sent by the first run after the digest hour (Swedish time)
+      that has something new. A new listing that arrives later the same day waits for tomorrow.
+    * 'instant': one message per new listing, right away.
+    """
+    if not searches:
+        return "no searches in alerts.json, nothing to do"
+    stamp = now.isoformat(timespec="seconds")
+    if not store.alerts_started(conn):
+        marked = store.mark_all_alerted(conn, stamp)
+        return f"first run with alerts on: {marked} listings marked as already seen, nothing sent"
+
+    items = []
+    for row in rows:
+        if row.get("alerted_at") is None:
+            names = [search["name"] for search in searches if alerts.matches(row, search)]
+            if names:
+                items.append((row, names))
+    if not items:
+        return "nothing new that matches"
+
+    if settings["delivery"] == "daily":
+        local = now.astimezone(STOCKHOLM)
+        if local.hour < settings["digest_hour"]:
+            return f"{len(items)} new, waiting for the {settings['digest_hour']:02d}:00 digest"
+        last = store.last_alert_time(conn)
+        if last and datetime.fromisoformat(last).astimezone(STOCKHOLM).date() == local.date():
+            return f"{len(items)} new, but today's message has already gone out: they wait until tomorrow"
+        messages = digest_messages(items, show_names=len(searches) > 1)
+    else:
+        messages = [(format_message(listing, names), [listing["id"]]) for listing, names in items]
+
+    token, chat_id = credentials or load_credentials()
+    for number, (text, ids) in enumerate(messages):
+        if number:
+            time.sleep(PAUSE_SECONDS if pause is None else pause)
+        send_message(text, token, chat_id, session)
+        store.mark_alerted(conn, ids, stamp)
+    return f"sent {len(messages)} message(s) about {len(items)} listing(s)"
+
+
 # --- command line ------------------------------------------------------------------
 
 def preview(count: int, listings_path=LISTINGS_PATH, alerts_path=None) -> int:
-    """Print the messages the first `count` matching listings would give. Sends nothing."""
+    """Print what the alert would look like for the first `count` matching listings. Sends nothing."""
     searches = alerts.load_alerts(alerts_path)
+    settings = alerts.load_settings(alerts_path)
     rows = json.loads(Path(listings_path).read_text(encoding="utf-8"))
-    shown = 0
+    items = []
     for row in rows:
         names = [search["name"] for search in searches if alerts.matches(row, search)]
         if names:
-            print(format_message(row, names), end="\n\n---\n\n")
-            shown += 1
-            if shown == count:
-                break
-    print(f"({shown} shown. Nothing was sent.)")
+            items.append((row, names))
+        if len(items) == count:
+            break
+    if settings["delivery"] == "daily":
+        texts = [text for text, _ in digest_messages(items, show_names=len(searches) > 1)]
+    else:
+        texts = [format_message(listing, names) for listing, names in items]
+    for text in texts:
+        print(text, end="\n\n---\n\n")
+    print(f"({len(items)} listings shown, delivery '{settings['delivery']}'. Nothing was sent.)")
     return 0
 
 
@@ -143,7 +256,7 @@ def main(argv=None) -> int:
     sys.stdout.reconfigure(encoding="utf-8")  # the Windows console cannot show emoji or å/ä/ö by default
     parser = argparse.ArgumentParser(description="Telegram messages for the bostadskö tracker.")
     commands = parser.add_subparsers(dest="command", required=True)
-    preview_parser = commands.add_parser("preview", help="print messages, send nothing")
+    preview_parser = commands.add_parser("preview", help="print what the alert looks like, send nothing")
     preview_parser.add_argument("count", nargs="?", type=int, default=3)
     commands.add_parser("test", help="send one greeting to your Telegram")
     args = parser.parse_args(argv)

@@ -152,3 +152,32 @@ def test_old_database_without_the_frame_column_is_upgraded(tmp_path):
     row = conn.execute("SELECT applicants, frame FROM snapshots").fetchone()
     assert (row["applicants"], row["frame"]) == (7, None)
     conn.close()
+
+
+# --- remembering what has been announced --------------------------------------------------
+
+def test_alert_marks_start_empty_and_are_remembered(conn):
+    for number in (1, 2, 3):
+        store.upsert_listing(conn, {"id": f"boplats:{number}", "source": "boplats"}, RUN_1)
+    assert not store.alerts_started(conn) and store.last_alert_time(conn) is None
+
+    store.mark_alerted(conn, ["boplats:1"], RUN_2)
+    assert store.alerts_started(conn) and store.last_alert_time(conn) == RUN_2
+
+    assert store.mark_all_alerted(conn, "2026-09-19T10:00:00+00:00") == 2  # only the two not yet marked
+    stamps = dict(conn.execute("SELECT id, alerted_at FROM listings").fetchall())
+    assert stamps["boplats:1"] == RUN_2  # an earlier mark is never overwritten
+
+
+def test_an_old_database_without_the_alert_column_gets_it_added(tmp_path):
+    import sqlite3
+    path = tmp_path / "old.db"
+    old = sqlite3.connect(path)
+    old.execute("CREATE TABLE listings (id TEXT PRIMARY KEY, source TEXT NOT NULL, first_seen TEXT NOT NULL,"
+                " last_seen TEXT NOT NULL, status TEXT NOT NULL DEFAULT 'active')")
+    old.execute("INSERT INTO listings (id, source, first_seen, last_seen) VALUES ('boplats:1', 'boplats', 'x', 'x')")
+    old.commit()
+    old.close()
+    conn = store.connect(path)
+    assert not store.alerts_started(conn)  # the column exists, and the old listing is simply "not yet announced"
+    conn.close()
