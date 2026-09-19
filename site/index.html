@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bostadskö Tracker</title>
+  <!-- Leaflet (map library), pinned to one version; the hashes make the browser refuse a changed copy. -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+  <style>
+    :root {
+      --boplats: #1f6fb4;
+      --homeq: #d9730d;
+      --line: #d9d9d9;
+      --muted: #666;
+      --panel-bg: #fafafa;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font: 15px/1.4 system-ui, -apple-system, "Segoe UI", sans-serif;
+      color: #1c1c1c;
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      height: 100dvh;
+    }
+    #panel {
+      overflow-y: auto;
+      padding: 16px;
+      background: var(--panel-bg);
+      border-right: 1px solid var(--line);
+    }
+    #map { height: 100%; min-height: 320px; }
+    h1 { font-size: 1.25rem; margin: 0 0 4px; }
+    #status { margin: 0 0 12px; color: var(--muted); font-size: .9rem; }
+    #status.error { color: #b00020; }
+    fieldset { border: 0; padding: 0; margin: 0 0 14px; }
+    legend { font-weight: 600; padding: 0; margin-bottom: 6px; }
+    label { display: block; margin: 4px 0; }
+    .row { display: flex; gap: 8px; }
+    .row label { flex: 1; }
+    input[type=number], select {
+      width: 100%; padding: 6px 8px; font: inherit;
+      border: 1px solid #bbb; border-radius: 6px; background: #fff;
+    }
+    input[type=checkbox] { margin-right: 6px; }
+    button {
+      font: inherit; padding: 6px 12px; border: 1px solid #bbb;
+      border-radius: 6px; background: #fff; cursor: pointer;
+    }
+    #summary { font-weight: 600; margin: 14px 0 6px; }
+    .legend { list-style: none; margin: 0 0 14px; padding: 0; font-size: .9rem; color: var(--muted); }
+    .legend li { margin: 3px 0; }
+    .dot {
+      display: inline-block; width: 12px; height: 12px; border-radius: 50%;
+      vertical-align: -1px; margin-right: 6px; border: 2px solid transparent;
+    }
+    .dot.boplats { background: var(--boplats); }
+    .dot.homeq { background: var(--homeq); }
+    .dot.grey { background: #b8b8b8; opacity: .6; }
+    .dot.short { background: transparent; border: 2px dashed #555; }
+    details { font-size: .9rem; }
+    details ul { padding-left: 18px; margin: 6px 0; }
+    .hint { color: var(--muted); font-size: .85rem; }
+
+    /* Popup cards */
+    .leaflet-popup-content { margin: 12px 14px; font-size: 14px; }
+    .card + .card { border-top: 1px solid var(--line); margin-top: 10px; padding-top: 10px; }
+    .card.dim { opacity: .55; }
+    .card .title { font-weight: 700; font-size: 15px; }
+    .card .sub { color: var(--muted); margin-bottom: 4px; }
+    .card dl { display: grid; grid-template-columns: auto 1fr; gap: 1px 10px; margin: 4px 0 6px; }
+    .card dt { color: var(--muted); }
+    .card dd { margin: 0; white-space: nowrap; }
+    .card dd.wrap { white-space: normal; overflow-wrap: anywhere; }
+    .badge {
+      display: inline-block; padding: 0 6px; border-radius: 4px; font-size: 12px;
+      font-weight: 600; background: #ffe7c2; color: #7a4300; margin-left: 4px;
+    }
+    .source { font-weight: 600; }
+    .source.boplats { color: var(--boplats); }
+    .source.homeq { color: var(--homeq); }
+
+    @media (max-width: 760px) {
+      body { grid-template-columns: 1fr; height: auto; }
+      #map { order: -1; height: 60dvh; }
+      #panel { border-right: 0; border-top: 1px solid var(--line); }
+    }
+  </style>
+</head>
+<body>
+  <aside id="panel">
+    <h1>Bostadskö Tracker</h1>
+    <p id="status">Loading listings…</p>
+
+    <form id="filters" autocomplete="off">
+      <fieldset>
+        <legend>Rent</legend>
+        <label>Max rent (kr/month) <input type="number" id="maxRent" min="0" step="100" inputmode="numeric"></label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Size and rooms</legend>
+        <div class="row">
+          <label>Min m² <input type="number" id="minSize" min="0" step="1" inputmode="decimal"></label>
+          <label>Max m² <input type="number" id="maxSize" min="0" step="1" inputmode="decimal"></label>
+        </div>
+        <label>Min rooms <input type="number" id="minRooms" min="0" step="0.5" inputmode="decimal"></label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Source</legend>
+        <label><input type="checkbox" id="srcBoplats" checked>Boplats</label>
+        <label><input type="checkbox" id="srcHomeq" checked>HomeQ</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Short leases (time-limited contracts)</legend>
+        <select id="shortLease">
+          <option value="include">Include</option>
+          <option value="exclude">Exclude</option>
+          <option value="only">Only short leases</option>
+        </select>
+      </fieldset>
+
+      <fieldset>
+        <label><input type="checkbox" id="hideOthers">Hide listings that don't match</label>
+        <p class="hint">Left unticked, non-matching pins turn grey so you still see the whole market.</p>
+      </fieldset>
+
+      <button type="button" id="reset">Reset filters</button>
+    </form>
+
+    <p id="summary" aria-live="polite"></p>
+
+    <ul class="legend">
+      <li><span class="dot boplats"></span>Boplats</li>
+      <li><span class="dot homeq"></span>HomeQ</li>
+      <li><span class="dot short"></span>Short lease (dashed ring)</li>
+      <li><span class="dot grey"></span>Doesn't match your filters</li>
+      <li>Bigger pin = several listings at the same address</li>
+    </ul>
+
+    <details id="unplaced" hidden>
+      <summary id="unplacedSummary"></summary>
+      <ul id="unplacedList"></ul>
+      <p class="hint">No coordinates could be found for these addresses.</p>
+    </details>
+
+    <noscript>This page needs JavaScript to show the map.</noscript>
+  </aside>
+
+  <div id="map" role="application" aria-label="Map of listings"></div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+          integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="app.js"></script>
+</body>
+</html>
