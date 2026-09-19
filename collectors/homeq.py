@@ -113,7 +113,7 @@ def parse_search_response(data) -> list[dict]:
             "size_m2": _number(item.get("area")),  # HomeQ's "area" is the size, not the district
             "rooms": _number(item.get("rooms")),
             "move_in": _iso_date(item.get("date_access")),
-            "is_short_lease": bool(item.get("is_short_lease")),  # store.py ignores this for now
+            "is_short_lease": bool(item["is_short_lease"]) if item.get("is_short_lease") is not None else None,
         })
     return listings
 

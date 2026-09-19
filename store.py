@@ -26,7 +26,8 @@ CREATE TABLE IF NOT EXISTS listings (
     landlord           TEXT,
     allocation         TEXT,               -- queue / queue_guidance / first_come / lottery / points_landlord
     winners_queue_days INTEGER,            -- Boplats "kötid för liknande", in days
-    first_seen         TEXT NOT NULL,
+    is_short_lease     INTEGER,            -- 1 = time-limited lease, 0 = not, NULL = unknown
+    first_seen        TEXT NOT NULL,
     last_seen          TEXT NOT NULL,
     status             TEXT NOT NULL DEFAULT 'active'   -- 'active' / 'closed'
 );
@@ -56,8 +57,12 @@ CREATE TABLE IF NOT EXISTS applications (
 LISTING_FIELDS = [
     "url", "address", "area", "kommun", "lat", "lon", "rent_sek", "size_m2",
     "rooms", "floor", "published", "move_in", "deadline", "landlord",
-    "allocation", "winners_queue_days",
+    "allocation", "winners_queue_days", "is_short_lease",
 ]
+
+# Columns added after the first version. CREATE TABLE IF NOT EXISTS leaves an
+# existing database alone, so connect() adds any of these that are missing.
+ADDED_COLUMNS = {"is_short_lease": "INTEGER"}
 
 
 def now_iso() -> str:
@@ -71,6 +76,10 @@ def connect(path=DEFAULT_DB) -> sqlite3.Connection:
     conn = sqlite3.connect(path)
     conn.row_factory = sqlite3.Row
     conn.executescript(SCHEMA)
+    have = {row["name"] for row in conn.execute("PRAGMA table_info(listings)")}
+    for column, kind in ADDED_COLUMNS.items():
+        if column not in have:
+            conn.execute(f"ALTER TABLE listings ADD COLUMN {column} {kind}")
     return conn
 
 

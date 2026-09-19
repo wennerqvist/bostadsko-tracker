@@ -79,3 +79,26 @@ def test_export_json_keeps_swedish_letters(conn, tmp_path):
     out = tmp_path / "site" / "listings.json"
     assert collect.export_json(conn, out) == 1
     assert json.loads(out.read_text(encoding="utf-8"))[0]["address"] == "Hasselbackevägen 4"
+
+
+def test_short_lease_flag_is_saved_as_yes_no_or_unknown(conn):
+    store.upsert_listing(conn, {"id": "homeq:1", "source": "homeq", "is_short_lease": True}, RUN_1)
+    store.upsert_listing(conn, {"id": "homeq:2", "source": "homeq", "is_short_lease": False}, RUN_1)
+    store.upsert_listing(conn, {"id": "boplats:3", "source": "boplats"}, RUN_1)  # Boplats: unknown
+    flags = {r["id"]: r["is_short_lease"] for r in conn.execute("SELECT id, is_short_lease FROM listings")}
+    assert flags == {"homeq:1": 1, "homeq:2": 0, "boplats:3": None}
+
+
+def test_old_database_without_the_column_is_upgraded(tmp_path):
+    import sqlite3
+    path = tmp_path / "old.db"
+    old = sqlite3.connect(path)
+    old.executescript(store.SCHEMA.replace("is_short_lease     INTEGER,", ""))
+    old.execute("INSERT INTO listings (id, source, first_seen, last_seen) VALUES ('boplats:A', 'boplats', 'x', 'x')")
+    old.commit()
+    old.close()
+
+    conn = store.connect(path)  # must not fail, and must keep the existing row
+    row = conn.execute("SELECT id, is_short_lease FROM listings").fetchone()
+    assert (row["id"], row["is_short_lease"]) == ("boplats:A", None)
+    conn.close()

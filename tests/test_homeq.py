@@ -167,3 +167,8 @@ def test_wrong_password_gives_a_clear_error(fake):
     fake.responses = [refused]
     with pytest.raises(homeq.HomeQError, match="wrong email or password"):
         homeq.collect(pause=0)
+
+
+def test_missing_short_lease_flag_is_unknown_not_no():
+    [item] = homeq.parse_search_response({"results": [{"id": 1}]})
+    assert item["is_short_lease"] is None
