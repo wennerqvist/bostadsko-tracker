@@ -57,7 +57,7 @@ def test_min_chance_words_map_to_score_buckets(tmp_path):
         path = write_alerts(tmp_path, {"searches": [{"name": "x", "min_chance": word}]})
         return alerts.load_alerts(path)[0]["min_chance"]
 
-    assert chance("hög chans") == "likely"
+    assert chance("god chans") == "likely"
     assert chance(" Möjlig ") == "possible"
     assert chance(None) is None
 

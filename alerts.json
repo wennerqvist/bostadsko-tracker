@@ -1,5 +1,5 @@
 {
-  "help": "Varje sökning under 'searches' ger egna Telegram-aviseringar. null betyder 'ingen gräns'. min_chance: 'hög chans' eller 'möjlig' (eller null). sources: 'boplats' och/eller 'homeq'. Lägg till en sökning genom att kopiera ett helt block {...} och sätta ett komma emellan.",
+  "help": "Varje sökning under 'searches' ger egna Telegram-aviseringar. null betyder 'ingen gräns'. min_chance: 'god chans' eller 'möjlig' (eller null). sources: 'boplats' och/eller 'homeq'. Lägg till en sökning genom att kopiera ett helt block {...} och sätta ett komma emellan.",
   "searches": [
     {
       "name": "Min sökning",

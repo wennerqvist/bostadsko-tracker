@@ -12,7 +12,7 @@ import score
 ALERTS_PATH = Path(__file__).parent / "alerts.json"
 
 SOURCES = ("boplats", "homeq")
-CHANCE_WORDS = {"hög chans": "likely", "möjlig": "possible"}  # what alerts.json says -> score.py's bucket
+CHANCE_WORDS = {"god chans": "likely", "möjlig": "possible"}  # what alerts.json says -> score.py's bucket
 SEARCH_KEYS = (
     "name", "max_rent", "min_size", "min_rooms", "sources", "kommuner",
     "include_first_come", "include_lottery", "min_chance",
@@ -66,7 +66,7 @@ def _check_search(raw, number: int) -> dict:
     chance = raw.get("min_chance")
     if chance is not None:
         if not isinstance(chance, str) or chance.strip().lower() not in CHANCE_WORDS:
-            raise AlertsError(f"{where}: 'min_chance' must be \"hög chans\", \"möjlig\" or null, got {chance!r}")
+            raise AlertsError(f"{where}: 'min_chance' must be \"god chans\", \"möjlig\" or null, got {chance!r}")
         chance = CHANCE_WORDS[chance.strip().lower()]
 
     sources = _text_list(raw.get("sources"), where, "sources", allowed=SOURCES)
