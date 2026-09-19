@@ -1,16 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Bostadskö Tracker</title>
-  <!-- Leaflet (map library), pinned to one version; the hashes make the browser refuse a changed copy. -->
+  <!-- Leaflet (kartbibliotek), låst till en version; hashvärdena gör att webbläsaren vägrar en ändrad kopia. -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
         integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
   <style>
     :root {
       --boplats: #1f6fb4;
       --homeq: #d9730d;
+      --area: #6a3fb5;
       --line: #d9d9d9;
       --muted: #666;
       --panel-bg: #fafafa;
@@ -21,16 +22,19 @@
       font: 15px/1.4 system-ui, -apple-system, "Segoe UI", sans-serif;
       color: #1c1c1c;
       display: grid;
-      grid-template-columns: 320px 1fr;
+      grid-template-columns: 330px 1fr;
       height: 100dvh;
     }
     #panel {
       overflow-y: auto;
+      overflow-x: hidden;
       padding: 16px;
       background: var(--panel-bg);
       border-right: 1px solid var(--line);
     }
     #map { height: 100%; min-height: 320px; }
+    #map.drawing { cursor: crosshair; }
+    #map.drawing .leaflet-interactive { pointer-events: none; } /* klick ska sätta ut hörn, inte öppna kort */
     h1 { font-size: 1.25rem; margin: 0 0 4px; }
     #status { margin: 0 0 12px; color: var(--muted); font-size: .9rem; }
     #status.error { color: #b00020; }
@@ -38,9 +42,9 @@
     legend { font-weight: 600; padding: 0; margin-bottom: 6px; }
     label { display: block; margin: 4px 0; }
     .row { display: flex; gap: 8px; }
-    .row label { flex: 1; }
-    input[type=number], select {
-      width: 100%; padding: 6px 8px; font: inherit;
+    .row label { flex: 1; min-width: 0; }
+    input[type=number], input[type=date], select {
+      width: 100%; min-width: 0; padding: 6px 8px; font: inherit;
       border: 1px solid #bbb; border-radius: 6px; background: #fff;
     }
     input[type=checkbox] { margin-right: 6px; }
@@ -48,6 +52,8 @@
       font: inherit; padding: 6px 12px; border: 1px solid #bbb;
       border-radius: 6px; background: #fff; cursor: pointer;
     }
+    button.small { padding: 2px 8px; font-size: .85rem; }
+    button.primary { background: var(--area); border-color: var(--area); color: #fff; }
     #summary { font-weight: 600; margin: 14px 0 6px; }
     .legend { list-style: none; margin: 0 0 14px; padding: 0; font-size: .9rem; color: var(--muted); }
     .legend li { margin: 3px 0; }
@@ -61,9 +67,20 @@
     .dot.short { background: transparent; border: 2px dashed #555; }
     details { font-size: .9rem; }
     details ul { padding-left: 18px; margin: 6px 0; }
-    .hint { color: var(--muted); font-size: .85rem; }
+    .hint { color: var(--muted); font-size: .85rem; margin: 4px 0; }
+    .hint.warn { color: #b00020; }
 
-    /* Popup cards */
+    .kommun-list {
+      max-height: 170px; overflow-y: auto; padding: 4px 8px;
+      border: 1px solid #ccc; border-radius: 6px; background: #fff;
+    }
+    .kommun-list label { margin: 2px 0; }
+    .count { color: var(--muted); }
+    #areaList { list-style: none; margin: 6px 0; padding: 0; }
+    #areaList li { display: flex; justify-content: space-between; align-items: center; margin: 3px 0; }
+    .actions { display: flex; gap: 8px; margin-top: 6px; }
+
+    /* Kort i popupen */
     .leaflet-popup-content { margin: 12px 14px; font-size: 14px; }
     .card + .card { border-top: 1px solid var(--line); margin-top: 10px; padding-top: 10px; }
     .card.dim { opacity: .55; }
@@ -91,44 +108,76 @@
 <body>
   <aside id="panel">
     <h1>Bostadskö Tracker</h1>
-    <p id="status">Loading listings…</p>
+    <p id="status">Laddar annonser…</p>
 
     <form id="filters" autocomplete="off">
       <fieldset>
-        <legend>Rent</legend>
-        <label>Max rent (kr/month) <input type="number" id="maxRent" min="0" step="100" inputmode="numeric"></label>
+        <legend>Hyra</legend>
+        <label>Max hyra (kr/mån) <input type="number" id="maxRent" min="0" step="100" inputmode="numeric"></label>
       </fieldset>
 
       <fieldset>
-        <legend>Size and rooms</legend>
+        <legend>Storlek och rum</legend>
         <div class="row">
           <label>Min m² <input type="number" id="minSize" min="0" step="1" inputmode="decimal"></label>
           <label>Max m² <input type="number" id="maxSize" min="0" step="1" inputmode="decimal"></label>
         </div>
-        <label>Min rooms <input type="number" id="minRooms" min="0" step="0.5" inputmode="decimal"></label>
+        <label>Minsta antal rum <input type="number" id="minRooms" min="0" step="0.5" inputmode="decimal"></label>
       </fieldset>
 
       <fieldset>
-        <legend>Source</legend>
+        <legend>Inflyttning</legend>
+        <div class="row">
+          <label>Från <input type="date" id="moveFrom"></label>
+          <label>Till <input type="date" id="moveTo"></label>
+        </div>
+        <p class="hint">Annonser utan inflyttningsdatum visas alltid.</p>
+      </fieldset>
+
+      <fieldset>
+        <legend>Källa</legend>
         <label><input type="checkbox" id="srcBoplats" checked>Boplats</label>
         <label><input type="checkbox" id="srcHomeq" checked>HomeQ</label>
       </fieldset>
 
       <fieldset>
-        <legend>Short leases (time-limited contracts)</legend>
+        <legend>Tilldelning</legend>
+        <label><input type="checkbox" id="allowFirstCome" checked>Visa först till kvarn</label>
+        <label><input type="checkbox" id="allowLottery" checked>Visa lottning</label>
+        <p class="hint">Avbockad ruta gör att sådana annonser inte matchar. Annonser vars tilldelning inte är känd visas alltid.</p>
+      </fieldset>
+
+      <fieldset>
+        <legend>Korttidskontrakt (tidsbegränsade)</legend>
         <select id="shortLease">
-          <option value="include">Include</option>
-          <option value="exclude">Exclude</option>
-          <option value="only">Only short leases</option>
+          <option value="include">Visa</option>
+          <option value="exclude">Dölj</option>
+          <option value="only">Bara korttidskontrakt</option>
         </select>
       </fieldset>
 
       <fieldset>
-        <label><input type="checkbox" id="hideOthers">Hide listings that don't match</label>
-        <p class="hint">Left unticked, non-matching pins turn grey so you still see the whole market.</p>
+        <legend>Kommun</legend>
+        <div class="kommun-list" id="kommunList"></div>
       </fieldset>
 
-      <button type="button" id="reset">Reset filters</button>
+      <fieldset>
+        <legend>Områden på kartan</legend>
+        <p class="hint" id="areaHint">Rita ett eller flera områden. Då matchar bara annonser inuti områdena.</p>
+        <ul id="areaList"></ul>
+        <div class="actions">
+          <button type="button" id="drawStart">Rita område</button>
+          <button type="button" id="drawDone" class="primary" hidden>Klar</button>
+          <button type="button" id="drawCancel" hidden>Avbryt</button>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <label><input type="checkbox" id="hideOthers">Dölj annonser som inte matchar</label>
+        <p class="hint">Lämnas rutan tom blir pins som inte matchar grå, så att du ändå ser hela marknaden.</p>
+      </fieldset>
+
+      <button type="button" id="resetFilters">Återställ filter</button>
     </form>
 
     <p id="summary" aria-live="polite"></p>
@@ -136,21 +185,21 @@
     <ul class="legend">
       <li><span class="dot boplats"></span>Boplats</li>
       <li><span class="dot homeq"></span>HomeQ</li>
-      <li><span class="dot short"></span>Short lease (dashed ring)</li>
-      <li><span class="dot grey"></span>Doesn't match your filters</li>
-      <li>Bigger pin = several listings at the same address</li>
+      <li><span class="dot short"></span>Korttidskontrakt (streckad ring)</li>
+      <li><span class="dot grey"></span>Matchar inte dina filter</li>
+      <li>Större pin = flera annonser på samma adress</li>
     </ul>
 
     <details id="unplaced" hidden>
       <summary id="unplacedSummary"></summary>
       <ul id="unplacedList"></ul>
-      <p class="hint">No coordinates could be found for these addresses.</p>
+      <p class="hint">Ingen position kunde hittas för de här adresserna.</p>
     </details>
 
-    <noscript>This page needs JavaScript to show the map.</noscript>
+    <noscript>Sidan kräver JavaScript för att visa kartan.</noscript>
   </aside>
 
-  <div id="map" role="application" aria-label="Map of listings"></div>
+  <div id="map" role="application" aria-label="Karta över annonser"></div>
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
           integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
