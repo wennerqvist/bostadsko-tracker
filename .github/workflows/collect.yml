@@ -1,0 +1,70 @@
+name: Collect listings
+
+on:
+  schedule:
+    # Every 3 hours (UTC). Minute 17 instead of 0 because GitHub is busiest on the hour.
+    # 06:17 UTC is 07:17 or 08:17 Swedish time, so the daily digest goes out at the first run after 07:00.
+    - cron: "17 */3 * * *"
+  workflow_dispatch:   # lets you start a run by hand from the Actions tab
+
+# Never run two at once: they would both write to listings.db.
+concurrency:
+  group: collect
+  cancel-in-progress: false
+
+permissions:
+  contents: write   # save listings.db back to the repo
+  pages: write      # publish the web page
+  id-token: write   # needed by the Pages deploy step
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      # me.local.json is gitignored, so the robot rebuilds it from a secret.
+      # Without it every listing would lose its chance score.
+      - name: Recreate me.local.json
+        env:
+          ME_LOCAL_JSON: ${{ secrets.ME_LOCAL_JSON }}
+        run: printf '%s' "$ME_LOCAL_JSON" > me.local.json
+
+      - name: Collect, score, export, alert
+        env:
+          HOMEQ_EMAIL: ${{ secrets.HOMEQ_EMAIL }}
+          HOMEQ_PASSWORD: ${{ secrets.HOMEQ_PASSWORD }}
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python collect.py
+
+      # The database is the robot's memory (what was seen, what was alerted), so it must be saved.
+      - name: Save the updated data to the repo
+        run: |
+          git config user.name "bostadsko-bot"
+          git config user.email "bostadsko-bot@users.noreply.github.com"
+          git add data/listings.db site/listings.json site/queue.json
+          if git diff --cached --quiet; then
+            echo "Nothing changed."
+          else
+            git commit -m "Update listings (automatic)"
+            git push
+          fi
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+      - id: deploy
+        uses: actions/deploy-pages@v4
