@@ -10,7 +10,13 @@ First written 2026-09-18, status updated 2026-09-20. Author: Jakob Wennerqvist.
 
 **Also built (2026-09-20):** the "Värda att ansöka" shortlist in the side panel: up to 8 listings that match your filters, good chance before possible, then nearest deadline, at most 4 from Boplats. It cannot know how many Boplats applications you already hold, so the page tells you to subtract them.
 
-**Not built yet:** deadline-within-24 h and applicant-count-change alerts. **Dropped for now:** the application log (2026-09-20). Both sites already notify you when an application moves, so the log's only unique value is long-term calibration data. Revisit if that starts to matter; the `applications` table is still there, empty.
+**Checked:** `python notify.py test` reached Jakob's phone on 2026-09-20, so Telegram sending works end to end. The workflow is pinned to `ubuntu-26.04` and the newest versions of the four GitHub actions (2026-09-20), so GitHub's switch of `ubuntu-latest` in Oct–Nov 2026 changes nothing.
+
+**Dropped (2026-09-20):** the application log, and with it the applicant-count-change alerts (they only made sense for listings you had applied to). Both sites already notify you when an application moves, so the log's only unique value is long-term calibration data. Also dropped: deadline-within-24 h alerts, which Jakob doesn't need. Revisit any of these only if the friction shows up in daily use; the `applications` table is still there, empty.
+
+**Known small issue:** 3 Boplats addresses get no coordinates and so no pin. Left alone on purpose; if it still happens around 2026-10-04, look into it then.
+
+**Nothing is planned.** Use it daily for two weeks, then decide what v2 is (see "Build plan").
 
 **Decisions since the first draft**
 - HomeQ needs a login for the listing search, so the collector logs in with a password from a secret. No session cookies are stored.
@@ -25,7 +31,7 @@ A private web page you open each morning that shows every apartment currently li
 
 The page has three parts. The map: one pin per apartment, green = likely, yellow = possible, grey = out of reach or outside your criteria. Tap a pin for one card with rent, size, rooms, move-in date, deadline, applicant count, the queue time recent winners had, and a link to the original listing. The side panel: your criteria (max rent, min size, rooms, areas) and your live queue counter for both sites. The log: what you've applied to, how many of your five Boplats slots are used, and what happened.
 
-Behind it, a small robot visits both sites every few hours, saves what it finds, and sends you a Telegram message about new matches and deadlines. No servers to pay for, no app store, no login. One web page, one robot, one message channel.
+Behind it, a small robot visits both sites every few hours, saves what it finds, and sends you a Telegram message about new matches. No servers to pay for, no app store, no login. One web page, one robot, one message channel.
 
 **About the owner, for anyone (or any Claude) working on this:** Jakob is not a developer by trade and has been learning Claude Code for a month or two. Every explanation in this project should be simple and brief, with jargon defined the first time it appears. The tools are chosen for being easy to understand and impossible to break expensively, not for being clever.
 
@@ -62,7 +68,7 @@ Build in this order; each one is useful on its own before the next exists.
 3. **Criteria profile.** *(Done.)* Max rent, min/max m², min rooms, areas (pick stadsdelar or draw a shape on the map), move-in window, and a switch for including first-come/lottery listings. Non-matching pins go grey, not hidden, so you still see the whole market.
 4. **Queue tracker.** *(Done.)* Enter your Boplats registration date and HomeQ verification date once. The app shows today's days/points and projects forward ("on 1 March 2027 you'll have 1 350 Boplats days").
 5. **Chance score per listing** *(done)* and a "worth applying" shortlist that respects the Boplats limit of fewer than five active applications *(done, with the caveat that it cannot see your existing applications)*.
-6. **Telegram alerts.** *(Partly done: new matches arrive as a daily digest.)* Still to do: deadlines within 24 h on listings you care about, and changes in applicant count on ones you've applied to.
+6. **Telegram alerts.** *(Done: new matches arrive as a daily digest.)* Deadline-within-24 h alerts and applicant-count-change alerts were dropped on 2026-09-20.
 7. **Application log.** *(Dropped for now; the table exists.)* What you applied to, outcome, and the winner's queue time when you learn it. Over months this becomes your own calibration data.
 8. **Instant alert for HomeQ first-come listings** in your criteria. These are won in minutes, so this is the single highest-value notification. *(Parked 2026-09-19: first-come is only about 1 in 10 of your matches, and a 3-hour poll is too slow for listings won in minutes. `include_first_come` is off in `alerts.json`; alerts arrive as a daily digest.)*
 
@@ -164,10 +170,10 @@ Four weeks of evenings, data first, screen second. Each week ends with something
 
 | Week | Build | Done when | Status |
 | --- | --- | --- | --- |
-| 1 — Data | Repo, `CLAUDE.md`, Boplats collector writing to SQLite, then the HomeQ collector once you've captured its real request in the browser's DevTools, then geocoding with a cache | Running `python collect.py` twice in a row adds no duplicates, and `listings.json` has correct rent, m², rooms, address and coordinates for every active listing on both sites | Done (3 Boplats addresses still get no coordinates) |
+| 1 — Data | Repo, `CLAUDE.md`, Boplats collector writing to SQLite, then the HomeQ collector once you've captured its real request in the browser's DevTools, then geocoding with a cache | Running `python collect.py` twice in a row adds no duplicates, and `listings.json` has correct rent, m², rooms, address and coordinates for every active listing on both sites | Done (3 Boplats addresses still get no coordinates; revisit if still so on 2026-10-04) |
 | 2 — Map | Static page with Leaflet, pins from `listings.json`, click-for-card, criteria panel, grey-out logic, deployed to GitHub Pages | You open the page on your phone and can see and filter every listing | Done, checked on phone 2026-09-20 |
 | 3 — Queue and score | Your two queue dates, the live counter and projection, the three-bucket score with allocation-model overrides, pin colours, the application log | Pins are coloured, and a listing you'd realistically win is green | Done, plus the shortlist; application log dropped |
-| 4 — Automation | GitHub Actions cron every 3 h, Telegram bot, new-match and deadline alerts, first-come instant alert | You get a Telegram message about a new listing without having touched anything | Cron, bot and new-match digest done; deadline alerts open; instant alert parked |
+| 4 — Automation | GitHub Actions cron every 3 h, Telegram bot, new-match and deadline alerts, first-come instant alert | You get a Telegram message about a new listing without having touched anything | Done: cron, bot and new-match digest. Deadline alerts dropped; instant alert parked |
 
 Then use it daily for two weeks before deciding what v2 is. The friction you feel is the roadmap.
 
