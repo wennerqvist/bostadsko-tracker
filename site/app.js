@@ -17,6 +17,8 @@ const CHANCE = {
 const UNKNOWN_CHANCE = { label: "Okänd chans", colour: "#eef1f4", text: "#1c1c1c" };
 const CHANCE_ORDER = ["likely", "possible", "unlikely"]; // bäst först
 const chanceOf = (l) => CHANCE[l.bucket] ?? UNKNOWN_CHANCE;
+const SHORTLIST_SIZE = 8;
+const SHORTLIST_BOPLATS_MAX = 4; // Boplats: färre än 5 aktiva ansökningar samtidigt
 const GREY = "#b8b8b8";
 const AREA_STYLE = { color: "#6a3fb5", weight: 2, dashArray: "6 4", fillOpacity: 0.08 };
 const SAFE_LINK = /^https:\/\/(www\.)?(boplats|homeq)\.se\//; // länka bara till de två sajter vi hämtar från
@@ -46,6 +48,7 @@ const pinLayer = L.layerGroup().addTo(map);
 let listings = [];
 let groups = []; // en per adress: { lat, lon, listings: [...], marker }
 let unplaced = []; // annonser utan koordinater
+const groupOf = new Map(); // annons-id -> dess pin-grupp, så att en klick i "Värda att ansöka" hittar pinnen
 let areas = []; // ritade områden: varje område är en lista av [lat, lon]
 let drawing = null; // pågående ritning: { points, preview }
 
@@ -230,6 +233,7 @@ function buildGroups() {
   }
   groups = [...byPlace.values()];
   for (const group of groups) {
+    for (const l of group.listings) groupOf.set(l.id, group);
     group.marker = L.circleMarker([group.lat, group.lon], { radius: 7 });
     group.marker.bindPopup(() => popupHtml(group), { minWidth: 270, maxWidth: 340, maxHeight: 380 });
     const n = group.listings.length;
@@ -296,6 +300,51 @@ function popupHtml(group) {
   return header + group.listings.map((l) => cardHtml(l, f)).join("");
 }
 
+// --- värda att ansöka ---------------------------------------------------------
+
+// De bästa annonserna som matchar filtren: god chans före möjlig, sedan närmast sista
+// ansökningsdag (okänd dag sist). Högst SHORTLIST_BOPLATS_MAX från Boplats. Passerade dagar räknas bort.
+function pickShortlist(rows, isMatch, today) {
+  const rank = (l) => CHANCE_ORDER.indexOf(l.bucket);
+  const open = rows
+    .filter((l) => (l.bucket === "likely" || l.bucket === "possible") && (!l.deadline || l.deadline >= today) && isMatch(l))
+    .sort(
+      (a, b) =>
+        rank(a) - rank(b) ||
+        (a.deadline ?? "9999").localeCompare(b.deadline ?? "9999") ||
+        (a.address ?? "").localeCompare(b.address ?? "", "sv")
+    );
+  const picked = [];
+  let boplats = 0;
+  for (const l of open) {
+    if (picked.length === SHORTLIST_SIZE) break;
+    if (l.source === "boplats") {
+      if (boplats === SHORTLIST_BOPLATS_MAX) continue;
+      boplats++;
+    }
+    picked.push(l);
+  }
+  return picked;
+}
+
+function shortlistItemHtml(l) {
+  const facts = [kr(l.rent_sek), rooms(l.rooms), m2(l.size_m2), l.deadline ? `sök senast ${l.deadline}` : null].filter(Boolean).join(" · ");
+  const body =
+    `<span class="chip" style="background:${chanceOf(l).colour};color:${chanceOf(l).text}">${esc(chanceOf(l).label)}</span>` +
+    `<span class="title">${esc(l.address ?? "(adress saknas)")}</span>` +
+    `<span class="sl-sub"><span class="source ${esc(l.source)}">${esc(SOURCES[l.source]?.name ?? l.source)}</span>${facts ? " · " + esc(facts) : ""}</span>`;
+  if (groupOf.has(l.id)) return `<li><button type="button" class="sl-item" data-id="${esc(l.id)}">${body}</button></li>`;
+  if (SAFE_LINK.test(l.url || "")) return `<li><a class="sl-item" href="${esc(l.url)}" target="_blank" rel="noopener noreferrer">${body}</a></li>`;
+  return `<li><div class="sl-item">${body}</div></li>`; // ingen position och ingen säker länk
+}
+
+function renderShortlist(f) {
+  const today = new Date().toLocaleDateString("sv-SE"); // YYYY-MM-DD, lokal tid
+  const picked = pickShortlist(listings, (l) => matches(l, f), today);
+  $("shortlistList").innerHTML = picked.map(shortlistItemHtml).join("");
+  $("shortlistEmpty").hidden = picked.length > 0;
+}
+
 // --- ritning ------------------------------------------------------------------
 
 function apply() {
@@ -313,6 +362,7 @@ function apply() {
   const unplacedHits = unplaced.filter((l) => matches(l, f));
   matching += unplacedHits.length;
 
+  renderShortlist(f);
   $("summary").textContent = `${matching} av ${listings.length} annonser matchar`;
   $("unplaced").hidden = unplacedHits.length === 0;
   $("unplacedSummary").textContent =
@@ -399,6 +449,14 @@ function init(data) {
   renderAreas();
 
   $("filters").addEventListener("input", apply);
+  $("shortlistList").addEventListener("click", (event) => {
+    const button = event.target.closest("button[data-id]");
+    const group = button && groupOf.get(button.dataset.id);
+    if (!group) return;
+    $("map").scrollIntoView({ behavior: "smooth", block: "start" }); // på mobil ligger kartan ovanför panelen
+    map.setView([group.lat, group.lon], Math.max(map.getZoom(), 15));
+    group.marker.openPopup();
+  });
   $("drawStart").addEventListener("click", startDrawing);
   $("drawDone").addEventListener("click", () => stopDrawing(true));
   $("drawCancel").addEventListener("click", () => stopDrawing(false));

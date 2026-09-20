@@ -79,6 +79,15 @@
     #queueNow { list-style: none; margin: 0 0 8px; padding: 0; }
     #queueLater { margin: 4px 0 0; font-weight: 600; }
 
+    #shortlist { margin: 0 0 14px; padding: 10px 12px; background: #fff; border: 1px solid var(--line); border-radius: 8px; }
+    #shortlist h2 { font-size: 1rem; margin: 0 0 4px; }
+    #shortlistList { list-style: none; margin: 8px 0 0; padding: 0; }
+    #shortlistList li + li { border-top: 1px solid var(--line); }
+    .sl-item { display: block; width: 100%; padding: 7px 0; border: 0; border-radius: 0; background: none; text-align: left; color: inherit; text-decoration: none; }
+    button.sl-item:hover, a.sl-item:hover { background: #f3f0fa; }
+    .sl-item .title { font-weight: 600; margin-left: 6px; }
+    .sl-sub { display: block; margin-top: 2px; color: var(--muted); font-size: .85rem; }
+
     .kommun-list {
       max-height: 170px; overflow-y: auto; padding: 4px 8px;
       border: 1px solid #ccc; border-radius: 6px; background: #fff;
@@ -127,6 +136,13 @@
       <ul id="queueNow"><li class="count">Laddar…</li></ul>
       <label>Räkna framåt till <input type="date" id="queueDate"></label>
       <p id="queueLater" aria-live="polite"></p>
+    </section>
+
+    <section id="shortlist">
+      <h2>Värda att ansöka</h2>
+      <p class="hint">Bästa chans först, sedan närmast sista ansökningsdag. Följer dina filter. Högst 4 från Boplats, eftersom du får ha färre än 5 aktiva ansökningar där samtidigt: räkna av dem du redan har.</p>
+      <ol id="shortlistList"></ol>
+      <p id="shortlistEmpty" class="hint" hidden>Ingen annons med god eller möjlig chans matchar dina filter.</p>
     </section>
 
     <form id="filters" autocomplete="off">

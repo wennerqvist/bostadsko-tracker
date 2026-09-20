@@ -8,7 +8,9 @@ First written 2026-09-18, status updated 2026-09-20. Author: Jakob Wennerqvist.
 
 **Built:** listing store with snapshots, both collectors, geocoding, map with filters, queue box with projection, likely/possible/unlikely score, Telegram daily digest (`alerts.json`, 07:00 Swedish time).
 
-**Not built yet:** the "worth applying" shortlist that respects the Boplats limit of 5; deadline-within-24 h and applicant-count-change alerts; the application log screen (the `applications` table exists but is empty).
+**Also built (2026-09-20):** the "Värda att ansöka" shortlist in the side panel: up to 8 listings that match your filters, good chance before possible, then nearest deadline, at most 4 from Boplats. It cannot know how many Boplats applications you already hold, so the page tells you to subtract them.
+
+**Not built yet:** deadline-within-24 h and applicant-count-change alerts. **Dropped for now:** the application log (2026-09-20). Both sites already notify you when an application moves, so the log's only unique value is long-term calibration data. Revisit if that starts to matter; the `applications` table is still there, empty.
 
 **Decisions since the first draft**
 - HomeQ needs a login for the listing search, so the collector logs in with a password from a secret. No session cookies are stored.
@@ -59,9 +61,9 @@ Build in this order; each one is useful on its own before the next exists.
 2. **Map view.** *(Done.)* One pin per listing, coloured by chance score. Click for a card with the essentials and a link to the source. Filter panel beside it.
 3. **Criteria profile.** *(Done.)* Max rent, min/max m², min rooms, areas (pick stadsdelar or draw a shape on the map), move-in window, and a switch for including first-come/lottery listings. Non-matching pins go grey, not hidden, so you still see the whole market.
 4. **Queue tracker.** *(Done.)* Enter your Boplats registration date and HomeQ verification date once. The app shows today's days/points and projects forward ("on 1 March 2027 you'll have 1 350 Boplats days").
-5. **Chance score per listing** *(done)* and a "worth applying" shortlist that respects the Boplats limit of fewer than five active applications *(not built)*.
+5. **Chance score per listing** *(done)* and a "worth applying" shortlist that respects the Boplats limit of fewer than five active applications *(done, with the caveat that it cannot see your existing applications)*.
 6. **Telegram alerts.** *(Partly done: new matches arrive as a daily digest.)* Still to do: deadlines within 24 h on listings you care about, and changes in applicant count on ones you've applied to.
-7. **Application log.** *(Not built; the table exists.)* What you applied to, outcome, and the winner's queue time when you learn it. Over months this becomes your own calibration data.
+7. **Application log.** *(Dropped for now; the table exists.)* What you applied to, outcome, and the winner's queue time when you learn it. Over months this becomes your own calibration data.
 8. **Instant alert for HomeQ first-come listings** in your criteria. These are won in minutes, so this is the single highest-value notification. *(Parked 2026-09-19: first-come is only about 1 in 10 of your matches, and a 3-hour poll is too slow for listings won in minutes. `include_first_come` is off in `alerts.json`; alerts arrive as a daily digest.)*
 
 **Left out of v1 on purpose:** auto-applying (Boplats penalises declined offers, and a bot applying for you is how you end up with a flat you don't want), user accounts, a native mobile app, anything that costs money monthly.
@@ -164,7 +166,7 @@ Four weeks of evenings, data first, screen second. Each week ends with something
 | --- | --- | --- | --- |
 | 1 — Data | Repo, `CLAUDE.md`, Boplats collector writing to SQLite, then the HomeQ collector once you've captured its real request in the browser's DevTools, then geocoding with a cache | Running `python collect.py` twice in a row adds no duplicates, and `listings.json` has correct rent, m², rooms, address and coordinates for every active listing on both sites | Done (3 Boplats addresses still get no coordinates) |
 | 2 — Map | Static page with Leaflet, pins from `listings.json`, click-for-card, criteria panel, grey-out logic, deployed to GitHub Pages | You open the page on your phone and can see and filter every listing | Done, checked on phone 2026-09-20 |
-| 3 — Queue and score | Your two queue dates, the live counter and projection, the three-bucket score with allocation-model overrides, pin colours, the application log | Pins are coloured, and a listing you'd realistically win is green | Done except the application log |
+| 3 — Queue and score | Your two queue dates, the live counter and projection, the three-bucket score with allocation-model overrides, pin colours, the application log | Pins are coloured, and a listing you'd realistically win is green | Done, plus the shortlist; application log dropped |
 | 4 — Automation | GitHub Actions cron every 3 h, Telegram bot, new-match and deadline alerts, first-come instant alert | You get a Telegram message about a new listing without having touched anything | Cron, bot and new-match digest done; deadline alerts open; instant alert parked |
 
 Then use it daily for two weeks before deciding what v2 is. The friction you feel is the roadmap.
@@ -217,7 +219,7 @@ Session two is the HomeQ collector. Before that session, open homeq.se/lediga-la
 - [x] Does `POST api.homeq.se/api/v3/cards` answer without a login? No: the collector logs in first (see Status).
 - [x] Does HomeQ's response include "points needed for top 10" and the allocation model? No: allocation model and landlord come from a per-listing page, the top-10 points from the `free_insights` endpoint (strict-queue listings only).
 - [x] Do Boplats detail pages still carry coordinates? No: addresses are geocoded once with Nominatim and cached.
-- [ ] Read both sites' user terms once for anything about automated access, and keep the polling gentle regardless. **Still not done, and the repo is now public, so do this soon.**
+- [x] Read both sites' user terms for anything about automated access. Jakob had Claude Cowork analyse them and judged it fine for a private, gentle personal project (2026-09-20). Keep the polling gentle regardless.
 - [x] Your exact Boplats registration date and HomeQ verification date, for the queue counter (in `me.local.json` and the `ME_LOCAL_JSON` secret).
 - [x] Your starting criteria (in `alerts.json`: max rent 9 000 kr, min 20 m², from 1 room, Göteborg and Mölndal). Stadsdelar are picked on the map instead.
 - [x] Alerts: Telegram (decided 2026-09-18).
