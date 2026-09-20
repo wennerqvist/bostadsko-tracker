@@ -1,6 +1,21 @@
 # Bostadskö Tracker — Project Plan
 
-As of 2026-09-18. Author: Jakob Wennerqvist.
+First written 2026-09-18, status updated 2026-09-20. Author: Jakob Wennerqvist.
+
+## Status (2026-09-20)
+
+**Live.** A GitHub Actions robot runs every 3 hours, collects from both sites, scores, saves `data/listings.db` back to the repo, and republishes the page at https://wennerqvist.github.io/bostadsko-tracker/. The repo is public (needed for free Pages). Secrets (`HOMEQ_EMAIL`, `HOMEQ_PASSWORD`, `TELEGRAM_TOKEN`, `TELEGRAM_CHAT_ID`, `ME_LOCAL_JSON`) live in GitHub, never in code.
+
+**Built:** listing store with snapshots, both collectors, geocoding, map with filters, queue box with projection, likely/possible/unlikely score, Telegram daily digest (`alerts.json`, 07:00 Swedish time).
+
+**Not built yet:** the "worth applying" shortlist that respects the Boplats limit of 5; deadline-within-24 h and applicant-count-change alerts; the application log screen (the `applications` table exists but is empty).
+
+**Decisions since the first draft**
+- HomeQ needs a login for the listing search, so the collector logs in with a password from a secret. No session cookies are stored.
+- HomeQ allocation model and landlord come from each listing's own page (one extra request per new listing). The top-10 points figure comes from HomeQ's `free_insights` endpoint and is only shown for strict-queue listings.
+- Instant alerts for HomeQ first-come are parked (feature 8): a 3-hour poll is too slow, and first-come is only about 1 in 10 of your matches.
+- Public repo chosen over paying for private Pages. What is public: the listings, `alerts.json` (your criteria) and `site/queue.json` (your queue start dates, which the page needs to count days).
+- The robot commits the database after each run. Run `git pull` before committing anything from your laptop.
 
 ## What we're building
 
@@ -40,13 +55,13 @@ Sources: https://boio.se/ko/koer/boplats-goteborg · https://boplats.se/tipshjal
 
 Build in this order; each one is useful on its own before the next exists.
 
-1. **One listing store.** Every apartment from both sites in the same shape (see Data model). A daily snapshot of the fields that change (applicant count, points needed) so history builds up.
-2. **Map view.** One pin per listing, coloured by chance score. Click for a card with the essentials and a link to the source. Filter panel beside it.
-3. **Criteria profile.** Max rent, min/max m², min rooms, areas (pick stadsdelar or draw a shape on the map), move-in window, and a switch for including first-come/lottery listings. Non-matching pins go grey, not hidden, so you still see the whole market.
-4. **Queue tracker.** Enter your Boplats registration date and HomeQ verification date once. The app shows today's days/points and projects forward ("on 1 March 2027 you'll have 1 350 Boplats days").
-5. **Chance score per listing** and a "worth applying" shortlist that respects the Boplats limit of fewer than five active applications.
-6. **Telegram alerts.** New matches, deadlines within 24 h on listings you care about, and changes in applicant count on ones you've applied to.
-7. **Application log.** What you applied to, outcome, and the winner's queue time when you learn it. Over months this becomes your own calibration data.
+1. **One listing store.** *(Done.)* Every apartment from both sites in the same shape (see Data model). A daily snapshot of the fields that change (applicant count, points needed) so history builds up.
+2. **Map view.** *(Done.)* One pin per listing, coloured by chance score. Click for a card with the essentials and a link to the source. Filter panel beside it.
+3. **Criteria profile.** *(Done.)* Max rent, min/max m², min rooms, areas (pick stadsdelar or draw a shape on the map), move-in window, and a switch for including first-come/lottery listings. Non-matching pins go grey, not hidden, so you still see the whole market.
+4. **Queue tracker.** *(Done.)* Enter your Boplats registration date and HomeQ verification date once. The app shows today's days/points and projects forward ("on 1 March 2027 you'll have 1 350 Boplats days").
+5. **Chance score per listing** *(done)* and a "worth applying" shortlist that respects the Boplats limit of fewer than five active applications *(not built)*.
+6. **Telegram alerts.** *(Partly done: new matches arrive as a daily digest.)* Still to do: deadlines within 24 h on listings you care about, and changes in applicant count on ones you've applied to.
+7. **Application log.** *(Not built; the table exists.)* What you applied to, outcome, and the winner's queue time when you learn it. Over months this becomes your own calibration data.
 8. **Instant alert for HomeQ first-come listings** in your criteria. These are won in minutes, so this is the single highest-value notification. *(Parked 2026-09-19: first-come is only about 1 in 10 of your matches, and a 3-hour poll is too slow for listings won in minutes. `include_first_come` is off in `alerts.json`; alerts arrive as a daily digest.)*
 
 **Left out of v1 on purpose:** auto-applying (Boplats penalises declined offers, and a bot applying for you is how you end up with a flat you don't want), user accounts, a native mobile app, anything that costs money monthly.
@@ -145,12 +160,12 @@ Three tables. `listings` is one row per apartment; `snapshots` records the chang
 
 Four weeks of evenings, data first, screen second. Each week ends with something you can actually use.
 
-| Week | Build | Done when |
-| --- | --- | --- |
-| 1 — Data | Repo, `CLAUDE.md`, Boplats collector writing to SQLite, then the HomeQ collector once you've captured its real request in the browser's DevTools, then geocoding with a cache | Running `python collect.py` twice in a row adds no duplicates, and `listings.json` has correct rent, m², rooms, address and coordinates for every active listing on both sites |
-| 2 — Map | Static page with Leaflet, pins from `listings.json`, click-for-card, criteria panel, grey-out logic, deployed to GitHub Pages | You open the page on your phone and can see and filter every listing |
-| 3 — Queue and score | Your two queue dates, the live counter and projection, the three-bucket score with allocation-model overrides, pin colours, the application log | Pins are coloured, and a listing you'd realistically win is green |
-| 4 — Automation | GitHub Actions cron every 3 h, Telegram bot, new-match and deadline alerts, first-come instant alert | You get a Telegram message about a new listing without having touched anything |
+| Week | Build | Done when | Status |
+| --- | --- | --- | --- |
+| 1 — Data | Repo, `CLAUDE.md`, Boplats collector writing to SQLite, then the HomeQ collector once you've captured its real request in the browser's DevTools, then geocoding with a cache | Running `python collect.py` twice in a row adds no duplicates, and `listings.json` has correct rent, m², rooms, address and coordinates for every active listing on both sites | Done (3 Boplats addresses still get no coordinates) |
+| 2 — Map | Static page with Leaflet, pins from `listings.json`, click-for-card, criteria panel, grey-out logic, deployed to GitHub Pages | You open the page on your phone and can see and filter every listing | Done, checked on phone 2026-09-20 |
+| 3 — Queue and score | Your two queue dates, the live counter and projection, the three-bucket score with allocation-model overrides, pin colours, the application log | Pins are coloured, and a listing you'd realistically win is green | Done except the application log |
+| 4 — Automation | GitHub Actions cron every 3 h, Telegram bot, new-match and deadline alerts, first-come instant alert | You get a Telegram message about a new listing without having touched anything | Cron, bot and new-match digest done; deadline alerts open; instant alert parked |
 
 Then use it daily for two weeks before deciding what v2 is. The friction you feel is the roadmap.
 
@@ -199,11 +214,11 @@ Session two is the HomeQ collector. Before that session, open homeq.se/lediga-la
 
 ## Open questions
 
-- [ ] Does `POST api.homeq.se/api/v3/cards` answer without a login? Their docs say it's open to any website, but it hasn't been tested with a POST yet. Verify with DevTools before session two.
-- [ ] Does HomeQ's response include "points needed for top 10" and the allocation model, or is that only on the detail page? Decides whether HomeQ needs a second request per listing.
-- [ ] Do Boplats detail pages still carry coordinates? An older scraper read `data-latitude` from the page; a recent fetch didn't show it. If not, Nominatim geocoding is the fallback.
-- [ ] Read both sites' user terms once for anything about automated access, and keep the polling gentle regardless.
-- [ ] Your exact Boplats registration date and HomeQ verification date, for the queue counter.
-- [ ] Your starting criteria: max rent, min m², rooms, and which stadsdelar you'd actually live in.
+- [x] Does `POST api.homeq.se/api/v3/cards` answer without a login? No: the collector logs in first (see Status).
+- [x] Does HomeQ's response include "points needed for top 10" and the allocation model? No: allocation model and landlord come from a per-listing page, the top-10 points from the `free_insights` endpoint (strict-queue listings only).
+- [x] Do Boplats detail pages still carry coordinates? No: addresses are geocoded once with Nominatim and cached.
+- [ ] Read both sites' user terms once for anything about automated access, and keep the polling gentle regardless. **Still not done, and the repo is now public, so do this soon.**
+- [x] Your exact Boplats registration date and HomeQ verification date, for the queue counter (in `me.local.json` and the `ME_LOCAL_JSON` secret).
+- [x] Your starting criteria (in `alerts.json`: max rent 9 000 kr, min 20 m², from 1 room, Göteborg and Mölndal). Stadsdelar are picked on the map instead.
 - [x] Alerts: Telegram (decided 2026-09-18).
-- [ ] Public or private GitHub repo? Public gives unlimited Actions minutes; private is plenty for a run every 3 h but keep `me.local.json` and the Telegram token out of git either way.
+- [x] Public or private GitHub repo? Public (decided 2026-09-20): private repos need a paid plan for Pages. `.env` and `me.local.json` were never committed.
