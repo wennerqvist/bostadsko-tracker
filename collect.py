@@ -1,8 +1,12 @@
 """Entry point: collect listings, save them, export site/listings.json, and send alerts.
 
 Usage:  python collect.py [--no-alert]
+        python collect.py --alert-only
 
 After saving and exporting, sends the Telegram alerts that are due (see alerts.json and notify.py).
+--alert-only skips fetching boplats/homeq entirely and only checks/sends a due digest; it's for a
+separate, more frequent workflow that stands in for the 3-hourly collector so the digest lands close
+to digest_hour instead of whenever GitHub happens to run the next 3-hourly job (see notify.yml).
 """
 
 import argparse
@@ -91,7 +95,12 @@ def main(argv=None, db_path=store.DEFAULT_DB, export_path=EXPORT_PATH, geocoder=
          alerts_path=None) -> int:
     parser = argparse.ArgumentParser(description="Collect apartment listings.")
     parser.add_argument("--no-alert", action="store_true", help="skip Telegram alerts")
+    parser.add_argument("--alert-only", action="store_true",
+                         help="skip fetching boplats/homeq; only check/send a due digest")
     args = parser.parse_args(argv)
+    if args.alert_only and args.no_alert:
+        print("--alert-only and --no-alert together would do nothing", file=sys.stderr)
+        return 1
 
     try:
         me = score.load_me(me_path)  # check this first, so a typo in the dates stops us before any fetching
@@ -104,38 +113,41 @@ def main(argv=None, db_path=store.DEFAULT_DB, export_path=EXPORT_PATH, geocoder=
     conn = store.connect(db_path)
     now = store.now_iso()
 
-    insight_cutoff = (datetime.fromisoformat(now) - INSIGHT_MAX_AGE).isoformat(timespec="seconds")
-
-    # (name, source id, how to fetch, errors that mean "this site failed", save snapshots for every listing?)
-    sources = [
-        ("Boplats", "boplats", lambda: boplats.collect(store.known_ids(conn, "boplats")),
-         (boplats.PageChanged, requests.RequestException), True),
-        # HomeQ gives no applicant counts; it only gets a snapshot row when its points figure was read.
-        ("HomeQ", "homeq",
-         lambda: homeq.collect(store.ids_with_allocation(conn, "homeq"),
-                               last_insight=store.latest_insight_times(conn, "homeq"),
-                               insight_cutoff=insight_cutoff),
-         (homeq.HomeQError, requests.RequestException), False),
-    ]
-
     failed = []
-    for name, source, fetch, errors, snapshots in sources:
-        try:
-            listings = fetch()
-        except errors as error:
-            # Nothing is saved or closed for this source; its old listings stay as they were.
-            print(f"{name} failed, its listings left untouched: {error}", file=sys.stderr)
-            failed.append(name)
-            continue
-        new, closed = save(conn, source, listings, now, snapshots)
-        print(f"{name}: {new} new, {len(listings) - new} already known, {closed} closed.")
+    if args.alert_only:
+        print("Alert-only run: not fetching boplats/homeq.")
+    else:
+        insight_cutoff = (datetime.fromisoformat(now) - INSIGHT_MAX_AGE).isoformat(timespec="seconds")
 
-    found, missing = add_coordinates(conn, geocoder or geocode.Geocoder())
-    if found or missing:
-        print(f"Coordinates: {found} found, {missing} not found.")
+        # (name, source id, how to fetch, errors that mean "this site failed", save snapshots for every listing?)
+        sources = [
+            ("Boplats", "boplats", lambda: boplats.collect(store.known_ids(conn, "boplats")),
+             (boplats.PageChanged, requests.RequestException), True),
+            # HomeQ gives no applicant counts; it only gets a snapshot row when its points figure was read.
+            ("HomeQ", "homeq",
+             lambda: homeq.collect(store.ids_with_allocation(conn, "homeq"),
+                                   last_insight=store.latest_insight_times(conn, "homeq"),
+                                   insight_cutoff=insight_cutoff),
+             (homeq.HomeQError, requests.RequestException), False),
+        ]
 
-    exported = export_json(conn, export_path, me)
-    print(f"Done: {exported} active listings written to {Path(export_path).name}.")
+        for name, source, fetch, errors, snapshots in sources:
+            try:
+                listings = fetch()
+            except errors as error:
+                # Nothing is saved or closed for this source; its old listings stay as they were.
+                print(f"{name} failed, its listings left untouched: {error}", file=sys.stderr)
+                failed.append(name)
+                continue
+            new, closed = save(conn, source, listings, now, snapshots)
+            print(f"{name}: {new} new, {len(listings) - new} already known, {closed} closed.")
+
+        found, missing = add_coordinates(conn, geocoder or geocode.Geocoder())
+        if found or missing:
+            print(f"Coordinates: {found} found, {missing} not found.")
+
+        exported = export_json(conn, export_path, me)
+        print(f"Done: {exported} active listings written to {Path(export_path).name}.")
 
     if not args.no_alert:
         # After the export, so a problem with alerts never stops the listings from being saved and shown.

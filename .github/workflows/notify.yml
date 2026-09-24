@@ -1,0 +1,59 @@
+name: Send daily digest
+
+# The main "Collect listings" workflow (every 3h) also sends the digest, but GitHub Actions
+# schedules are best-effort: a run can start over an hour late, especially the ones just after
+# 06:00 UTC. Since the digest goes out on "the first run whose local time is past digest_hour",
+# a delayed collector run makes the Telegram message land at very different times each day.
+# This workflow does no scraping (so it doesn't count against the "poll no more than every 3h"
+# rule) - it just checks a few times each morning whether a digest is due, so it fires close to
+# 07:00 Swedish time even when the collector itself is running late.
+on:
+  schedule:
+    # Every 15 min, 05:00-08:45 UTC: covers 06:00-09:45 (winter, CET) and 07:00-10:45 (summer, CEST)
+    # Swedish time, so digest_hour (7) falls inside the window either way.
+    - cron: "*/15 5,6,7,8 * * *"
+  workflow_dispatch:
+
+concurrency:
+  group: collect   # same group as collect.yml: never write to listings.db at the same time
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  notify:
+    runs-on: ubuntu-26.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      - name: Recreate me.local.json
+        env:
+          ME_LOCAL_JSON: ${{ secrets.ME_LOCAL_JSON }}
+        run: printf '%s' "$ME_LOCAL_JSON" > me.local.json
+
+      - name: Check and send the digest if due
+        env:
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python collect.py --alert-only
+
+      - name: Save alert state
+        run: |
+          git config user.name "bostadsko-bot"
+          git config user.email "bostadsko-bot@users.noreply.github.com"
+          git add data/listings.db
+          if git diff --cached --quiet; then
+            echo "Nothing changed."
+          else
+            git commit -m "Send daily digest (automatic)"
+            git push
+          fi
