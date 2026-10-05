@@ -19,7 +19,7 @@
     "allocation": "first_come",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 1,
     "applicants": null,
@@ -47,7 +47,7 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
@@ -75,7 +75,7 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
@@ -103,7 +103,7 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
@@ -131,7 +131,7 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
@@ -159,7 +159,7 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
@@ -187,7 +187,7 @@
     "allocation": "lottery",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 1,
     "applicants": null,
@@ -215,7 +215,7 @@
     "allocation": "first_come",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 1,
     "applicants": null,
@@ -243,7 +243,7 @@
     "allocation": "lottery",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 1,
     "applicants": null,
@@ -271,7 +271,7 @@
     "allocation": "first_come",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 1,
     "applicants": null,
@@ -299,7 +299,7 @@
     "allocation": "first_come",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 1,
     "applicants": null,
@@ -327,7 +327,7 @@
     "allocation": "lottery",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 1,
     "applicants": null,
@@ -355,7 +355,7 @@
     "allocation": "first_come",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 1,
     "applicants": null,
@@ -383,7 +383,7 @@
     "allocation": "lottery",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
@@ -411,7 +411,7 @@
     "allocation": "first_come",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
@@ -439,7 +439,7 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
@@ -467,7 +467,7 @@
     "allocation": "first_come",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
@@ -495,7 +495,7 @@
     "allocation": "first_come",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
@@ -523,13 +523,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 1672,
     "bucket": "unlikely",
-    "bucket_note": "Dina 1 262 poäng mot 1 672 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 1 672 som krävs för topp 10."
   },
   {
     "id": "homeq:251595",
@@ -551,7 +551,7 @@
     "allocation": "first_come",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
@@ -579,7 +579,7 @@
     "allocation": "lottery",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
@@ -607,7 +607,7 @@
     "allocation": "first_come",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
@@ -635,7 +635,7 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
@@ -663,13 +663,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 552,
     "bucket": "likely",
-    "bucket_note": "Dina 1 262 poäng mot 552 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 552 som krävs för topp 10."
   },
   {
     "id": "homeq:263382",
@@ -691,7 +691,7 @@
     "allocation": "first_come",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 1,
     "applicants": null,
@@ -719,13 +719,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 1991,
     "bucket": "unlikely",
-    "bucket_note": "Dina 1 262 poäng mot 1 991 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 1 991 som krävs för topp 10."
   },
   {
     "id": "homeq:265144",
@@ -747,7 +747,7 @@
     "allocation": "first_come",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
@@ -775,7 +775,7 @@
     "allocation": "first_come",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
@@ -803,7 +803,7 @@
     "allocation": "first_come",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
@@ -831,7 +831,7 @@
     "allocation": "first_come",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
@@ -859,13 +859,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 2198,
     "bucket": "unlikely",
-    "bucket_note": "Dina 1 262 poäng mot 2 198 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 2 198 som krävs för topp 10."
   },
   {
     "id": "homeq:270785",
@@ -887,7 +887,7 @@
     "allocation": "first_come",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
@@ -915,7 +915,7 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
@@ -943,7 +943,7 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
@@ -971,7 +971,7 @@
     "allocation": "lottery",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
@@ -999,7 +999,7 @@
     "allocation": "first_come",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
@@ -1027,13 +1027,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 2038,
     "bucket": "unlikely",
-    "bucket_note": "Dina 1 262 poäng mot 2 038 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 2 038 som krävs för topp 10."
   },
   {
     "id": "homeq:273409",
@@ -1055,7 +1055,7 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
@@ -1083,7 +1083,7 @@
     "allocation": "lottery",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
@@ -1111,7 +1111,7 @@
     "allocation": "first_come",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
@@ -1139,7 +1139,7 @@
     "allocation": "first_come",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
@@ -1167,7 +1167,7 @@
     "allocation": "first_come",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 1,
     "applicants": null,
@@ -1195,7 +1195,7 @@
     "allocation": "first_come",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
@@ -1223,7 +1223,7 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
@@ -1251,7 +1251,7 @@
     "allocation": "lottery",
     "winners_queue_days": null,
     "first_seen": "2026-09-30T12:41:34+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
@@ -1279,7 +1279,7 @@
     "allocation": "lottery",
     "winners_queue_days": null,
     "first_seen": "2026-09-29T09:54:42+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 1,
     "applicants": null,
@@ -1307,7 +1307,7 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
@@ -1335,7 +1335,7 @@
     "allocation": "lottery",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
@@ -1363,7 +1363,7 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
@@ -1391,13 +1391,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 1245,
     "bucket": "likely",
-    "bucket_note": "Dina 1 262 poäng mot 1 245 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 1 245 som krävs för topp 10."
   },
   {
     "id": "homeq:276810",
@@ -1419,7 +1419,7 @@
     "allocation": "lottery",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
@@ -1447,13 +1447,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 2827,
     "bucket": "unlikely",
-    "bucket_note": "Dina 1 262 poäng mot 2 827 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 2 827 som krävs för topp 10."
   },
   {
     "id": "homeq:277285",
@@ -1475,7 +1475,7 @@
     "allocation": "lottery",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
@@ -1503,7 +1503,7 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
@@ -1531,7 +1531,7 @@
     "allocation": "lottery",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
@@ -1559,7 +1559,7 @@
     "allocation": "lottery",
     "winners_queue_days": null,
     "first_seen": "2026-09-22T11:44:43+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
@@ -1587,7 +1587,7 @@
     "allocation": "lottery",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
@@ -1615,7 +1615,7 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
@@ -1643,13 +1643,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 2088,
     "bucket": "unlikely",
-    "bucket_note": "Dina 1 262 poäng mot 2 088 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 2 088 som krävs för topp 10."
   },
   {
     "id": "homeq:277784",
@@ -1671,13 +1671,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 959,
     "bucket": "likely",
-    "bucket_note": "Dina 1 262 poäng mot 959 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 959 som krävs för topp 10."
   },
   {
     "id": "homeq:277848",
@@ -1699,7 +1699,7 @@
     "allocation": "first_come",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 1,
     "applicants": null,
@@ -1727,13 +1727,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 2121,
     "bucket": "unlikely",
-    "bucket_note": "Dina 1 262 poäng mot 2 121 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 2 121 som krävs för topp 10."
   },
   {
     "id": "homeq:277986",
@@ -1755,13 +1755,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 2186,
     "bucket": "unlikely",
-    "bucket_note": "Dina 1 262 poäng mot 2 186 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 2 186 som krävs för topp 10."
   },
   {
     "id": "homeq:278184",
@@ -1783,7 +1783,7 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
@@ -1811,13 +1811,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 2191,
     "bucket": "unlikely",
-    "bucket_note": "Dina 1 262 poäng mot 2 191 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 2 191 som krävs för topp 10."
   },
   {
     "id": "homeq:278281",
@@ -1839,7 +1839,7 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
@@ -1867,13 +1867,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 1204,
     "bucket": "likely",
-    "bucket_note": "Dina 1 262 poäng mot 1 204 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 1 204 som krävs för topp 10."
   },
   {
     "id": "homeq:278417",
@@ -1895,7 +1895,7 @@
     "allocation": "lottery",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
@@ -1923,13 +1923,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 1337,
     "bucket": "possible",
-    "bucket_note": "Dina 1 262 poäng mot 1 337 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 1 337 som krävs för topp 10."
   },
   {
     "id": "homeq:278863",
@@ -1951,13 +1951,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 2034,
     "bucket": "unlikely",
-    "bucket_note": "Dina 1 262 poäng mot 2 034 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 2 034 som krävs för topp 10."
   },
   {
     "id": "homeq:279062",
@@ -1979,13 +1979,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-24T11:52:59+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 2746,
     "bucket": "unlikely",
-    "bucket_note": "Dina 1 262 poäng mot 2 746 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 2 746 som krävs för topp 10."
   },
   {
     "id": "homeq:279098",
@@ -2007,13 +2007,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 1133,
     "bucket": "likely",
-    "bucket_note": "Dina 1 262 poäng mot 1 133 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 1 133 som krävs för topp 10."
   },
   {
     "id": "homeq:279102",
@@ -2035,13 +2035,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 901,
     "bucket": "likely",
-    "bucket_note": "Dina 1 262 poäng mot 901 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 901 som krävs för topp 10."
   },
   {
     "id": "homeq:279152",
@@ -2063,7 +2063,7 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
@@ -2091,13 +2091,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 1,
     "applicants": null,
     "points_needed_top10": 1640,
     "bucket": "unlikely",
-    "bucket_note": "Dina 1 262 poäng mot 1 640 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 1 640 som krävs för topp 10."
   },
   {
     "id": "homeq:279595",
@@ -2119,13 +2119,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 39,
     "bucket": "likely",
-    "bucket_note": "Dina 1 262 poäng mot 39 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 39 som krävs för topp 10."
   },
   {
     "id": "homeq:279600",
@@ -2147,7 +2147,7 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
@@ -2175,7 +2175,7 @@
     "allocation": "lottery",
     "winners_queue_days": null,
     "first_seen": "2026-09-21T05:02:38+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
@@ -2203,13 +2203,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 1385,
     "bucket": "possible",
-    "bucket_note": "Dina 1 262 poäng mot 1 385 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 1 385 som krävs för topp 10."
   },
   {
     "id": "homeq:279726",
@@ -2231,13 +2231,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 1273,
     "bucket": "possible",
-    "bucket_note": "Dina 1 262 poäng mot 1 273 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 1 273 som krävs för topp 10."
   },
   {
     "id": "homeq:279815",
@@ -2259,7 +2259,7 @@
     "allocation": "lottery",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
@@ -2287,13 +2287,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 1342,
     "bucket": "possible",
-    "bucket_note": "Dina 1 262 poäng mot 1 342 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 1 342 som krävs för topp 10."
   },
   {
     "id": "homeq:280209",
@@ -2315,13 +2315,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 2234,
     "bucket": "unlikely",
-    "bucket_note": "Dina 1 262 poäng mot 2 234 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 2 234 som krävs för topp 10."
   },
   {
     "id": "homeq:280275",
@@ -2343,7 +2343,7 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
@@ -2371,13 +2371,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 1596,
     "bucket": "unlikely",
-    "bucket_note": "Dina 1 262 poäng mot 1 596 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 1 596 som krävs för topp 10."
   },
   {
     "id": "homeq:280375",
@@ -2399,7 +2399,7 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
@@ -2427,7 +2427,7 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
@@ -2455,13 +2455,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 578,
     "bucket": "likely",
-    "bucket_note": "Dina 1 262 poäng mot 578 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 578 som krävs för topp 10."
   },
   {
     "id": "homeq:280403",
@@ -2483,7 +2483,7 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-21T12:55:31+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
@@ -2511,13 +2511,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 2560,
     "bucket": "unlikely",
-    "bucket_note": "Dina 1 262 poäng mot 2 560 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 2 560 som krävs för topp 10."
   },
   {
     "id": "homeq:280443",
@@ -2539,13 +2539,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 1322,
     "bucket": "possible",
-    "bucket_note": "Dina 1 262 poäng mot 1 322 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 1 322 som krävs för topp 10."
   },
   {
     "id": "homeq:280501",
@@ -2567,13 +2567,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 2741,
     "bucket": "unlikely",
-    "bucket_note": "Dina 1 262 poäng mot 2 741 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 2 741 som krävs för topp 10."
   },
   {
     "id": "homeq:280573",
@@ -2595,7 +2595,7 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
@@ -2623,7 +2623,7 @@
     "allocation": "lottery",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
@@ -2651,13 +2651,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 1494,
     "bucket": "unlikely",
-    "bucket_note": "Dina 1 262 poäng mot 1 494 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 1 494 som krävs för topp 10."
   },
   {
     "id": "homeq:280599",
@@ -2679,7 +2679,7 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
@@ -2707,7 +2707,7 @@
     "allocation": "lottery",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
@@ -2735,13 +2735,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 2242,
     "bucket": "unlikely",
-    "bucket_note": "Dina 1 262 poäng mot 2 242 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 2 242 som krävs för topp 10."
   },
   {
     "id": "homeq:280750",
@@ -2763,13 +2763,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 1987,
     "bucket": "unlikely",
-    "bucket_note": "Dina 1 262 poäng mot 1 987 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 1 987 som krävs för topp 10."
   },
   {
     "id": "homeq:280769",
@@ -2791,13 +2791,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 1376,
     "bucket": "possible",
-    "bucket_note": "Dina 1 262 poäng mot 1 376 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 1 376 som krävs för topp 10."
   },
   {
     "id": "homeq:280903",
@@ -2819,13 +2819,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 2621,
     "bucket": "unlikely",
-    "bucket_note": "Dina 1 262 poäng mot 2 621 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 2 621 som krävs för topp 10."
   },
   {
     "id": "homeq:280904",
@@ -2847,13 +2847,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 1579,
     "bucket": "unlikely",
-    "bucket_note": "Dina 1 262 poäng mot 1 579 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 1 579 som krävs för topp 10."
   },
   {
     "id": "homeq:280930",
@@ -2875,13 +2875,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 877,
     "bucket": "likely",
-    "bucket_note": "Dina 1 262 poäng mot 877 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 877 som krävs för topp 10."
   },
   {
     "id": "homeq:281007",
@@ -2903,7 +2903,7 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
@@ -2931,7 +2931,7 @@
     "allocation": "lottery",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
@@ -2959,13 +2959,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 1,
     "applicants": null,
     "points_needed_top10": 1050,
     "bucket": "likely",
-    "bucket_note": "Dina 1 262 poäng mot 1 050 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 1 050 som krävs för topp 10."
   },
   {
     "id": "homeq:281069",
@@ -2987,7 +2987,7 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
@@ -3015,13 +3015,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 1125,
     "bucket": "likely",
-    "bucket_note": "Dina 1 262 poäng mot 1 125 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 1 125 som krävs för topp 10."
   },
   {
     "id": "homeq:281079",
@@ -3043,7 +3043,7 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
@@ -3071,7 +3071,7 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
@@ -3099,7 +3099,7 @@
     "allocation": "lottery",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
@@ -3127,13 +3127,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 1,
     "applicants": null,
     "points_needed_top10": 1989,
     "bucket": "unlikely",
-    "bucket_note": "Dina 1 262 poäng mot 1 989 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 1 989 som krävs för topp 10."
   },
   {
     "id": "homeq:281292",
@@ -3155,13 +3155,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 2824,
     "bucket": "unlikely",
-    "bucket_note": "Dina 1 262 poäng mot 2 824 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 2 824 som krävs för topp 10."
   },
   {
     "id": "homeq:281321",
@@ -3183,13 +3183,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 2267,
     "bucket": "unlikely",
-    "bucket_note": "Dina 1 262 poäng mot 2 267 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 2 267 som krävs för topp 10."
   },
   {
     "id": "homeq:281340",
@@ -3211,13 +3211,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 2189,
     "bucket": "unlikely",
-    "bucket_note": "Dina 1 262 poäng mot 2 189 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 2 189 som krävs för topp 10."
   },
   {
     "id": "homeq:281381",
@@ -3239,13 +3239,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 1266,
     "bucket": "possible",
-    "bucket_note": "Dina 1 262 poäng mot 1 266 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 1 266 som krävs för topp 10."
   },
   {
     "id": "homeq:281390",
@@ -3267,13 +3267,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 1735,
     "bucket": "unlikely",
-    "bucket_note": "Dina 1 262 poäng mot 1 735 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 1 735 som krävs för topp 10."
   },
   {
     "id": "homeq:281397",
@@ -3295,7 +3295,7 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
@@ -3323,7 +3323,7 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
@@ -3351,7 +3351,7 @@
     "allocation": "lottery",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
@@ -3379,13 +3379,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 1,
     "applicants": null,
     "points_needed_top10": 2570,
     "bucket": "unlikely",
-    "bucket_note": "Dina 1 262 poäng mot 2 570 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 2 570 som krävs för topp 10."
   },
   {
     "id": "homeq:281451",
@@ -3407,13 +3407,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 962,
     "bucket": "likely",
-    "bucket_note": "Dina 1 262 poäng mot 962 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 962 som krävs för topp 10."
   },
   {
     "id": "homeq:281454",
@@ -3435,13 +3435,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 2798,
     "bucket": "unlikely",
-    "bucket_note": "Dina 1 262 poäng mot 2 798 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 2 798 som krävs för topp 10."
   },
   {
     "id": "homeq:281456",
@@ -3463,13 +3463,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 1028,
     "bucket": "likely",
-    "bucket_note": "Dina 1 262 poäng mot 1 028 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 1 028 som krävs för topp 10."
   },
   {
     "id": "homeq:281458",
@@ -3491,13 +3491,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 757,
     "bucket": "likely",
-    "bucket_note": "Dina 1 262 poäng mot 757 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 757 som krävs för topp 10."
   },
   {
     "id": "homeq:281476",
@@ -3519,13 +3519,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 1232,
     "bucket": "likely",
-    "bucket_note": "Dina 1 262 poäng mot 1 232 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 1 232 som krävs för topp 10."
   },
   {
     "id": "homeq:281550",
@@ -3547,13 +3547,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 1908,
     "bucket": "unlikely",
-    "bucket_note": "Dina 1 262 poäng mot 1 908 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 1 908 som krävs för topp 10."
   },
   {
     "id": "homeq:281556",
@@ -3575,13 +3575,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 2527,
     "bucket": "unlikely",
-    "bucket_note": "Dina 1 262 poäng mot 2 527 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 2 527 som krävs för topp 10."
   },
   {
     "id": "homeq:281568",
@@ -3603,13 +3603,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 569,
     "bucket": "likely",
-    "bucket_note": "Dina 1 262 poäng mot 569 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 569 som krävs för topp 10."
   },
   {
     "id": "homeq:281574",
@@ -3631,13 +3631,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 2041,
     "bucket": "unlikely",
-    "bucket_note": "Dina 1 262 poäng mot 2 041 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 2 041 som krävs för topp 10."
   },
   {
     "id": "homeq:281588",
@@ -3659,13 +3659,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 1536,
     "bucket": "unlikely",
-    "bucket_note": "Dina 1 262 poäng mot 1 536 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 1 536 som krävs för topp 10."
   },
   {
     "id": "homeq:281631",
@@ -3687,13 +3687,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 873,
     "bucket": "likely",
-    "bucket_note": "Dina 1 262 poäng mot 873 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 873 som krävs för topp 10."
   },
   {
     "id": "homeq:281637",
@@ -3715,7 +3715,7 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
@@ -3743,13 +3743,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 2343,
     "bucket": "unlikely",
-    "bucket_note": "Dina 1 262 poäng mot 2 343 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 2 343 som krävs för topp 10."
   },
   {
     "id": "homeq:281646",
@@ -3771,13 +3771,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-25T05:02:34+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 1638,
     "bucket": "unlikely",
-    "bucket_note": "Dina 1 262 poäng mot 1 638 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 1 638 som krävs för topp 10."
   },
   {
     "id": "homeq:281648",
@@ -3799,7 +3799,7 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
@@ -3827,7 +3827,7 @@
     "allocation": "first_come",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
@@ -3855,13 +3855,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-25T05:02:34+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 1229,
     "bucket": "likely",
-    "bucket_note": "Dina 1 262 poäng mot 1 229 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 1 229 som krävs för topp 10."
   },
   {
     "id": "homeq:281666",
@@ -3883,13 +3883,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-25T05:02:34+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 1270,
     "bucket": "possible",
-    "bucket_note": "Dina 1 262 poäng mot 1 270 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 1 270 som krävs för topp 10."
   },
   {
     "id": "homeq:281821",
@@ -3911,13 +3911,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 1252,
     "bucket": "likely",
-    "bucket_note": "Dina 1 262 poäng mot 1 252 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 1 252 som krävs för topp 10."
   },
   {
     "id": "homeq:281824",
@@ -3939,13 +3939,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 1,
     "applicants": null,
     "points_needed_top10": 1150,
     "bucket": "likely",
-    "bucket_note": "Dina 1 262 poäng mot 1 150 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 1 150 som krävs för topp 10."
   },
   {
     "id": "homeq:281825",
@@ -3967,13 +3967,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 1,
     "applicants": null,
     "points_needed_top10": 1342,
     "bucket": "possible",
-    "bucket_note": "Dina 1 262 poäng mot 1 342 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 1 342 som krävs för topp 10."
   },
   {
     "id": "homeq:281830",
@@ -3995,7 +3995,7 @@
     "allocation": "lottery",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
@@ -4023,13 +4023,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 1,
     "applicants": null,
     "points_needed_top10": 2599,
     "bucket": "unlikely",
-    "bucket_note": "Dina 1 262 poäng mot 2 599 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 2 599 som krävs för topp 10."
   },
   {
     "id": "homeq:281847",
@@ -4051,13 +4051,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 1,
     "applicants": null,
     "points_needed_top10": 2426,
     "bucket": "unlikely",
-    "bucket_note": "Dina 1 262 poäng mot 2 426 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 2 426 som krävs för topp 10."
   },
   {
     "id": "homeq:281848",
@@ -4079,13 +4079,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 1,
     "applicants": null,
     "points_needed_top10": 2455,
     "bucket": "unlikely",
-    "bucket_note": "Dina 1 262 poäng mot 2 455 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 2 455 som krävs för topp 10."
   },
   {
     "id": "homeq:281854",
@@ -4107,7 +4107,7 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
@@ -4135,13 +4135,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 2796,
     "bucket": "unlikely",
-    "bucket_note": "Dina 1 262 poäng mot 2 796 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 2 796 som krävs för topp 10."
   },
   {
     "id": "homeq:281863",
@@ -4163,7 +4163,7 @@
     "allocation": "lottery",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
@@ -4191,13 +4191,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 1513,
     "bucket": "unlikely",
-    "bucket_note": "Dina 1 262 poäng mot 1 513 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 1 513 som krävs för topp 10."
   },
   {
     "id": "homeq:281882",
@@ -4219,7 +4219,7 @@
     "allocation": "lottery",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
@@ -4247,13 +4247,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 517,
     "bucket": "likely",
-    "bucket_note": "Dina 1 262 poäng mot 517 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 517 som krävs för topp 10."
   },
   {
     "id": "homeq:281897",
@@ -4275,13 +4275,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 330,
     "bucket": "likely",
-    "bucket_note": "Dina 1 262 poäng mot 330 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 330 som krävs för topp 10."
   },
   {
     "id": "homeq:281903",
@@ -4303,7 +4303,7 @@
     "allocation": "lottery",
     "winners_queue_days": null,
     "first_seen": "2026-09-19T11:29:02+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
@@ -4331,7 +4331,7 @@
     "allocation": "lottery",
     "winners_queue_days": null,
     "first_seen": "2026-09-21T12:55:31+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
@@ -4359,13 +4359,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-23T04:50:04+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 2707,
     "bucket": "unlikely",
-    "bucket_note": "Dina 1 262 poäng mot 2 707 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 2 707 som krävs för topp 10."
   },
   {
     "id": "homeq:282138",
@@ -4387,13 +4387,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-21T20:00:11+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 1177,
     "bucket": "likely",
-    "bucket_note": "Dina 1 262 poäng mot 1 177 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 1 177 som krävs för topp 10."
   },
   {
     "id": "homeq:282170",
@@ -4415,13 +4415,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-22T00:10:04+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 1659,
     "bucket": "unlikely",
-    "bucket_note": "Dina 1 262 poäng mot 1 659 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 1 659 som krävs för topp 10."
   },
   {
     "id": "homeq:282171",
@@ -4443,7 +4443,7 @@
     "allocation": "first_come",
     "winners_queue_days": null,
     "first_seen": "2026-09-22T11:44:43+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
@@ -4471,13 +4471,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-21T20:00:11+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 1084,
     "bucket": "likely",
-    "bucket_note": "Dina 1 262 poäng mot 1 084 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 1 084 som krävs för topp 10."
   },
   {
     "id": "homeq:282175",
@@ -4499,13 +4499,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-28T05:29:59+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 569,
     "bucket": "likely",
-    "bucket_note": "Dina 1 262 poäng mot 569 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 569 som krävs för topp 10."
   },
   {
     "id": "homeq:282178",
@@ -4527,13 +4527,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-28T05:29:59+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 232,
     "bucket": "likely",
-    "bucket_note": "Dina 1 262 poäng mot 232 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 232 som krävs för topp 10."
   },
   {
     "id": "homeq:282248",
@@ -4555,13 +4555,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-22T11:44:43+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 940,
     "bucket": "likely",
-    "bucket_note": "Dina 1 262 poäng mot 940 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 940 som krävs för topp 10."
   },
   {
     "id": "homeq:282275",
@@ -4583,13 +4583,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-22T11:44:43+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 1293,
     "bucket": "possible",
-    "bucket_note": "Dina 1 262 poäng mot 1 293 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 1 293 som krävs för topp 10."
   },
   {
     "id": "homeq:282292",
@@ -4611,7 +4611,7 @@
     "allocation": "first_come",
     "winners_queue_days": null,
     "first_seen": "2026-09-22T11:44:43+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
@@ -4639,13 +4639,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-22T11:44:43+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 2496,
     "bucket": "unlikely",
-    "bucket_note": "Dina 1 262 poäng mot 2 496 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 2 496 som krävs för topp 10."
   },
   {
     "id": "homeq:282366",
@@ -4667,13 +4667,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-22T11:44:43+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 1698,
     "bucket": "unlikely",
-    "bucket_note": "Dina 1 262 poäng mot 1 698 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 1 698 som krävs för topp 10."
   },
   {
     "id": "homeq:282368",
@@ -4695,13 +4695,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-22T11:44:43+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 882,
     "bucket": "likely",
-    "bucket_note": "Dina 1 262 poäng mot 882 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 882 som krävs för topp 10."
   },
   {
     "id": "homeq:282401",
@@ -4723,13 +4723,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-22T17:00:48+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 2673,
     "bucket": "unlikely",
-    "bucket_note": "Dina 1 262 poäng mot 2 673 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 2 673 som krävs för topp 10."
   },
   {
     "id": "homeq:282446",
@@ -4751,13 +4751,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-22T17:00:48+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 927,
     "bucket": "likely",
-    "bucket_note": "Dina 1 262 poäng mot 927 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 927 som krävs för topp 10."
   },
   {
     "id": "homeq:282449",
@@ -4779,13 +4779,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-22T17:00:48+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 2808,
     "bucket": "unlikely",
-    "bucket_note": "Dina 1 262 poäng mot 2 808 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 2 808 som krävs för topp 10."
   },
   {
     "id": "homeq:282537",
@@ -4807,7 +4807,7 @@
     "allocation": "lottery",
     "winners_queue_days": null,
     "first_seen": "2026-09-23T11:44:00+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
@@ -4835,7 +4835,7 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-23T11:44:00+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
@@ -4863,13 +4863,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-23T11:44:00+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 1,
     "applicants": null,
     "points_needed_top10": 2674,
     "bucket": "unlikely",
-    "bucket_note": "Dina 1 262 poäng mot 2 674 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 2 674 som krävs för topp 10."
   },
   {
     "id": "homeq:282575",
@@ -4891,7 +4891,7 @@
     "allocation": "lottery",
     "winners_queue_days": null,
     "first_seen": "2026-09-23T11:44:00+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 1,
     "applicants": null,
@@ -4919,13 +4919,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-23T11:44:00+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 1355,
     "bucket": "possible",
-    "bucket_note": "Dina 1 262 poäng mot 1 355 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 1 355 som krävs för topp 10."
   },
   {
     "id": "homeq:282601",
@@ -4947,13 +4947,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-23T11:44:00+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 837,
     "bucket": "likely",
-    "bucket_note": "Dina 1 262 poäng mot 837 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 837 som krävs för topp 10."
   },
   {
     "id": "homeq:282635",
@@ -4975,13 +4975,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-24T17:15:49+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 1256,
     "bucket": "likely",
-    "bucket_note": "Dina 1 262 poäng mot 1 256 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 1 256 som krävs för topp 10."
   },
   {
     "id": "homeq:282643",
@@ -5003,13 +5003,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-23T11:44:00+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 2606,
     "bucket": "unlikely",
-    "bucket_note": "Dina 1 262 poäng mot 2 606 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 2 606 som krävs för topp 10."
   },
   {
     "id": "homeq:282644",
@@ -5031,13 +5031,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-23T11:44:00+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 1869,
     "bucket": "unlikely",
-    "bucket_note": "Dina 1 262 poäng mot 1 869 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 1 869 som krävs för topp 10."
   },
   {
     "id": "homeq:282671",
@@ -5059,7 +5059,7 @@
     "allocation": "lottery",
     "winners_queue_days": null,
     "first_seen": "2026-09-23T11:44:00+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 1,
     "applicants": null,
@@ -5087,7 +5087,7 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-23T17:07:56+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
@@ -5115,13 +5115,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-23T17:07:56+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 2453,
     "bucket": "unlikely",
-    "bucket_note": "Dina 1 262 poäng mot 2 453 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 2 453 som krävs för topp 10."
   },
   {
     "id": "homeq:282730",
@@ -5143,13 +5143,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-23T17:07:56+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 1417,
     "bucket": "unlikely",
-    "bucket_note": "Dina 1 262 poäng mot 1 417 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 1 417 som krävs för topp 10."
   },
   {
     "id": "homeq:282731",
@@ -5171,7 +5171,7 @@
     "allocation": "lottery",
     "winners_queue_days": null,
     "first_seen": "2026-09-23T17:07:56+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 1,
     "applicants": null,
@@ -5199,7 +5199,7 @@
     "allocation": "lottery",
     "winners_queue_days": null,
     "first_seen": "2026-09-23T17:07:56+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 1,
     "applicants": null,
@@ -5227,7 +5227,7 @@
     "allocation": "lottery",
     "winners_queue_days": null,
     "first_seen": "2026-09-24T04:57:44+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
@@ -5255,13 +5255,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-24T11:52:59+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 637,
     "bucket": "likely",
-    "bucket_note": "Dina 1 262 poäng mot 637 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 637 som krävs för topp 10."
   },
   {
     "id": "homeq:282841",
@@ -5283,13 +5283,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-24T11:52:59+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 641,
     "bucket": "likely",
-    "bucket_note": "Dina 1 262 poäng mot 641 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 641 som krävs för topp 10."
   },
   {
     "id": "homeq:282881",
@@ -5311,13 +5311,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-24T11:52:59+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 982,
     "bucket": "likely",
-    "bucket_note": "Dina 1 262 poäng mot 982 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 982 som krävs för topp 10."
   },
   {
     "id": "homeq:282882",
@@ -5339,13 +5339,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-24T11:52:59+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 2184,
     "bucket": "unlikely",
-    "bucket_note": "Dina 1 262 poäng mot 2 184 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 2 184 som krävs för topp 10."
   },
   {
     "id": "homeq:282885",
@@ -5367,13 +5367,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-24T11:52:59+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 2439,
     "bucket": "unlikely",
-    "bucket_note": "Dina 1 262 poäng mot 2 439 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 2 439 som krävs för topp 10."
   },
   {
     "id": "homeq:282888",
@@ -5395,7 +5395,7 @@
     "allocation": "lottery",
     "winners_queue_days": null,
     "first_seen": "2026-09-24T11:52:59+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 1,
     "applicants": null,
@@ -5423,13 +5423,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-24T17:15:49+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 2792,
     "bucket": "unlikely",
-    "bucket_note": "Dina 1 262 poäng mot 2 792 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 2 792 som krävs för topp 10."
   },
   {
     "id": "homeq:282923",
@@ -5451,13 +5451,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-24T17:15:49+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 1875,
     "bucket": "unlikely",
-    "bucket_note": "Dina 1 262 poäng mot 1 875 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 1 875 som krävs för topp 10."
   },
   {
     "id": "homeq:282940",
@@ -5479,13 +5479,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-24T17:15:49+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 416,
     "bucket": "likely",
-    "bucket_note": "Dina 1 262 poäng mot 416 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 416 som krävs för topp 10."
   },
   {
     "id": "homeq:282941",
@@ -5507,13 +5507,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-24T17:15:49+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 2611,
     "bucket": "unlikely",
-    "bucket_note": "Dina 1 262 poäng mot 2 611 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 2 611 som krävs för topp 10."
   },
   {
     "id": "homeq:282956",
@@ -5535,7 +5535,7 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-24T17:15:49+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
@@ -5563,13 +5563,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-25T11:55:45+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 1939,
     "bucket": "unlikely",
-    "bucket_note": "Dina 1 262 poäng mot 1 939 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 1 939 som krävs för topp 10."
   },
   {
     "id": "homeq:283030",
@@ -5591,13 +5591,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-25T11:55:45+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 334,
     "bucket": "likely",
-    "bucket_note": "Dina 1 262 poäng mot 334 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 334 som krävs för topp 10."
   },
   {
     "id": "homeq:283039",
@@ -5619,13 +5619,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-25T11:55:45+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 1785,
     "bucket": "unlikely",
-    "bucket_note": "Dina 1 262 poäng mot 1 785 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 1 785 som krävs för topp 10."
   },
   {
     "id": "homeq:283067",
@@ -5647,13 +5647,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-25T11:55:45+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 1467,
     "bucket": "unlikely",
-    "bucket_note": "Dina 1 262 poäng mot 1 467 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 1 467 som krävs för topp 10."
   },
   {
     "id": "homeq:283087",
@@ -5675,7 +5675,7 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-25T11:55:45+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
@@ -5703,13 +5703,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-25T11:55:45+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 2732,
     "bucket": "unlikely",
-    "bucket_note": "Dina 1 262 poäng mot 2 732 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 2 732 som krävs för topp 10."
   },
   {
     "id": "homeq:283107",
@@ -5731,13 +5731,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-25T11:55:45+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 2576,
     "bucket": "unlikely",
-    "bucket_note": "Dina 1 262 poäng mot 2 576 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 2 576 som krävs för topp 10."
   },
   {
     "id": "homeq:283122",
@@ -5759,13 +5759,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-25T11:55:45+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 274,
     "bucket": "likely",
-    "bucket_note": "Dina 1 262 poäng mot 274 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 274 som krävs för topp 10."
   },
   {
     "id": "homeq:283128",
@@ -5787,13 +5787,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-25T11:55:45+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 969,
     "bucket": "likely",
-    "bucket_note": "Dina 1 262 poäng mot 969 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 969 som krävs för topp 10."
   },
   {
     "id": "homeq:283141",
@@ -5815,13 +5815,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-25T17:16:12+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 2082,
     "bucket": "unlikely",
-    "bucket_note": "Dina 1 262 poäng mot 2 082 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 2 082 som krävs för topp 10."
   },
   {
     "id": "homeq:283169",
@@ -5843,7 +5843,7 @@
     "allocation": "lottery",
     "winners_queue_days": null,
     "first_seen": "2026-09-25T17:16:12+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
@@ -5871,13 +5871,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-25T17:16:12+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 747,
     "bucket": "likely",
-    "bucket_note": "Dina 1 262 poäng mot 747 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 747 som krävs för topp 10."
   },
   {
     "id": "homeq:283231",
@@ -5899,13 +5899,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-25T17:16:12+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 1150,
     "bucket": "likely",
-    "bucket_note": "Dina 1 262 poäng mot 1 150 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 1 150 som krävs för topp 10."
   },
   {
     "id": "homeq:283255",
@@ -5927,7 +5927,7 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-25T17:16:12+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
@@ -5955,13 +5955,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-25T17:16:12+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 1342,
     "bucket": "possible",
-    "bucket_note": "Dina 1 262 poäng mot 1 342 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 1 342 som krävs för topp 10."
   },
   {
     "id": "homeq:283289",
@@ -5983,7 +5983,7 @@
     "allocation": "lottery",
     "winners_queue_days": null,
     "first_seen": "2026-09-28T14:03:30+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
@@ -6011,13 +6011,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-27T12:08:06+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 1775,
     "bucket": "unlikely",
-    "bucket_note": "Dina 1 262 poäng mot 1 775 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 1 775 som krävs för topp 10."
   },
   {
     "id": "homeq:283322",
@@ -6039,13 +6039,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-27T12:08:06+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 1086,
     "bucket": "likely",
-    "bucket_note": "Dina 1 262 poäng mot 1 086 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 1 086 som krävs för topp 10."
   },
   {
     "id": "homeq:283323",
@@ -6067,13 +6067,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-27T17:01:13+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 1583,
     "bucket": "unlikely",
-    "bucket_note": "Dina 1 262 poäng mot 1 583 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 1 583 som krävs för topp 10."
   },
   {
     "id": "homeq:283357",
@@ -6095,13 +6095,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-28T14:03:30+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 956,
     "bucket": "likely",
-    "bucket_note": "Dina 1 262 poäng mot 956 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 956 som krävs för topp 10."
   },
   {
     "id": "homeq:283359",
@@ -6123,13 +6123,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-28T14:03:30+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 888,
     "bucket": "likely",
-    "bucket_note": "Dina 1 262 poäng mot 888 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 888 som krävs för topp 10."
   },
   {
     "id": "homeq:283360",
@@ -6151,13 +6151,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-28T14:03:30+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 2678,
     "bucket": "unlikely",
-    "bucket_note": "Dina 1 262 poäng mot 2 678 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 2 678 som krävs för topp 10."
   },
   {
     "id": "homeq:283369",
@@ -6179,13 +6179,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-28T14:03:30+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 768,
     "bucket": "likely",
-    "bucket_note": "Dina 1 262 poäng mot 768 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 768 som krävs för topp 10."
   },
   {
     "id": "homeq:283377",
@@ -6207,13 +6207,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-28T14:03:30+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 889,
     "bucket": "likely",
-    "bucket_note": "Dina 1 262 poäng mot 889 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 889 som krävs för topp 10."
   },
   {
     "id": "homeq:283379",
@@ -6235,13 +6235,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-28T14:03:30+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 1823,
     "bucket": "unlikely",
-    "bucket_note": "Dina 1 262 poäng mot 1 823 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 1 823 som krävs för topp 10."
   },
   {
     "id": "homeq:283390",
@@ -6263,13 +6263,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-28T14:03:30+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 388,
     "bucket": "likely",
-    "bucket_note": "Dina 1 262 poäng mot 388 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 388 som krävs för topp 10."
   },
   {
     "id": "homeq:283391",
@@ -6291,13 +6291,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-28T14:03:30+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 1226,
     "bucket": "likely",
-    "bucket_note": "Dina 1 262 poäng mot 1 226 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 1 226 som krävs för topp 10."
   },
   {
     "id": "homeq:283421",
@@ -6319,7 +6319,7 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-28T14:03:30+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
@@ -6347,13 +6347,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-28T14:03:30+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 1776,
     "bucket": "unlikely",
-    "bucket_note": "Dina 1 262 poäng mot 1 776 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 1 776 som krävs för topp 10."
   },
   {
     "id": "homeq:283457",
@@ -6375,7 +6375,7 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-28T14:03:30+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 1,
     "applicants": null,
@@ -6403,13 +6403,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-28T14:03:30+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 1340,
     "bucket": "possible",
-    "bucket_note": "Dina 1 262 poäng mot 1 340 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 1 340 som krävs för topp 10."
   },
   {
     "id": "homeq:283588",
@@ -6431,13 +6431,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-28T14:03:30+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 475,
     "bucket": "likely",
-    "bucket_note": "Dina 1 262 poäng mot 475 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 475 som krävs för topp 10."
   },
   {
     "id": "homeq:283598",
@@ -6459,13 +6459,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-28T21:15:52+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 1999,
     "bucket": "unlikely",
-    "bucket_note": "Dina 1 262 poäng mot 1 999 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 1 999 som krävs för topp 10."
   },
   {
     "id": "homeq:283617",
@@ -6487,13 +6487,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-28T21:15:52+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 1860,
     "bucket": "unlikely",
-    "bucket_note": "Dina 1 262 poäng mot 1 860 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 1 860 som krävs för topp 10."
   },
   {
     "id": "homeq:283618",
@@ -6515,13 +6515,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-29T01:03:26+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 1153,
     "bucket": "likely",
-    "bucket_note": "Dina 1 262 poäng mot 1 153 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 1 153 som krävs för topp 10."
   },
   {
     "id": "homeq:283619",
@@ -6543,13 +6543,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-28T21:15:52+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 1409,
     "bucket": "unlikely",
-    "bucket_note": "Dina 1 262 poäng mot 1 409 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 1 409 som krävs för topp 10."
   },
   {
     "id": "homeq:283656",
@@ -6571,7 +6571,7 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-30T12:41:34+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
@@ -6599,13 +6599,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-29T09:54:42+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 1056,
     "bucket": "likely",
-    "bucket_note": "Dina 1 262 poäng mot 1 056 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 1 056 som krävs för topp 10."
   },
   {
     "id": "homeq:283700",
@@ -6627,13 +6627,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-29T09:54:42+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 214,
     "bucket": "likely",
-    "bucket_note": "Dina 1 262 poäng mot 214 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 214 som krävs för topp 10."
   },
   {
     "id": "homeq:283705",
@@ -6655,13 +6655,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-29T09:54:42+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 1993,
     "bucket": "unlikely",
-    "bucket_note": "Dina 1 262 poäng mot 1 993 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 1 993 som krävs för topp 10."
   },
   {
     "id": "homeq:283707",
@@ -6683,13 +6683,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-29T09:54:42+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 1519,
     "bucket": "unlikely",
-    "bucket_note": "Dina 1 262 poäng mot 1 519 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 1 519 som krävs för topp 10."
   },
   {
     "id": "homeq:283718",
@@ -6711,13 +6711,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-29T09:54:42+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 293,
     "bucket": "likely",
-    "bucket_note": "Dina 1 262 poäng mot 293 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 293 som krävs för topp 10."
   },
   {
     "id": "homeq:283721",
@@ -6739,7 +6739,7 @@
     "allocation": "lottery",
     "winners_queue_days": null,
     "first_seen": "2026-09-29T09:54:42+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
@@ -6767,13 +6767,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-29T09:54:42+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 849,
     "bucket": "likely",
-    "bucket_note": "Dina 1 262 poäng mot 849 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 849 som krävs för topp 10."
   },
   {
     "id": "homeq:283751",
@@ -6795,13 +6795,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-29T09:54:42+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 1670,
     "bucket": "unlikely",
-    "bucket_note": "Dina 1 262 poäng mot 1 670 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 1 670 som krävs för topp 10."
   },
   {
     "id": "homeq:283770",
@@ -6823,13 +6823,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-29T09:54:42+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 128,
     "bucket": "likely",
-    "bucket_note": "Dina 1 262 poäng mot 128 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 128 som krävs för topp 10."
   },
   {
     "id": "homeq:283773",
@@ -6851,13 +6851,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-29T09:54:42+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 1870,
     "bucket": "unlikely",
-    "bucket_note": "Dina 1 262 poäng mot 1 870 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 1 870 som krävs för topp 10."
   },
   {
     "id": "homeq:283776",
@@ -6879,13 +6879,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-29T18:07:44+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 1895,
     "bucket": "unlikely",
-    "bucket_note": "Dina 1 262 poäng mot 1 895 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 1 895 som krävs för topp 10."
   },
   {
     "id": "homeq:283782",
@@ -6907,13 +6907,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-29T18:07:44+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 887,
     "bucket": "likely",
-    "bucket_note": "Dina 1 262 poäng mot 887 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 887 som krävs för topp 10."
   },
   {
     "id": "homeq:283804",
@@ -6935,7 +6935,7 @@
     "allocation": "lottery",
     "winners_queue_days": null,
     "first_seen": "2026-09-29T18:07:44+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
@@ -6963,13 +6963,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-29T18:07:44+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 1140,
     "bucket": "likely",
-    "bucket_note": "Dina 1 262 poäng mot 1 140 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 1 140 som krävs för topp 10."
   },
   {
     "id": "homeq:283839",
@@ -6991,13 +6991,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-29T18:07:44+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 1980,
     "bucket": "unlikely",
-    "bucket_note": "Dina 1 262 poäng mot 1 980 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 1 980 som krävs för topp 10."
   },
   {
     "id": "homeq:283869",
@@ -7019,7 +7019,7 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-29T18:07:44+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
@@ -7047,13 +7047,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-29T18:07:44+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 832,
     "bucket": "likely",
-    "bucket_note": "Dina 1 262 poäng mot 832 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 832 som krävs för topp 10."
   },
   {
     "id": "homeq:283917",
@@ -7075,7 +7075,7 @@
     "allocation": "first_come",
     "winners_queue_days": null,
     "first_seen": "2026-10-01T10:13:29+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
@@ -7103,7 +7103,7 @@
     "allocation": "lottery",
     "winners_queue_days": null,
     "first_seen": "2026-09-30T12:41:34+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
@@ -7131,13 +7131,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-30T12:41:34+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 1140,
     "bucket": "likely",
-    "bucket_note": "Dina 1 262 poäng mot 1 140 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 1 140 som krävs för topp 10."
   },
   {
     "id": "homeq:283981",
@@ -7159,7 +7159,7 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-30T12:41:34+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
@@ -7187,13 +7187,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-30T12:41:34+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 2272,
     "bucket": "unlikely",
-    "bucket_note": "Dina 1 262 poäng mot 2 272 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 2 272 som krävs för topp 10."
   },
   {
     "id": "homeq:284077",
@@ -7215,13 +7215,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-30T12:41:34+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 1,
     "applicants": null,
     "points_needed_top10": 2010,
     "bucket": "unlikely",
-    "bucket_note": "Dina 1 262 poäng mot 2 010 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 2 010 som krävs för topp 10."
   },
   {
     "id": "homeq:284202",
@@ -7243,13 +7243,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-30T20:04:51+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 207,
     "bucket": "likely",
-    "bucket_note": "Dina 1 262 poäng mot 207 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 207 som krävs för topp 10."
   },
   {
     "id": "homeq:284203",
@@ -7271,7 +7271,7 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-30T20:04:51+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
@@ -7299,13 +7299,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-10-01T10:13:29+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 523,
     "bucket": "likely",
-    "bucket_note": "Dina 1 262 poäng mot 523 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 523 som krävs för topp 10."
   },
   {
     "id": "homeq:284245",
@@ -7327,13 +7327,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-10-01T10:13:29+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 34,
     "bucket": "likely",
-    "bucket_note": "Dina 1 262 poäng mot 34 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 34 som krävs för topp 10."
   },
   {
     "id": "homeq:284248",
@@ -7355,13 +7355,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-10-01T10:13:29+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 1581,
     "bucket": "unlikely",
-    "bucket_note": "Dina 1 262 poäng mot 1 581 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 1 581 som krävs för topp 10."
   },
   {
     "id": "homeq:284249",
@@ -7383,7 +7383,7 @@
     "allocation": "first_come",
     "winners_queue_days": null,
     "first_seen": "2026-10-01T10:13:29+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
@@ -7411,13 +7411,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-10-01T10:13:29+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 1335,
     "bucket": "possible",
-    "bucket_note": "Dina 1 262 poäng mot 1 335 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 1 335 som krävs för topp 10."
   },
   {
     "id": "homeq:284253",
@@ -7439,13 +7439,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-10-01T10:13:29+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 2162,
     "bucket": "unlikely",
-    "bucket_note": "Dina 1 262 poäng mot 2 162 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 2 162 som krävs för topp 10."
   },
   {
     "id": "homeq:284255",
@@ -7467,7 +7467,7 @@
     "allocation": "first_come",
     "winners_queue_days": null,
     "first_seen": "2026-10-01T10:13:29+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 1,
     "applicants": null,
@@ -7495,7 +7495,7 @@
     "allocation": "first_come",
     "winners_queue_days": null,
     "first_seen": "2026-10-01T10:13:29+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 1,
     "applicants": null,
@@ -7523,13 +7523,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-10-01T10:13:29+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 431,
     "bucket": "likely",
-    "bucket_note": "Dina 1 262 poäng mot 431 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 431 som krävs för topp 10."
   },
   {
     "id": "homeq:284265",
@@ -7551,13 +7551,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-10-01T10:13:29+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 1506,
     "bucket": "unlikely",
-    "bucket_note": "Dina 1 262 poäng mot 1 506 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 1 506 som krävs för topp 10."
   },
   {
     "id": "homeq:284267",
@@ -7579,13 +7579,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-10-01T10:13:29+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 1818,
     "bucket": "unlikely",
-    "bucket_note": "Dina 1 262 poäng mot 1 818 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 1 818 som krävs för topp 10."
   },
   {
     "id": "homeq:284268",
@@ -7607,13 +7607,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-10-01T10:13:29+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 2153,
     "bucket": "unlikely",
-    "bucket_note": "Dina 1 262 poäng mot 2 153 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 2 153 som krävs för topp 10."
   },
   {
     "id": "homeq:284288",
@@ -7635,13 +7635,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-10-01T10:13:29+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 1340,
     "bucket": "possible",
-    "bucket_note": "Dina 1 262 poäng mot 1 340 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 1 340 som krävs för topp 10."
   },
   {
     "id": "homeq:284296",
@@ -7663,13 +7663,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-10-01T10:13:29+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 1583,
     "bucket": "unlikely",
-    "bucket_note": "Dina 1 262 poäng mot 1 583 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 1 583 som krävs för topp 10."
   },
   {
     "id": "homeq:284298",
@@ -7691,7 +7691,7 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-10-01T10:13:29+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
@@ -7719,13 +7719,69 @@
     "allocation": "lottery",
     "winners_queue_days": null,
     "first_seen": "2026-10-01T10:13:29+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": null,
     "bucket": "possible",
     "bucket_note": "Lottning: din kötid spelar ingen roll."
+  },
+  {
+    "id": "homeq:284319",
+    "source": "homeq",
+    "url": "https://www.homeq.se/lagenhet/284319-4rum-göteborg-västra-götalands-län-pilegården-8-c",
+    "address": "Pilegården 8 C",
+    "area": "Göteborg",
+    "kommun": "Göteborg",
+    "lat": 57.6415542,
+    "lon": 11.9362313,
+    "rent_sek": 15812,
+    "size_m2": 99.0,
+    "rooms": 4.0,
+    "floor": 3,
+    "published": "2026-10-05",
+    "move_in": "2027-02-15",
+    "deadline": null,
+    "landlord": "Stena Fastigheter",
+    "allocation": "queue",
+    "winners_queue_days": null,
+    "first_seen": "2026-10-05T05:47:52+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
+    "status": "active",
+    "is_short_lease": 0,
+    "applicants": null,
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar ingen poänggräns för den här annonsen (än), så chansen kan inte räknas ut."
+  },
+  {
+    "id": "homeq:284342",
+    "source": "homeq",
+    "url": "https://www.homeq.se/lagenhet/284342-2rum-göteborg-västra-götalands-län-kobbeslätten-8",
+    "address": "Kobbeslätten 8",
+    "area": "Göteborg",
+    "kommun": "Göteborg",
+    "lat": 57.63873,
+    "lon": 11.94353,
+    "rent_sek": 11518,
+    "size_m2": 54.0,
+    "rooms": 2.0,
+    "floor": 3,
+    "published": "2026-10-05",
+    "move_in": "2027-01-01",
+    "deadline": null,
+    "landlord": "Stena Fastigheter",
+    "allocation": "queue",
+    "winners_queue_days": null,
+    "first_seen": "2026-10-05T05:47:52+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
+    "status": "active",
+    "is_short_lease": 0,
+    "applicants": null,
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar ingen poänggräns för den här annonsen (än), så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:284348",
@@ -7747,7 +7803,7 @@
     "allocation": "lottery",
     "winners_queue_days": null,
     "first_seen": "2026-10-01T10:13:29+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
@@ -7775,7 +7831,7 @@
     "allocation": "lottery",
     "winners_queue_days": null,
     "first_seen": "2026-10-01T10:13:29+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
@@ -7803,7 +7859,7 @@
     "allocation": "lottery",
     "winners_queue_days": null,
     "first_seen": "2026-10-01T10:13:29+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
@@ -7831,7 +7887,7 @@
     "allocation": "lottery",
     "winners_queue_days": null,
     "first_seen": "2026-10-02T00:50:15+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
@@ -7859,7 +7915,7 @@
     "allocation": "lottery",
     "winners_queue_days": null,
     "first_seen": "2026-10-02T00:50:15+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
@@ -7887,13 +7943,41 @@
     "allocation": "first_come",
     "winners_queue_days": null,
     "first_seen": "2026-10-01T18:27:05+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": null,
     "bucket": "possible",
     "bucket_note": "Först till kvarn: köpoängen spelar ingen roll, den som ansöker först vinner."
+  },
+  {
+    "id": "homeq:284375",
+    "source": "homeq",
+    "url": "https://www.homeq.se/lagenhet/284375-1rum-askim-västra-götalands-län-kobbegården-31",
+    "address": "Kobbegården 31",
+    "area": "Askim",
+    "kommun": "Göteborg",
+    "lat": 57.6376865,
+    "lon": 11.9410322,
+    "rent_sek": 8126,
+    "size_m2": 34.0,
+    "rooms": 1.0,
+    "floor": 1,
+    "published": "2026-10-05",
+    "move_in": "2027-01-01",
+    "deadline": null,
+    "landlord": "Stena Fastigheter",
+    "allocation": "queue",
+    "winners_queue_days": null,
+    "first_seen": "2026-10-05T05:47:52+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
+    "status": "active",
+    "is_short_lease": 0,
+    "applicants": null,
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar ingen poänggräns för den här annonsen (än), så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:284381",
@@ -7915,7 +7999,7 @@
     "allocation": "lottery",
     "winners_queue_days": null,
     "first_seen": "2026-10-01T18:27:05+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
@@ -7943,13 +8027,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-10-01T18:27:05+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 1999,
     "bucket": "unlikely",
-    "bucket_note": "Dina 1 262 poäng mot 1 999 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 1 999 som krävs för topp 10."
   },
   {
     "id": "homeq:284408",
@@ -7971,7 +8055,7 @@
     "allocation": "lottery",
     "winners_queue_days": null,
     "first_seen": "2026-10-01T18:27:05+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
@@ -7999,13 +8083,41 @@
     "allocation": "lottery",
     "winners_queue_days": null,
     "first_seen": "2026-10-01T18:27:05+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": null,
     "bucket": "possible",
     "bucket_note": "Lottning: din kötid spelar ingen roll."
+  },
+  {
+    "id": "homeq:284448",
+    "source": "homeq",
+    "url": "https://www.homeq.se/lagenhet/284448-1rum-göteborg-västra-götalands-län-pilegården-6c",
+    "address": "Pilegården 6C",
+    "area": "Göteborg",
+    "kommun": "Göteborg",
+    "lat": 57.6409455,
+    "lon": 11.9343243,
+    "rent_sek": 8395,
+    "size_m2": 41.0,
+    "rooms": 1.0,
+    "floor": -1,
+    "published": "2026-10-05",
+    "move_in": "2027-01-01",
+    "deadline": null,
+    "landlord": "Stena Fastigheter",
+    "allocation": "queue",
+    "winners_queue_days": null,
+    "first_seen": "2026-10-05T05:47:52+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
+    "status": "active",
+    "is_short_lease": 0,
+    "applicants": null,
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar ingen poänggräns för den här annonsen (än), så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:284491",
@@ -8027,7 +8139,7 @@
     "allocation": "lottery",
     "winners_queue_days": null,
     "first_seen": "2026-10-01T18:27:05+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
@@ -8055,7 +8167,7 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-10-01T18:27:05+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
@@ -8083,13 +8195,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-10-01T18:27:05+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 408,
     "bucket": "likely",
-    "bucket_note": "Dina 1 262 poäng mot 408 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 408 som krävs för topp 10."
   },
   {
     "id": "homeq:284510",
@@ -8111,13 +8223,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-10-01T18:27:05+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 724,
     "bucket": "likely",
-    "bucket_note": "Dina 1 262 poäng mot 724 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 724 som krävs för topp 10."
   },
   {
     "id": "homeq:284511",
@@ -8139,13 +8251,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-10-01T18:27:05+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 466,
     "bucket": "likely",
-    "bucket_note": "Dina 1 262 poäng mot 466 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 466 som krävs för topp 10."
   },
   {
     "id": "homeq:284512",
@@ -8167,13 +8279,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-10-01T18:27:05+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 712,
     "bucket": "likely",
-    "bucket_note": "Dina 1 262 poäng mot 712 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 712 som krävs för topp 10."
   },
   {
     "id": "homeq:284514",
@@ -8195,13 +8307,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-10-01T18:27:05+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 724,
     "bucket": "likely",
-    "bucket_note": "Dina 1 262 poäng mot 724 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 724 som krävs för topp 10."
   },
   {
     "id": "homeq:284515",
@@ -8223,13 +8335,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-10-01T18:27:05+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 2355,
     "bucket": "unlikely",
-    "bucket_note": "Dina 1 262 poäng mot 2 355 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 2 355 som krävs för topp 10."
   },
   {
     "id": "homeq:284518",
@@ -8251,7 +8363,7 @@
     "allocation": "lottery",
     "winners_queue_days": null,
     "first_seen": "2026-10-01T18:27:05+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
@@ -8279,7 +8391,7 @@
     "allocation": "lottery",
     "winners_queue_days": null,
     "first_seen": "2026-10-01T18:27:05+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 1,
     "applicants": null,
@@ -8307,13 +8419,41 @@
     "allocation": "lottery",
     "winners_queue_days": null,
     "first_seen": "2026-10-01T18:27:05+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 1,
     "applicants": null,
     "points_needed_top10": null,
     "bucket": "possible",
     "bucket_note": "Lottning: din kötid spelar ingen roll."
+  },
+  {
+    "id": "homeq:284559",
+    "source": "homeq",
+    "url": "https://www.homeq.se/lagenhet/284559-2rum-göteborg-västra-götalands-län-kobbeslätten-4",
+    "address": "Kobbeslätten 4",
+    "area": "Göteborg",
+    "kommun": "Göteborg",
+    "lat": 57.6390661,
+    "lon": 11.9401928,
+    "rent_sek": 11748,
+    "size_m2": 54.0,
+    "rooms": 2.0,
+    "floor": 1,
+    "published": "2026-10-05",
+    "move_in": "2027-01-01",
+    "deadline": null,
+    "landlord": "Stena Fastigheter",
+    "allocation": "queue",
+    "winners_queue_days": null,
+    "first_seen": "2026-10-05T05:47:52+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
+    "status": "active",
+    "is_short_lease": 0,
+    "applicants": null,
+    "points_needed_top10": null,
+    "bucket": null,
+    "bucket_note": "HomeQ visar ingen poänggräns för den här annonsen (än), så chansen kan inte räknas ut."
   },
   {
     "id": "homeq:284578",
@@ -8335,13 +8475,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-10-02T17:53:54+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 350,
     "bucket": "likely",
-    "bucket_note": "Dina 1 262 poäng mot 350 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 350 som krävs för topp 10."
   },
   {
     "id": "homeq:284606",
@@ -8363,13 +8503,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-10-03T11:44:13+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 2179,
     "bucket": "unlikely",
-    "bucket_note": "Dina 1 262 poäng mot 2 179 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 2 179 som krävs för topp 10."
   },
   {
     "id": "homeq:284607",
@@ -8391,13 +8531,13 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-10-03T11:44:13+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": 0,
     "applicants": null,
     "points_needed_top10": 1369,
     "bucket": "possible",
-    "bucket_note": "Dina 1 262 poäng mot 1 369 som krävs för topp 10."
+    "bucket_note": "Dina 1 263 poäng mot 1 369 som krävs för topp 10."
   },
   {
     "id": "boplats:6ABA0F820650381E7077B095",
@@ -8419,13 +8559,13 @@
     "allocation": "queue",
     "winners_queue_days": 2093,
     "first_seen": "2026-09-28T14:03:30+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": null,
     "applicants": 1,
     "points_needed_top10": null,
     "bucket": "possible",
-    "bucket_note": "Dina 1 262 dagar mot vinnarnas 2 093 dagar (60 %). Bara 1 sökande nära sista dagen: ett steg upp."
+    "bucket_note": "Dina 1 263 dagar mot vinnarnas 2 093 dagar (60 %). Bara 1 sökande nära sista dagen: ett steg upp."
   },
   {
     "id": "boplats:6ABCDFFBFDDE53FD8782C382",
@@ -8447,13 +8587,13 @@
     "allocation": "queue",
     "winners_queue_days": 715,
     "first_seen": "2026-10-01T00:35:36+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": null,
     "applicants": 1,
     "points_needed_top10": null,
     "bucket": "likely",
-    "bucket_note": "Dina 1 262 dagar mot vinnarnas 715 dagar (177 %). Bara 1 sökande nära sista dagen: ett steg upp."
+    "bucket_note": "Dina 1 263 dagar mot vinnarnas 715 dagar (177 %). Bara 1 sökande nära sista dagen: ett steg upp."
   },
   {
     "id": "boplats:6ABD5BE0040A5B47CCD8C382",
@@ -8475,13 +8615,13 @@
     "allocation": "queue",
     "winners_queue_days": 1638,
     "first_seen": "2026-10-01T10:13:29+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": null,
     "applicants": 0,
     "points_needed_top10": null,
     "bucket": "possible",
-    "bucket_note": "Dina 1 262 dagar mot vinnarnas 1 638 dagar (77 %). Bara 0 sökande nära sista dagen: ett steg upp."
+    "bucket_note": "Dina 1 263 dagar mot vinnarnas 1 638 dagar (77 %). Bara 0 sökande nära sista dagen: ett steg upp."
   },
   {
     "id": "boplats:6ABD88BBF8B55A36F81FC379",
@@ -8503,13 +8643,13 @@
     "allocation": "queue",
     "winners_queue_days": 1433,
     "first_seen": "2026-10-02T00:50:15+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": null,
     "applicants": 4,
     "points_needed_top10": null,
     "bucket": "likely",
-    "bucket_note": "Dina 1 262 dagar mot vinnarnas 1 433 dagar (88 %). Bara 4 sökande nära sista dagen: ett steg upp."
+    "bucket_note": "Dina 1 263 dagar mot vinnarnas 1 433 dagar (88 %). Bara 4 sökande nära sista dagen: ett steg upp."
   },
   {
     "id": "boplats:6ABE317A041763772068C379",
@@ -8531,13 +8671,13 @@
     "allocation": "queue",
     "winners_queue_days": 1649,
     "first_seen": "2026-10-01T10:13:29+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": null,
     "applicants": 0,
     "points_needed_top10": null,
     "bucket": "possible",
-    "bucket_note": "Dina 1 262 dagar mot vinnarnas 1 649 dagar (77 %). Bara 0 sökande nära sista dagen: ett steg upp."
+    "bucket_note": "Dina 1 263 dagar mot vinnarnas 1 649 dagar (77 %). Bara 0 sökande nära sista dagen: ett steg upp."
   },
   {
     "id": "boplats:6ABE317DFA666246238FB095",
@@ -8559,13 +8699,13 @@
     "allocation": "queue",
     "winners_queue_days": 2085,
     "first_seen": "2026-10-02T00:50:15+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": null,
     "applicants": 6,
     "points_needed_top10": null,
     "bucket": "unlikely",
-    "bucket_note": "Dina 1 262 dagar mot vinnarnas 2 085 dagar (61 %)."
+    "bucket_note": "Dina 1 263 dagar mot vinnarnas 2 085 dagar (61 %)."
   },
   {
     "id": "boplats:6ABE85DEFC3A633C2971C382",
@@ -8587,13 +8727,13 @@
     "allocation": "queue",
     "winners_queue_days": 2605,
     "first_seen": "2026-10-02T00:50:15+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": null,
     "applicants": 10,
     "points_needed_top10": null,
     "bucket": "unlikely",
-    "bucket_note": "Dina 1 262 dagar mot vinnarnas 2 605 dagar (48 %)."
+    "bucket_note": "Dina 1 263 dagar mot vinnarnas 2 605 dagar (48 %)."
   },
   {
     "id": "boplats:6ABE85DF0382648E6687C379",
@@ -8615,13 +8755,13 @@
     "allocation": "queue",
     "winners_queue_days": 2160,
     "first_seen": "2026-10-02T00:50:15+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": null,
     "applicants": 1,
     "points_needed_top10": null,
     "bucket": "possible",
-    "bucket_note": "Dina 1 262 dagar mot vinnarnas 2 160 dagar (58 %). Bara 1 sökande nära sista dagen: ett steg upp."
+    "bucket_note": "Dina 1 263 dagar mot vinnarnas 2 160 dagar (58 %). Bara 1 sökande nära sista dagen: ett steg upp."
   },
   {
     "id": "boplats:6ABF82FF0173715189BEB08B",
@@ -8643,13 +8783,13 @@
     "allocation": "queue",
     "winners_queue_days": 4353,
     "first_seen": "2026-10-03T11:44:13+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": null,
     "applicants": 20,
     "points_needed_top10": null,
     "bucket": "unlikely",
-    "bucket_note": "Dina 1 262 dagar mot vinnarnas 4 353 dagar (29 %)."
+    "bucket_note": "Dina 1 263 dagar mot vinnarnas 4 353 dagar (29 %)."
   },
   {
     "id": "boplats:6ABFD75C03B875781015C382",
@@ -8671,13 +8811,13 @@
     "allocation": "queue",
     "winners_queue_days": 3767,
     "first_seen": "2026-10-02T22:18:03+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": null,
     "applicants": 4,
     "points_needed_top10": null,
     "bucket": "possible",
-    "bucket_note": "Dina 1 262 dagar mot vinnarnas 3 767 dagar (34 %). Bara 4 sökande nära sista dagen: ett steg upp."
+    "bucket_note": "Dina 1 263 dagar mot vinnarnas 3 767 dagar (34 %). Bara 4 sökande nära sista dagen: ett steg upp."
   },
   {
     "id": "boplats:6ABFD75E03F5736E18A7C382",
@@ -8699,13 +8839,13 @@
     "allocation": "queue",
     "winners_queue_days": 1853,
     "first_seen": "2026-10-02T22:18:03+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": null,
     "applicants": 0,
     "points_needed_top10": null,
     "bucket": "possible",
-    "bucket_note": "Dina 1 262 dagar mot vinnarnas 1 853 dagar (68 %). Bara 0 sökande nära sista dagen: ett steg upp."
+    "bucket_note": "Dina 1 263 dagar mot vinnarnas 1 853 dagar (68 %). Bara 0 sökande nära sista dagen: ett steg upp."
   },
   {
     "id": "boplats:6ABFD762FFF8768EC487B095",
@@ -8727,13 +8867,13 @@
     "allocation": "queue",
     "winners_queue_days": 4007,
     "first_seen": "2026-10-02T22:18:03+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": null,
     "applicants": 3,
     "points_needed_top10": null,
     "bucket": "possible",
-    "bucket_note": "Dina 1 262 dagar mot vinnarnas 4 007 dagar (31 %). Bara 3 sökande nära sista dagen: ett steg upp."
+    "bucket_note": "Dina 1 263 dagar mot vinnarnas 4 007 dagar (32 %). Bara 3 sökande nära sista dagen: ett steg upp."
   },
   {
     "id": "boplats:6AC0801A03CD79770268C382",
@@ -8755,13 +8895,13 @@
     "allocation": "queue",
     "winners_queue_days": 1744,
     "first_seen": "2026-10-03T05:23:31+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": null,
     "applicants": 0,
     "points_needed_top10": null,
     "bucket": "possible",
-    "bucket_note": "Dina 1 262 dagar mot vinnarnas 1 744 dagar (72 %). Bara 0 sökande nära sista dagen: ett steg upp."
+    "bucket_note": "Dina 1 263 dagar mot vinnarnas 1 744 dagar (72 %). Bara 0 sökande nära sista dagen: ett steg upp."
   },
   {
     "id": "boplats:6AC0801BF86E7A5C8451B08B",
@@ -8783,13 +8923,13 @@
     "allocation": "queue",
     "winners_queue_days": 3933,
     "first_seen": "2026-10-03T05:23:31+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": null,
     "applicants": 12,
     "points_needed_top10": null,
     "bucket": "unlikely",
-    "bucket_note": "Dina 1 262 dagar mot vinnarnas 3 933 dagar (32 %)."
+    "bucket_note": "Dina 1 263 dagar mot vinnarnas 3 933 dagar (32 %)."
   },
   {
     "id": "boplats:6AB156E1FBBCF97B67D4B095",
@@ -8811,13 +8951,13 @@
     "allocation": "queue",
     "winners_queue_days": 2622,
     "first_seen": "2026-09-22T00:10:04+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": null,
     "applicants": 2,
     "points_needed_top10": null,
     "bucket": "possible",
-    "bucket_note": "Dina 1 262 dagar mot vinnarnas 2 622 dagar (48 %). Bara 2 sökande nära sista dagen: ett steg upp."
+    "bucket_note": "Dina 1 263 dagar mot vinnarnas 2 622 dagar (48 %). Bara 2 sökande nära sista dagen: ett steg upp."
   },
   {
     "id": "boplats:6AB23736FCC0FF843029B095",
@@ -8839,13 +8979,13 @@
     "allocation": "queue",
     "winners_queue_days": 1247,
     "first_seen": "2026-09-30T12:41:34+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": null,
     "applicants": 3,
     "points_needed_top10": null,
     "bucket": "likely",
-    "bucket_note": "Dina 1 262 dagar mot vinnarnas 1 247 dagar (101 %). Bara 3 sökande nära sista dagen: ett steg upp."
+    "bucket_note": "Dina 1 263 dagar mot vinnarnas 1 247 dagar (101 %). Bara 3 sökande nära sista dagen: ett steg upp."
   },
   {
     "id": "boplats:6AB24703FA4C04FEAC97C379",
@@ -8867,13 +9007,13 @@
     "allocation": "queue",
     "winners_queue_days": 2093,
     "first_seen": "2026-10-01T10:13:29+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": null,
     "applicants": 3,
     "points_needed_top10": null,
     "bucket": "possible",
-    "bucket_note": "Dina 1 262 dagar mot vinnarnas 2 093 dagar (60 %). Bara 3 sökande nära sista dagen: ett steg upp."
+    "bucket_note": "Dina 1 263 dagar mot vinnarnas 2 093 dagar (60 %). Bara 3 sökande nära sista dagen: ett steg upp."
   },
   {
     "id": "boplats:6AB9F2BD0841336AC3EBC382",
@@ -8895,13 +9035,13 @@
     "allocation": "queue",
     "winners_queue_days": 2697,
     "first_seen": "2026-09-30T12:41:34+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": null,
     "applicants": 0,
     "points_needed_top10": null,
     "bucket": "possible",
-    "bucket_note": "Dina 1 262 dagar mot vinnarnas 2 697 dagar (47 %). Bara 0 sökande nära sista dagen: ett steg upp."
+    "bucket_note": "Dina 1 263 dagar mot vinnarnas 2 697 dagar (47 %). Bara 0 sökande nära sista dagen: ett steg upp."
   },
   {
     "id": "boplats:6ABA08E9FE25345F6B20B08B",
@@ -8923,13 +9063,13 @@
     "allocation": "queue",
     "winners_queue_days": 3099,
     "first_seen": "2026-09-28T14:03:30+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": null,
     "applicants": 4,
     "points_needed_top10": null,
     "bucket": "possible",
-    "bucket_note": "Dina 1 262 dagar mot vinnarnas 3 099 dagar (41 %). Bara 4 sökande nära sista dagen: ett steg upp."
+    "bucket_note": "Dina 1 263 dagar mot vinnarnas 3 099 dagar (41 %). Bara 4 sökande nära sista dagen: ett steg upp."
   },
   {
     "id": "boplats:6ABA0C28FEAD370690CFB08B",
@@ -8951,13 +9091,13 @@
     "allocation": "queue",
     "winners_queue_days": 2093,
     "first_seen": "2026-09-28T14:03:30+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": null,
     "applicants": 1,
     "points_needed_top10": null,
     "bucket": "possible",
-    "bucket_note": "Dina 1 262 dagar mot vinnarnas 2 093 dagar (60 %). Bara 1 sökande nära sista dagen: ett steg upp."
+    "bucket_note": "Dina 1 263 dagar mot vinnarnas 2 093 dagar (60 %). Bara 1 sökande nära sista dagen: ett steg upp."
   },
   {
     "id": "boplats:6ABA20A2F7FA39D88BB5C379",
@@ -8979,13 +9119,13 @@
     "allocation": "queue",
     "winners_queue_days": 3553,
     "first_seen": "2026-09-29T18:07:44+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": null,
     "applicants": 16,
     "points_needed_top10": null,
     "bucket": "unlikely",
-    "bucket_note": "Dina 1 262 dagar mot vinnarnas 3 553 dagar (36 %)."
+    "bucket_note": "Dina 1 263 dagar mot vinnarnas 3 553 dagar (36 %)."
   },
   {
     "id": "boplats:6ABA57D4076E3B476CD8B08B",
@@ -9007,13 +9147,13 @@
     "allocation": "queue",
     "winners_queue_days": 2232,
     "first_seen": "2026-09-28T14:03:30+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": null,
     "applicants": 1,
     "points_needed_top10": null,
     "bucket": "possible",
-    "bucket_note": "Dina 1 262 dagar mot vinnarnas 2 232 dagar (57 %). Bara 1 sökande nära sista dagen: ett steg upp."
+    "bucket_note": "Dina 1 263 dagar mot vinnarnas 2 232 dagar (57 %). Bara 1 sökande nära sista dagen: ett steg upp."
   },
   {
     "id": "boplats:6ABCEF40010E538CDC21C379",
@@ -9035,13 +9175,13 @@
     "allocation": "queue",
     "winners_queue_days": 1598,
     "first_seen": "2026-09-30T12:41:34+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": null,
     "applicants": 0,
     "points_needed_top10": null,
     "bucket": "possible",
-    "bucket_note": "Dina 1 262 dagar mot vinnarnas 1 598 dagar (79 %). Bara 0 sökande nära sista dagen: ett steg upp."
+    "bucket_note": "Dina 1 263 dagar mot vinnarnas 1 598 dagar (79 %). Bara 0 sökande nära sista dagen: ett steg upp."
   },
   {
     "id": "boplats:6ABD2077723E6DBEC6BCBAAF",
@@ -9063,13 +9203,13 @@
     "allocation": "queue",
     "winners_queue_days": 1319,
     "first_seen": "2026-10-01T10:13:29+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": null,
     "applicants": 10,
     "points_needed_top10": null,
     "bucket": "possible",
-    "bucket_note": "Dina 1 262 dagar mot vinnarnas 1 319 dagar (96 %)."
+    "bucket_note": "Dina 1 263 dagar mot vinnarnas 1 319 dagar (96 %)."
   },
   {
     "id": "boplats:6ABD20780AB04A7F1DE46064",
@@ -9091,13 +9231,13 @@
     "allocation": "queue",
     "winners_queue_days": 1056,
     "first_seen": "2026-10-01T10:13:29+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": null,
     "applicants": 7,
     "points_needed_top10": null,
     "bucket": "likely",
-    "bucket_note": "Dina 1 262 dagar mot vinnarnas 1 056 dagar (120 %)."
+    "bucket_note": "Dina 1 263 dagar mot vinnarnas 1 056 dagar (120 %)."
   },
   {
     "id": "boplats:6ABD27A3F4D9A9829785B57E",
@@ -9119,13 +9259,13 @@
     "allocation": "queue",
     "winners_queue_days": 1966,
     "first_seen": "2026-10-01T10:13:29+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": null,
     "applicants": 13,
     "points_needed_top10": null,
     "bucket": "unlikely",
-    "bucket_note": "Dina 1 262 dagar mot vinnarnas 1 966 dagar (64 %)."
+    "bucket_note": "Dina 1 263 dagar mot vinnarnas 1 966 dagar (64 %)."
   },
   {
     "id": "boplats:6ABD27A476CC87A0E44BB17D",
@@ -9147,13 +9287,13 @@
     "allocation": "queue",
     "winners_queue_days": 963,
     "first_seen": "2026-10-01T10:13:29+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": null,
     "applicants": 8,
     "points_needed_top10": null,
     "bucket": "likely",
-    "bucket_note": "Dina 1 262 dagar mot vinnarnas 963 dagar (131 %)."
+    "bucket_note": "Dina 1 263 dagar mot vinnarnas 963 dagar (131 %)."
   },
   {
     "id": "boplats:6ABD27A516AB97F33CFF77D2",
@@ -9175,13 +9315,13 @@
     "allocation": "queue",
     "winners_queue_days": 263,
     "first_seen": "2026-10-01T10:13:29+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": null,
     "applicants": 11,
     "points_needed_top10": null,
     "bucket": "likely",
-    "bucket_note": "Dina 1 262 dagar mot vinnarnas 263 dagar (480 %)."
+    "bucket_note": "Dina 1 263 dagar mot vinnarnas 263 dagar (480 %)."
   },
   {
     "id": "boplats:6ABD27A5AF305ABB021EEE1F",
@@ -9203,13 +9343,13 @@
     "allocation": "queue",
     "winners_queue_days": 2817,
     "first_seen": "2026-10-01T10:13:29+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": null,
     "applicants": 10,
     "points_needed_top10": null,
     "bucket": "unlikely",
-    "bucket_note": "Dina 1 262 dagar mot vinnarnas 2 817 dagar (45 %)."
+    "bucket_note": "Dina 1 263 dagar mot vinnarnas 2 817 dagar (45 %)."
   },
   {
     "id": "boplats:6ABD2E826D72793A34AC8AAE",
@@ -9231,7 +9371,7 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-10-01T10:13:29+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": null,
     "applicants": 25,
@@ -9259,13 +9399,13 @@
     "allocation": "queue",
     "winners_queue_days": 1431,
     "first_seen": "2026-10-02T00:50:15+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": null,
     "applicants": 2,
     "points_needed_top10": null,
     "bucket": "likely",
-    "bucket_note": "Dina 1 262 dagar mot vinnarnas 1 431 dagar (88 %). Bara 2 sökande nära sista dagen: ett steg upp."
+    "bucket_note": "Dina 1 263 dagar mot vinnarnas 1 431 dagar (88 %). Bara 2 sökande nära sista dagen: ett steg upp."
   },
   {
     "id": "boplats:6ABF82FBF9876F1A81BBC382",
@@ -9287,13 +9427,13 @@
     "allocation": "queue",
     "winners_queue_days": 2597,
     "first_seen": "2026-10-02T22:18:03+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": null,
     "applicants": 0,
     "points_needed_top10": null,
     "bucket": "possible",
-    "bucket_note": "Dina 1 262 dagar mot vinnarnas 2 597 dagar (49 %). Bara 0 sökande nära sista dagen: ett steg upp."
+    "bucket_note": "Dina 1 263 dagar mot vinnarnas 2 597 dagar (49 %). Bara 0 sökande nära sista dagen: ett steg upp."
   },
   {
     "id": "boplats:6ABF82FCF82C6F277A78C379",
@@ -9315,13 +9455,13 @@
     "allocation": "queue",
     "winners_queue_days": 3388,
     "first_seen": "2026-10-02T22:18:03+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": null,
     "applicants": 4,
     "points_needed_top10": null,
     "bucket": "possible",
-    "bucket_note": "Dina 1 262 dagar mot vinnarnas 3 388 dagar (37 %). Bara 4 sökande nära sista dagen: ett steg upp."
+    "bucket_note": "Dina 1 263 dagar mot vinnarnas 3 388 dagar (37 %). Bara 4 sökande nära sista dagen: ett steg upp."
   },
   {
     "id": "boplats:6ABF82FD06BD7057F108B095",
@@ -9343,13 +9483,13 @@
     "allocation": "queue",
     "winners_queue_days": 3138,
     "first_seen": "2026-10-02T22:18:03+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": null,
     "applicants": 3,
     "points_needed_top10": null,
     "bucket": "possible",
-    "bucket_note": "Dina 1 262 dagar mot vinnarnas 3 138 dagar (40 %). Bara 3 sökande nära sista dagen: ett steg upp."
+    "bucket_note": "Dina 1 263 dagar mot vinnarnas 3 138 dagar (40 %). Bara 3 sökande nära sista dagen: ett steg upp."
   },
   {
     "id": "boplats:6ABF82FDF7DF724F95F0B095",
@@ -9371,13 +9511,13 @@
     "allocation": "queue",
     "winners_queue_days": 3413,
     "first_seen": "2026-10-02T22:18:03+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": null,
     "applicants": 3,
     "points_needed_top10": null,
     "bucket": "possible",
-    "bucket_note": "Dina 1 262 dagar mot vinnarnas 3 413 dagar (37 %). Bara 3 sökande nära sista dagen: ett steg upp."
+    "bucket_note": "Dina 1 263 dagar mot vinnarnas 3 413 dagar (37 %). Bara 3 sökande nära sista dagen: ett steg upp."
   },
   {
     "id": "boplats:6ABFA2A5F919730EA407C382",
@@ -9399,13 +9539,13 @@
     "allocation": "queue",
     "winners_queue_days": 3775,
     "first_seen": "2026-10-02T22:18:03+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": null,
     "applicants": 0,
     "points_needed_top10": null,
     "bucket": "possible",
-    "bucket_note": "Dina 1 262 dagar mot vinnarnas 3 775 dagar (33 %). Bara 0 sökande nära sista dagen: ett steg upp."
+    "bucket_note": "Dina 1 263 dagar mot vinnarnas 3 775 dagar (33 %). Bara 0 sökande nära sista dagen: ett steg upp."
   },
   {
     "id": "boplats:6ABCDB3D0846554F2EF0B095",
@@ -9427,13 +9567,13 @@
     "allocation": "queue",
     "winners_queue_days": 1878,
     "first_seen": "2026-09-30T12:41:34+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": null,
     "applicants": 2,
     "points_needed_top10": null,
     "bucket": "possible",
-    "bucket_note": "Dina 1 262 dagar mot vinnarnas 1 878 dagar (67 %). Bara 2 sökande nära sista dagen: ett steg upp."
+    "bucket_note": "Dina 1 263 dagar mot vinnarnas 1 878 dagar (67 %). Bara 2 sökande nära sista dagen: ett steg upp."
   },
   {
     "id": "boplats:6ABE01724257FECEF50A70CA",
@@ -9455,13 +9595,13 @@
     "allocation": "queue",
     "winners_queue_days": 213,
     "first_seen": "2026-10-01T10:13:29+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": null,
     "applicants": 1,
     "points_needed_top10": null,
     "bucket": "likely",
-    "bucket_note": "Dina 1 262 dagar mot vinnarnas 213 dagar (592 %). Bara 1 sökande nära sista dagen: ett steg upp."
+    "bucket_note": "Dina 1 263 dagar mot vinnarnas 213 dagar (593 %). Bara 1 sökande nära sista dagen: ett steg upp."
   },
   {
     "id": "boplats:6ABE087D5EE04D50D0F0A7F0",
@@ -9483,13 +9623,13 @@
     "allocation": "queue",
     "winners_queue_days": 1120,
     "first_seen": "2026-10-01T10:13:29+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": null,
     "applicants": 3,
     "points_needed_top10": null,
     "bucket": "likely",
-    "bucket_note": "Dina 1 262 dagar mot vinnarnas 1 120 dagar (113 %). Bara 3 sökande nära sista dagen: ett steg upp."
+    "bucket_note": "Dina 1 263 dagar mot vinnarnas 1 120 dagar (113 %). Bara 3 sökande nära sista dagen: ett steg upp."
   },
   {
     "id": "boplats:6AB3917DFB830C100BFDB095",
@@ -9511,13 +9651,13 @@
     "allocation": "queue",
     "winners_queue_days": 2200,
     "first_seen": "2026-09-24T11:52:59+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": null,
     "applicants": 9,
     "points_needed_top10": null,
     "bucket": "unlikely",
-    "bucket_note": "Dina 1 262 dagar mot vinnarnas 2 200 dagar (57 %)."
+    "bucket_note": "Dina 1 263 dagar mot vinnarnas 2 200 dagar (57 %)."
   },
   {
     "id": "boplats:6AB39189FDD80D011F4EC379",
@@ -9539,13 +9679,13 @@
     "allocation": "queue",
     "winners_queue_days": 1613,
     "first_seen": "2026-09-24T11:52:59+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": null,
     "applicants": 12,
     "points_needed_top10": null,
     "bucket": "unlikely",
-    "bucket_note": "Dina 1 262 dagar mot vinnarnas 1 613 dagar (78 %)."
+    "bucket_note": "Dina 1 263 dagar mot vinnarnas 1 613 dagar (78 %)."
   },
   {
     "id": "boplats:6ABB77FC015B472EC6E7C379",
@@ -9567,13 +9707,13 @@
     "allocation": "queue",
     "winners_queue_days": 3205,
     "first_seen": "2026-09-29T18:07:44+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": null,
     "applicants": 5,
     "points_needed_top10": null,
-    "bucket": "unlikely",
-    "bucket_note": "Dina 1 262 dagar mot vinnarnas 3 205 dagar (39 %)."
+    "bucket": "possible",
+    "bucket_note": "Dina 1 263 dagar mot vinnarnas 3 205 dagar (39 %). Bara 5 sökande nära sista dagen: ett steg upp."
   },
   {
     "id": "boplats:6ABCD0DF074D52A7CCF8B08B",
@@ -9595,13 +9735,13 @@
     "allocation": "queue",
     "winners_queue_days": 1174,
     "first_seen": "2026-09-30T12:41:34+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": null,
     "applicants": 4,
     "points_needed_top10": null,
-    "bucket": "possible",
-    "bucket_note": "Dina 1 262 dagar mot vinnarnas 1 174 dagar (107 %)."
+    "bucket": "likely",
+    "bucket_note": "Dina 1 263 dagar mot vinnarnas 1 174 dagar (108 %). Bara 4 sökande nära sista dagen: ett steg upp."
   },
   {
     "id": "boplats:6ABCE505F8065395218AC379",
@@ -9623,13 +9763,13 @@
     "allocation": "queue",
     "winners_queue_days": 2214,
     "first_seen": "2026-09-30T12:41:34+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": null,
     "applicants": 4,
     "points_needed_top10": null,
-    "bucket": "unlikely",
-    "bucket_note": "Dina 1 262 dagar mot vinnarnas 2 214 dagar (57 %)."
+    "bucket": "possible",
+    "bucket_note": "Dina 1 263 dagar mot vinnarnas 2 214 dagar (57 %). Bara 4 sökande nära sista dagen: ett steg upp."
   },
   {
     "id": "boplats:6ABE168A0B10255B340645E1",
@@ -9651,13 +9791,13 @@
     "allocation": "queue",
     "winners_queue_days": 1257,
     "first_seen": "2026-10-01T10:13:29+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": null,
     "applicants": 2,
     "points_needed_top10": null,
-    "bucket": "possible",
-    "bucket_note": "Dina 1 262 dagar mot vinnarnas 1 257 dagar (100 %)."
+    "bucket": "likely",
+    "bucket_note": "Dina 1 263 dagar mot vinnarnas 1 257 dagar (100 %). Bara 2 sökande nära sista dagen: ett steg upp."
   },
   {
     "id": "boplats:6ABE1D92515F84E086FD5187",
@@ -9679,13 +9819,13 @@
     "allocation": "queue",
     "winners_queue_days": 9,
     "first_seen": "2026-10-01T10:13:29+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": null,
     "applicants": 0,
     "points_needed_top10": null,
     "bucket": "likely",
-    "bucket_note": "Dina 1 262 dagar mot vinnarnas 9 dagar (14022 %)."
+    "bucket_note": "Dina 1 263 dagar mot vinnarnas 9 dagar (14033 %). Bara 0 sökande nära sista dagen: ett steg upp."
   },
   {
     "id": "boplats:6ABE45EAF81A64ABA764C382",
@@ -9707,7 +9847,7 @@
     "allocation": null,
     "winners_queue_days": 1245,
     "first_seen": "2026-10-01T18:27:05+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": null,
     "applicants": 4,
@@ -9735,13 +9875,13 @@
     "allocation": "queue",
     "winners_queue_days": 2577,
     "first_seen": "2026-10-02T17:53:54+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": null,
     "applicants": 34,
     "points_needed_top10": null,
     "bucket": "unlikely",
-    "bucket_note": "Dina 1 262 dagar mot vinnarnas 2 577 dagar (49 %)."
+    "bucket_note": "Dina 1 263 dagar mot vinnarnas 2 577 dagar (49 %)."
   },
   {
     "id": "boplats:6ABF938CF9B870605BADC382",
@@ -9763,13 +9903,13 @@
     "allocation": "queue",
     "winners_queue_days": 213,
     "first_seen": "2026-10-02T17:53:54+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": null,
     "applicants": 2,
     "points_needed_top10": null,
     "bucket": "likely",
-    "bucket_note": "Dina 1 262 dagar mot vinnarnas 213 dagar (592 %)."
+    "bucket_note": "Dina 1 263 dagar mot vinnarnas 213 dagar (593 %). Bara 2 sökande nära sista dagen: ett steg upp."
   },
   {
     "id": "boplats:6AC02BBFF8417B0962A6C379",
@@ -9791,13 +9931,13 @@
     "allocation": "queue",
     "winners_queue_days": 1895,
     "first_seen": "2026-10-04T05:59:17+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": null,
     "applicants": 7,
     "points_needed_top10": null,
     "bucket": "unlikely",
-    "bucket_note": "Dina 1 262 dagar mot vinnarnas 1 895 dagar (67 %)."
+    "bucket_note": "Dina 1 263 dagar mot vinnarnas 1 895 dagar (67 %)."
   },
   {
     "id": "boplats:6ABCF965FA3A548A6FCBC379",
@@ -9819,13 +9959,13 @@
     "allocation": "queue",
     "winners_queue_days": 1483,
     "first_seen": "2026-09-30T12:41:34+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": null,
     "applicants": 0,
     "points_needed_top10": null,
     "bucket": "possible",
-    "bucket_note": "Dina 1 262 dagar mot vinnarnas 1 483 dagar (85 %)."
+    "bucket_note": "Dina 1 263 dagar mot vinnarnas 1 483 dagar (85 %)."
   },
   {
     "id": "boplats:6ABCFF95FD8854F61F5FB08B",
@@ -9847,13 +9987,13 @@
     "allocation": "queue",
     "winners_queue_days": 1212,
     "first_seen": "2026-09-30T12:41:34+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": null,
     "applicants": 0,
     "points_needed_top10": null,
     "bucket": "possible",
-    "bucket_note": "Dina 1 262 dagar mot vinnarnas 1 212 dagar (104 %)."
+    "bucket_note": "Dina 1 263 dagar mot vinnarnas 1 212 dagar (104 %)."
   },
   {
     "id": "boplats:6ABCF212FD7154B531EAC382",
@@ -9875,7 +10015,7 @@
     "allocation": "queue",
     "winners_queue_days": null,
     "first_seen": "2026-09-30T12:41:34+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": null,
     "applicants": 0,
@@ -9903,13 +10043,13 @@
     "allocation": "queue",
     "winners_queue_days": 3243,
     "first_seen": "2026-10-02T00:50:15+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": null,
     "applicants": 3,
     "points_needed_top10": null,
     "bucket": "unlikely",
-    "bucket_note": "Dina 1 262 dagar mot vinnarnas 3 243 dagar (39 %)."
+    "bucket_note": "Dina 1 263 dagar mot vinnarnas 3 243 dagar (39 %)."
   },
   {
     "id": "boplats:6ABFD75AFBC779185C75C382",
@@ -9931,13 +10071,13 @@
     "allocation": "queue",
     "winners_queue_days": 2813,
     "first_seen": "2026-10-02T22:18:03+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": null,
     "applicants": 0,
     "points_needed_top10": null,
     "bucket": "unlikely",
-    "bucket_note": "Dina 1 262 dagar mot vinnarnas 2 813 dagar (45 %)."
+    "bucket_note": "Dina 1 263 dagar mot vinnarnas 2 813 dagar (45 %)."
   },
   {
     "id": "boplats:6ABFD75CFC0673FA57DBB08B",
@@ -9959,13 +10099,13 @@
     "allocation": "queue",
     "winners_queue_days": 2918,
     "first_seen": "2026-10-02T22:18:03+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": null,
     "applicants": 0,
     "points_needed_top10": null,
     "bucket": "unlikely",
-    "bucket_note": "Dina 1 262 dagar mot vinnarnas 2 918 dagar (43 %)."
+    "bucket_note": "Dina 1 263 dagar mot vinnarnas 2 918 dagar (43 %)."
   },
   {
     "id": "boplats:6ABFD75EFB6173F0781DC379",
@@ -9987,13 +10127,13 @@
     "allocation": "queue",
     "winners_queue_days": 3640,
     "first_seen": "2026-10-02T22:18:03+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": null,
     "applicants": 2,
     "points_needed_top10": null,
     "bucket": "unlikely",
-    "bucket_note": "Dina 1 262 dagar mot vinnarnas 3 640 dagar (35 %)."
+    "bucket_note": "Dina 1 263 dagar mot vinnarnas 3 640 dagar (35 %)."
   },
   {
     "id": "boplats:6ABFD76507E27607E118B08B",
@@ -10015,13 +10155,13 @@
     "allocation": "queue",
     "winners_queue_days": 2092,
     "first_seen": "2026-10-02T22:18:03+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": null,
     "applicants": 2,
     "points_needed_top10": null,
     "bucket": "unlikely",
-    "bucket_note": "Dina 1 262 dagar mot vinnarnas 2 092 dagar (60 %)."
+    "bucket_note": "Dina 1 263 dagar mot vinnarnas 2 092 dagar (60 %)."
   },
   {
     "id": "boplats:6AB3681806790F0E2807C379",
@@ -10043,12 +10183,12 @@
     "allocation": "queue",
     "winners_queue_days": 4325,
     "first_seen": "2026-09-23T11:44:00+00:00",
-    "last_seen": "2026-10-04T23:58:45+00:00",
+    "last_seen": "2026-10-05T05:47:52+00:00",
     "status": "active",
     "is_short_lease": null,
     "applicants": 5,
     "points_needed_top10": null,
     "bucket": "unlikely",
-    "bucket_note": "Dina 1 262 dagar mot vinnarnas 4 325 dagar (29 %)."
+    "bucket_note": "Dina 1 263 dagar mot vinnarnas 4 325 dagar (29 %)."
   }
 ]
