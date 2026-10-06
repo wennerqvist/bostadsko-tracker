@@ -16,7 +16,11 @@ const CHANCE = {
 };
 const UNKNOWN_CHANCE = { label: "Okänd chans", colour: "#eef1f4", text: "#1c1c1c" };
 const CHANCE_ORDER = ["likely", "possible", "unlikely"]; // bäst först
-const chanceOf = (l) => CHANCE[l.bucket] ?? UNKNOWN_CHANCE;
+// scenarioOverlay (satt i apply()) ersätter bucket/bucket_note för annonser vars chans
+// beror på köpoäng, när ett scenariodatum är valt. bucketOf/bucketNoteOf läser igenom den.
+const bucketOf = (l) => (scenarioOverlay?.has(l.id) ? scenarioOverlay.get(l.id)[0] : l.bucket);
+const bucketNoteOf = (l) => (scenarioOverlay?.has(l.id) ? scenarioOverlay.get(l.id)[1] : l.bucket_note);
+const chanceOf = (l) => CHANCE[bucketOf(l)] ?? UNKNOWN_CHANCE;
 const SHORTLIST_SIZE = 8;
 const SHORTLIST_BOPLATS_MAX = 4; // Boplats: färre än 5 aktiva ansökningar samtidigt
 const GREY = "#b8b8b8";
@@ -24,7 +28,7 @@ const AREA_STYLE = { color: "#6a3fb5", weight: 2, dashArray: "6 4", fillOpacity:
 const SAFE_LINK = /^https:\/\/(www\.)?(boplats|homeq)\.se\//; // länka bara till de två sajter vi hämtar från
 const FORM_FIELDS = [
   "maxRent", "minSize", "maxSize", "minRooms", "moveFrom", "moveTo",
-  "srcBoplats", "srcHomeq", "allowFirstCome", "allowLottery", "shortLease", "hideOthers",
+  "srcBoplats", "srcHomeq", "firstCome", "lottery", "shortLease", "hideOthers",
 ];
 const AREA_HINT = "Rita ett eller flera områden. Då matchar bara annonser inuti områdena.";
 const AREA_HINT_ACTIVE = "Bara annonser inuti områdena matchar. Annonser utan position matchar inte.";
@@ -51,6 +55,8 @@ let unplaced = []; // annonser utan koordinater
 const groupOf = new Map(); // annons-id -> dess pin-grupp, så att en klick i "Värda att ansöka" hittar pinnen
 let areas = []; // ritade områden: varje område är en lista av [lat, lon]
 let drawing = null; // pågående ritning: { points, preview }
+let queueState = {}; // { boplats_start, homeq_start } från queue.json
+let scenarioOverlay = null; // Map<listing-id, [bucket, note]> när ett scenariodatum är valt, annars null
 
 // --- filter ----------------------------------------------------------------
 
@@ -67,8 +73,8 @@ function readFilters() {
     moveFrom: $("moveFrom").value || null, // ÅÅÅÅ-MM-DD, går att jämföra som text
     moveTo: $("moveTo").value || null,
     sources: { boplats: $("srcBoplats").checked, homeq: $("srcHomeq").checked },
-    allowFirstCome: $("allowFirstCome").checked,
-    allowLottery: $("allowLottery").checked,
+    firstCome: $("firstCome").value,
+    lottery: $("lottery").value,
     shortLease: $("shortLease").value,
     kommunOff: new Set(
       [...document.querySelectorAll("#kommunList input")].filter((box) => !box.checked).map((box) => box.dataset.kommun)
@@ -95,8 +101,10 @@ function matches(l, f) {
   if (!f.sources[l.source]) return false;
   if (f.shortLease === "exclude" && l.is_short_lease === 1) return false;
   if (f.shortLease === "only" && l.is_short_lease !== 1) return false;
-  if (!f.allowFirstCome && l.allocation === "first_come") return false;
-  if (!f.allowLottery && l.allocation === "lottery") return false;
+  if (f.firstCome === "exclude" && l.allocation === "first_come") return false;
+  if (f.firstCome === "only" && l.allocation !== "first_come") return false;
+  if (f.lottery === "exclude" && l.allocation === "lottery") return false;
+  if (f.lottery === "only" && l.allocation !== "lottery") return false;
   if (f.maxRent != null && l.rent_sek != null && l.rent_sek > f.maxRent) return false;
   if (f.minSize != null && l.size_m2 != null && l.size_m2 < f.minSize) return false;
   if (f.maxSize != null && l.size_m2 != null && l.size_m2 > f.maxSize) return false;
@@ -208,7 +216,7 @@ function stopDrawing(save) {
 
 // Pinnens fyllning = bästa chansen bland annonserna på adressen.
 function pinColour(hits) {
-  const best = CHANCE_ORDER.find((bucket) => hits.some((l) => l.bucket === bucket));
+  const best = CHANCE_ORDER.find((bucket) => hits.some((l) => bucketOf(l) === bucket));
   return (CHANCE[best] ?? UNKNOWN_CHANCE).colour;
 }
 
@@ -287,7 +295,7 @@ function cardHtml(l, f) {
       <div class="sub">${esc(place)}${place ? " · " : ""}<span class="source ${esc(l.source)}">${esc(source?.name ?? l.source)}</span></div>
       <div class="chance">
         <span class="chip" style="background:${chanceOf(l).colour};color:${chanceOf(l).text}">${esc(chanceOf(l).label)}</span>
-        <span class="note">${esc(l.bucket_note ?? "")}</span>
+        <span class="note">${esc(bucketNoteOf(l) ?? "")}</span>
       </div>
       <dl>${rows.map(([label, value]) => `<dt>${esc(label)}</dt><dd${label === "Hyresvärd" ? ' class="wrap"' : ""}>${esc(value)}</dd>`).join("")}</dl>
       ${link}
@@ -305,9 +313,9 @@ function popupHtml(group) {
 // De bästa annonserna som matchar filtren: god chans före möjlig, sedan närmast sista
 // ansökningsdag (okänd dag sist). Högst SHORTLIST_BOPLATS_MAX från Boplats. Passerade dagar räknas bort.
 function pickShortlist(rows, isMatch, today) {
-  const rank = (l) => CHANCE_ORDER.indexOf(l.bucket);
+  const rank = (l) => CHANCE_ORDER.indexOf(bucketOf(l));
   const open = rows
-    .filter((l) => (l.bucket === "likely" || l.bucket === "possible") && (!l.deadline || l.deadline >= today) && isMatch(l))
+    .filter((l) => (bucketOf(l) === "likely" || bucketOf(l) === "possible") && (!l.deadline || l.deadline >= today) && isMatch(l))
     .sort(
       (a, b) =>
         rank(a) - rank(b) ||
@@ -348,6 +356,7 @@ function renderShortlist(f) {
 // --- ritning ------------------------------------------------------------------
 
 function apply() {
+  scenarioOverlay = buildScenarioOverlay(activeScenarioDate());
   const f = readFilters();
   pinLayer.clearLayers();
   let matching = 0;
@@ -363,7 +372,9 @@ function apply() {
   matching += unplacedHits.length;
 
   renderShortlist(f);
-  $("summary").textContent = `${matching} av ${listings.length} annonser matchar`;
+  $("summary").textContent = scenarioOverlay
+    ? `${matching} av ${listings.length} annonser matchar · scenario: ${$("queueDate").value}`
+    : `${matching} av ${listings.length} annonser matchar`;
   $("unplaced").hidden = unplacedHits.length === 0;
   $("unplacedSummary").textContent =
     unplacedHits.length === 1 ? "1 matchande annons finns inte på kartan" : `${unplacedHits.length} matchande annonser finns inte på kartan`;
@@ -387,6 +398,92 @@ const todayNumber = () => {
   const now = new Date();
   return Date.UTC(now.getFullYear(), now.getMonth(), now.getDate()) / 86400000;
 };
+
+// --- scenario (vad-om-läge för ett framtida ködatum) --------------------------
+
+// Samma siffror och regler som score.py ("Hur dina chanser räknas ut" i PLAN.md),
+// porterat till webbläsaren så att kartan kan räknas om direkt när du väljer ett
+// framtida datum, utan att behöva vänta på nästa körning av collect.py.
+const LIKELY_RATIO = 1.1;
+const POSSIBLE_RATIO = 0.8;
+const HOMEQ_POSSIBLE_RATIO = 0.9;
+const FEW_APPLICANTS = 5;
+const MANY_APPLICANTS = 50;
+const DEADLINE_DAYS = 3;
+const BUCKET_STEPS = ["unlikely", "possible", "likely"]; // sämst till bäst
+
+function shiftBucket(bucket, steps) {
+  const i = BUCKET_STEPS.indexOf(bucket);
+  return BUCKET_STEPS[Math.max(0, Math.min(BUCKET_STEPS.length - 1, i + steps))];
+}
+
+function scenarioBoplats(l, myDays, dateIso, todayIso) {
+  const winners = l.winners_queue_days;
+  if (!winners) return [null, "Boplats visar ingen kötid för vinnarna av liknande lägenheter, så chansen kan inte räknas ut."];
+  const ratio = myDays / winners;
+  let bucket = ratio >= LIKELY_RATIO ? "likely" : ratio >= POSSIBLE_RATIO ? "possible" : "unlikely";
+  let note = `Om ${dateIso}: dina ${numberFormat.format(myDays)} dagar mot vinnarnas ${numberFormat.format(winners)} dagar (${Math.round(ratio * 100)} %).`;
+  const applicants = l.applicants;
+  if (applicants != null) {
+    const daysLeft = l.deadline ? dayNumber(l.deadline) - dayNumber(todayIso) : null;
+    if (applicants >= MANY_APPLICANTS) {
+      bucket = shiftBucket(bucket, -1);
+      note += ` ${applicants} sökande: ett steg ner.`;
+    } else if (applicants <= FEW_APPLICANTS && daysLeft != null && daysLeft <= DEADLINE_DAYS) {
+      bucket = shiftBucket(bucket, 1);
+      note += ` Bara ${applicants} sökande nära sista dagen: ett steg upp.`;
+    }
+  }
+  return [bucket, note];
+}
+
+function scenarioHomeq(l, myDays, dateIso) {
+  const needed = l.points_needed_top10;
+  if (!needed) return [null, "HomeQ visar ingen poänggräns för den här annonsen (än), så chansen kan inte räknas ut."];
+  let bucket = myDays >= needed ? "likely" : myDays >= needed * HOMEQ_POSSIBLE_RATIO ? "possible" : "unlikely";
+  let note = `Om ${dateIso}: dina ${numberFormat.format(myDays)} poäng mot ${numberFormat.format(needed)} som krävs för topp 10.`;
+  if (l.allocation === "queue_guidance") {
+    bucket = shiftBucket(bucket, -1);
+    note += " Poängen är bara vägledande: ett steg ner.";
+  }
+  return [bucket, note];
+}
+
+// Bara annonser vars tilldelning faktiskt beror på köpoäng räknas om. Först till
+// kvarn, lottning, hyresvärdens egna poäng och okänd tilldelning är oförändrade av
+// datumet, så de returnerar null (bucketOf/bucketNoteOf faller då tillbaka på
+// listings.json:s vanliga bucket).
+function scenarioResult(l, myDays, dateIso, todayIso) {
+  if (l.allocation === "queue" && l.source === "boplats") {
+    return myDays.boplats == null ? null : scenarioBoplats(l, myDays.boplats, dateIso, todayIso);
+  }
+  if ((l.allocation === "queue" || l.allocation === "queue_guidance") && l.source === "homeq") {
+    return myDays.homeq == null ? null : scenarioHomeq(l, myDays.homeq, dateIso);
+  }
+  return null;
+}
+
+function buildScenarioOverlay(scenarioDate) {
+  if (!scenarioDate) return null;
+  const myDays = {
+    boplats: queueState.boplats_start ? dayNumber(scenarioDate) - dayNumber(queueState.boplats_start) : null,
+    homeq: queueState.homeq_start ? dayNumber(scenarioDate) - dayNumber(queueState.homeq_start) : null,
+  };
+  const todayIso = new Date().toLocaleDateString("sv-SE"); // ÅÅÅÅ-MM-DD, lokal tid
+  const overlay = new Map();
+  for (const l of listings) {
+    const result = scenarioResult(l, myDays, scenarioDate, todayIso);
+    if (result) overlay.set(l.id, result);
+  }
+  return overlay;
+}
+
+// Ett valt datum räknas bara som ett scenario om det inte redan har passerat
+// (samma regel som queueLater-texten använder).
+function activeScenarioDate() {
+  const value = $("queueDate").value;
+  return value && dayNumber(value) >= todayNumber() ? value : null;
+}
 
 function renderQueue(queue) {
   const queues = [
@@ -422,8 +519,13 @@ function initQueue() {
       return response.json();
     })
     .then((queue) => {
+      queueState = queue;
       renderQueue(queue);
-      $("queueDate").addEventListener("input", () => renderQueue(queue));
+      apply();
+      $("queueDate").addEventListener("input", () => {
+        renderQueue(queue);
+        apply();
+      });
     })
     .catch((error) => {
       $("queueNow").innerHTML = `<li class="warn">Kunde inte läsa queue.json (${esc(error.message)}).</li>`;

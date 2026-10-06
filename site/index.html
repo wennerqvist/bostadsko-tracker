@@ -134,7 +134,8 @@
     <section id="queue">
       <h2>Din kötid</h2>
       <ul id="queueNow"><li class="count">Laddar…</li></ul>
-      <label>Räkna framåt till <input type="date" id="queueDate"></label>
+      <label>Scenario – räkna framåt till <input type="date" id="queueDate"></label>
+      <p class="hint">Kartan, korten och "Värda att ansöka" färgas om som om detta vore dagens datum. Töm fältet för att se dagens läge.</p>
       <p id="queueLater" aria-live="polite"></p>
     </section>
 
@@ -177,9 +178,21 @@
 
       <fieldset>
         <legend>Tilldelning</legend>
-        <label><input type="checkbox" id="allowFirstCome" checked>Visa först till kvarn</label>
-        <label><input type="checkbox" id="allowLottery" checked>Visa lottning</label>
-        <p class="hint">Avbockad ruta gör att sådana annonser inte matchar. Annonser vars tilldelning inte är känd visas alltid.</p>
+        <label>Först till kvarn
+          <select id="firstCome">
+            <option value="include">Visa</option>
+            <option value="exclude">Dölj</option>
+            <option value="only">Bara först till kvarn</option>
+          </select>
+        </label>
+        <label>Lottning
+          <select id="lottery">
+            <option value="include">Visa</option>
+            <option value="exclude">Dölj</option>
+            <option value="only">Bara lottning</option>
+          </select>
+        </label>
+        <p class="hint">Annonser vars tilldelning inte är känd visas alltid, utom när ett av "Bara ..." är valt.</p>
       </fieldset>
 
       <fieldset>

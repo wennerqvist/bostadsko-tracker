@@ -16,7 +16,13 @@ First written 2026-09-18, status updated 2026-09-20. Author: Jakob Wennerqvist.
 
 **Known small issue:** 3 Boplats addresses get no coordinates and so no pin. Left alone on purpose; if it still happens around 2026-10-04, look into it then.
 
-**Nothing is planned.** Use it daily for two weeks, then decide what v2 is (see "Build plan").
+**Notification timing (2026-10-06):** the daily digest sometimes arrives around noon instead of 07:00. Working theory is GitHub Actions scheduling delay. Jakob decided this isn't worth fixing since the alerts aren't time-sensitive.
+
+**After two weeks of daily use (2026-10-06), two small additions:**
+- **Scenario date.** "Scenario – räkna framåt till" (the old "Räkna framåt till" box) now recolours the whole map, the popup cards and the shortlist as if the chosen future date were today, instead of only printing your projected queue days/points as text. The bucket math is ported from `score.py` into `site/app.js` (`scenarioBoplats`/`scenarioHomeq`/`buildScenarioOverlay`) so it can run instantly in the browser; keep the two in sync if the scoring rules in "How your chances are estimated" ever change.
+- **Allocation filter, split by type.** The "Tilldelning" fieldset replaced its two include/exclude checkboxes with two independent Visa/Dölj/Bara selects (one for först till kvarn, one for lottning), so you can search for only one of those categories instead of just hiding them.
+
+**Nothing else is planned.** Use it daily, and the friction you feel is the roadmap.
 
 **Decisions since the first draft**
 - HomeQ needs a login for the listing search, so the collector logs in with a password from a secret. No session cookies are stored.
