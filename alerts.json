@@ -2,17 +2,5 @@
   "help": "delivery: 'daily' (ett samlat meddelande per dag, av första körningen efter digest_hour svensk tid) eller 'instant' (ett meddelande per annons direkt). Varje sökning under 'searches' ger egna aviseringar. null betyder 'ingen gräns'. min_chance: 'god chans' eller 'möjlig' (eller null). sources: 'boplats' och/eller 'homeq'. Lägg till en sökning genom att kopiera ett helt block {...} och sätta ett komma emellan.",
   "delivery": "daily",
   "digest_hour": 7,
-  "searches": [
-    {
-      "name": "Min sökning",
-      "max_rent": 9000,
-      "min_size": 20,
-      "min_rooms": 1,
-      "sources": ["boplats", "homeq"],
-      "kommuner": ["Göteborg", "Mölndal"],
-      "include_first_come": false,
-      "include_lottery": true,
-      "min_chance": "möjlig"
-    }
-  ]
+  "searches": []
 }

@@ -8,10 +8,12 @@ name: Send daily digest
 # rule) - it just checks a few times each morning whether a digest is due, so it fires close to
 # 07:00 Swedish time even when the collector itself is running late.
 on:
-  schedule:
-    # Every 15 min, 05:00-08:45 UTC: covers 06:00-09:45 (winter, CET) and 07:00-10:45 (summer, CEST)
-    # Swedish time, so digest_hour (7) falls inside the window either way.
-    - cron: "*/15 5,6,7,8 * * *"
+  # Paused: Jakob found an apartment, so this no longer needs to run automatically.
+  # Uncomment the schedule below to turn it back on.
+  # schedule:
+  #   # Every 15 min, 05:00-08:45 UTC: covers 06:00-09:45 (winter, CET) and 07:00-10:45 (summer, CEST)
+  #   # Swedish time, so digest_hour (7) falls inside the window either way.
+  #   - cron: "*/15 5,6,7,8 * * *"
   workflow_dispatch:
 
 concurrency:

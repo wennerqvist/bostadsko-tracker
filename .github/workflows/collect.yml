@@ -1,10 +1,12 @@
 name: Collect listings
 
 on:
-  schedule:
-    # Every 3 hours (UTC). Minute 17 instead of 0 because GitHub is busiest on the hour.
-    # 06:17 UTC is 07:17 or 08:17 Swedish time, so the daily digest goes out at the first run after 07:00.
-    - cron: "17 */3 * * *"
+  # Paused: Jakob found an apartment, so this no longer needs to run automatically.
+  # Uncomment the schedule below to turn it back on.
+  # schedule:
+  #   # Every 3 hours (UTC). Minute 17 instead of 0 because GitHub is busiest on the hour.
+  #   # 06:17 UTC is 07:17 or 08:17 Swedish time, so the daily digest goes out at the first run after 07:00.
+  #   - cron: "17 */3 * * *"
   workflow_dispatch:   # lets you start a run by hand from the Actions tab
 
 # Never run two at once: they would both write to listings.db.
